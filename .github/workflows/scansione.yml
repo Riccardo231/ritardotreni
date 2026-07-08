@@ -1,0 +1,33 @@
+name: Monitoraggio Treni Canavese
+
+on:
+  schedule:
+    # Gira ogni 45 minuti
+    - cron: '*/45 * * * *'
+  workflow_dispatch: # Ti permette di lanciarlo anche a mano da GitHub per test
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Configura Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-node-version: '18'
+
+    - name: Installa dipendenze (se servono, es. jsdom)
+      run: npm install jsdom
+
+    - name: Esegui lo script di scansione
+      run: node cron.js
+
+    - name: Fai il commit e push del file modificato
+      run: |
+        git config --global user.name 'TreniBot'
+        git config --global user.email 'bot@treni.it'
+        git add stato_treni.json
+        git commit -m "Aggiornamento automatico tabellone" || exit 0
+        git push
