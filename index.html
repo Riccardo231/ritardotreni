@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vado o Non Vado — Il Tabellone del Destino</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚆</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1B2B;
+    --navy-deep:#060F1A;
+    --amber:#FFB627;
+    --amber-dim:#8a6a1f;
+    --cream:#F4EFE6;
+    --ok:#2FA88A;
+    --warn:#E8A33D;
+    --danger:#D64550;
+    --apoc:#7A1F2B;
+    --ink:#12203A;
+    --line:rgba(244,239,230,0.12);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(ellipse at top, #10233a 0%, var(--navy) 45%, var(--navy-deep) 100%);
+    color:var(--cream);
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+    padding:0 0 60px 0;
+  }
+
+  /* ---------- HEADER / SOLARI BOARD ---------- */
+  header{
+    padding:28px 20px 18px;
+    border-bottom:1px solid var(--line);
+    background:
+      repeating-linear-gradient(180deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 3px);
+  }
+  .board-top{
+    max-width:900px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .brand{display:flex; flex-direction:column; gap:6px;}
+  .brand .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.25em;
+    color:var(--amber-dim);
+    text-transform:uppercase;
+  }
+  .flap-title{
+    font-family:'Archivo Black', sans-serif;
+    font-size:clamp(28px, 6vw, 48px);
+    line-height:1;
+    color:var(--amber);
+    text-shadow: 0 0 18px rgba(255,182,39,0.25);
+    letter-spacing:0.01em;
+  }
+  .subtitle{
+    font-size:14px;
+    color:rgba(244,239,230,0.65);
+    max-width:520px;
+    line-height:1.5;
+  }
+  .clock-box{
+    font-family:'Space Mono',monospace;
+    text-align:right;
+    border:1px solid var(--line);
+    padding:10px 16px;
+    border-radius:4px;
+    background:rgba(0,0,0,0.25);
+  }
+  .clock-box .label{font-size:10px; letter-spacing:0.2em; color:var(--amber-dim); text-transform:uppercase;}
+  .clock-box .time{font-size:24px; color:var(--amber); font-weight:700;}
+  .clock-box .date{font-size:12px; color:rgba(244,239,230,0.6);}
+
+  /* ---------- FLAP CHARACTERS (signature element) ---------- */
+  .flap-word{display:inline-flex; gap:2px;}
+  .flap-char{
+    display:inline-block;
+    font-family:'Space Mono',monospace;
+    font-weight:700;
+    position:relative;
+    perspective:200px;
+  }
+  .flap-char span{
+    display:inline-block;
+    transform-origin:center;
+    animation:none;
+  }
+  .flap-char.flipping span{
+    animation:flapspin 0.09s linear;
+  }
+  @keyframes flapspin{
+    0%{transform:rotateX(0deg); opacity:1;}
+    45%{transform:rotateX(90deg); opacity:0.4;}
+    55%{transform:rotateX(90deg); opacity:0.4;}
+    100%{transform:rotateX(0deg); opacity:1;}
+  }
+
+  /* ---------- MAIN ---------- */
+  main{max-width:900px; margin:0 auto; padding:36px 20px 0;}
+
+  .cta-wrap{text-align:center; margin-bottom:40px;}
+  #consultBtn{
+    font-family:'Archivo Black', sans-serif;
+    font-size:18px;
+    letter-spacing:0.03em;
+    color:var(--navy-deep);
+    background:var(--amber);
+    border:none;
+    padding:18px 36px;
+    border-radius:6px;
+    cursor:pointer;
+    box-shadow:0 6px 0 var(--amber-dim), 0 10px 24px rgba(0,0,0,0.35);
+    transition:transform 0.08s ease;
+  }
+  #consultBtn:active{transform:translateY(4px); box-shadow:0 2px 0 var(--amber-dim);}
+  #consultBtn:disabled{opacity:0.6; cursor:wait;}
+  .cta-hint{
+    margin-top:12px;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:rgba(244,239,230,0.5);
+  }
+
+  .status-line{
+    text-align:center;
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    color:var(--amber);
+    min-height:20px;
+    margin-bottom:24px;
+  }
+
+  /* ---------- VERDICT CARD ---------- */
+  #verdictCard{
+    display:none;
+    border-radius:10px;
+    padding:36px 24px;
+    text-align:center;
+    margin-bottom:40px;
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  #verdictCard.ok{background:linear-gradient(160deg, rgba(47,168,138,0.18), rgba(47,168,138,0.04)); border-color:rgba(47,168,138,0.4);}
+  #verdictCard.warn{background:linear-gradient(160deg, rgba(232,163,61,0.18), rgba(232,163,61,0.04)); border-color:rgba(232,163,61,0.4);}
+  #verdictCard.danger{background:linear-gradient(160deg, rgba(214,69,80,0.18), rgba(214,69,80,0.04)); border-color:rgba(214,69,80,0.4);}
+  #verdictCard.apoc{background:linear-gradient(160deg, rgba(122,31,43,0.35), rgba(122,31,43,0.08)); border-color:rgba(122,31,43,0.6);}
+
+  .verdict-eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    color:rgba(244,239,230,0.55);
+    margin-bottom:10px;
+  }
+  #verdictWord{
+    font-family:'Archivo Black', sans-serif;
+    font-size:clamp(40px, 9vw, 76px);
+    line-height:1;
+  }
+  #verdictCard.ok #verdictWord{color:var(--ok);}
+  #verdictCard.warn #verdictWord{color:var(--warn);}
+  #verdictCard.danger #verdictWord{color:var(--danger);}
+  #verdictCard.apoc #verdictWord{color:#ff6b7a;}
+
+  #verdictSub{
+    margin-top:16px;
+    font-size:16px;
+    max-width:520px;
+    margin-left:auto;
+    margin-right:auto;
+    color:rgba(244,239,230,0.85);
+    line-height:1.5;
+  }
+  #verdictScore{
+    margin-top:18px;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:rgba(244,239,230,0.5);
+  }
+
+  /* ---------- STATION CARDS ---------- */
+  #stations{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    gap:16px;
+    margin-bottom:40px;
+  }
+  .station-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:18px;
+    display:none;
+  }
+  .station-card .st-name{
+    font-family:'Space Mono',monospace;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .st-pill{
+    font-size:10px;
+    padding:2px 8px;
+    border-radius:20px;
+    font-family:'Inter';
+    letter-spacing:0;
+  }
+  .st-pill.ok{background:rgba(47,168,138,0.2); color:#7fe3c8;}
+  .st-pill.warn{background:rgba(232,163,61,0.2); color:#ffcf85;}
+  .st-pill.danger{background:rgba(214,69,80,0.2); color:#ff9aa2;}
+  .st-row{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    padding:6px 0;
+    border-bottom:1px dashed var(--line);
+    color:rgba(244,239,230,0.8);
+  }
+  .st-row:last-child{border-bottom:none;}
+  .st-row b{color:var(--cream); font-weight:600;}
+  .st-note{
+    margin-top:10px;
+    font-size:12px;
+    color:rgba(255,182,39,0.85);
+    line-height:1.4;
+  }
+  .st-error{
+    font-size:12px;
+    color:#ff9aa2;
+    line-height:1.5;
+  }
+
+  /* ---------- FOOTER / SETTINGS ---------- */
+  details{
+    max-width:900px;
+    margin:0 auto 30px;
+    padding:0 20px;
+  }
+  summary{
+    cursor:pointer;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:rgba(244,239,230,0.5);
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    padding:8px 0;
+  }
+  .settings-box{
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:18px;
+    margin-top:8px;
+    font-size:13px;
+    line-height:1.6;
+    color:rgba(244,239,230,0.75);
+  }
+  .settings-box label{display:block; margin-top:10px; font-size:12px; color:var(--amber-dim); text-transform:uppercase; letter-spacing:0.08em;}
+  .settings-box input, .settings-box select{
+    width:100%;
+    background:rgba(0,0,0,0.3);
+    border:1px solid var(--line);
+    color:var(--cream);
+    padding:8px 10px;
+    border-radius:4px;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    margin-top:4px;
+  }
+  .settings-box button{
+    margin-top:12px;
+    background:transparent;
+    border:1px solid var(--amber-dim);
+    color:var(--amber);
+    padding:8px 14px;
+    border-radius:4px;
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    cursor:pointer;
+  }
+  footer{
+    text-align:center;
+    font-size:11px;
+    color:rgba(244,239,230,0.35);
+    padding:20px;
+    font-family:'Space Mono',monospace;
+  }
+  a{color:var(--amber-dim);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="board-top">
+    <div class="brand">
+      <span class="eyebrow">Linea Ivrea · Chivasso · Torino</span>
+      <div class="flap-title" id="titleFlap">VADO O NON VADO</div>
+      <div class="subtitle">Il tabellone Solari lo hanno inventato a Udine nel '56. Da allora, i ritardi sono un'invenzione tutta nostra. Consulta il fato prima di uscire di casa.</div>
+    </div>
+    <div class="clock-box">
+      <div class="label">Ora attuale</div>
+      <div class="time" id="clockTime">--:--</div>
+      <div class="date" id="clockDate">--/--/----</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="cta-wrap">
+    <button id="consultBtn">CONSULTA IL FATO</button>
+    <div class="cta-hint">Legge i tabelloni live RFI di Ivrea, Chivasso e Torino Porta Nuova</div>
+  </div>
+
+  <div class="status-line" id="statusLine"></div>
+
+  <div id="verdictCard">
+    <div class="verdict-eyebrow">Il tabellone ha parlato</div>
+    <div class="flap-word" id="verdictWord"></div>
+    <div id="verdictSub"></div>
+    <div id="verdictScore"></div>
+  </div>
+
+  <div id="stations">
+    <div class="station-card" id="card-ivrea"></div>
+    <div class="station-card" id="card-chivasso"></div>
+    <div class="station-card" id="card-torino"></div>
+  </div>
+</main>
+
+<details>
+  <summary>Impostazioni & note tecniche</summary>
+  <div class="settings-box">
+    <p>Questa app legge i tabelloni pubblici <a href="https://iechub.rfi.it" target="_blank" rel="noopener">iechub.rfi.it</a> direttamente dal tuo browser. RFI non espone CORS, quindi serve un proxy pubblico: se il risultato è vuoto o dà errore, il proxy potrebbe essere sovraccarico. Provane un altro qui sotto.</p>
+    <label for="proxySelect">Proxy CORS</label>
+    <select id="proxySelect">
+      <option value="https://api.allorigins.win/raw?url=">allorigins.win (default)</option>
+      <option value="https://corsproxy.io/?url=">corsproxy.io</option>
+      <option value="https://api.codetabs.com/v1/proxy?quest=">codetabs.com</option>
+      <option value="custom">Personalizzato…</option>
+    </select>
+    <input type="text" id="proxyCustom" placeholder="https://tuo-proxy.example/?url=" style="display:none;">
+    <label for="thresholdInput">Soglia ritardo "meglio la macchina" (minuti medi)</label>
+    <input type="number" id="thresholdInput" value="8" min="1" max="60">
+    <button id="saveSettings">Salva impostazioni</button>
+    <p style="margin-top:14px; font-size:11px; opacity:0.7;">Dati non ufficiali, a puro scopo ironico-informativo. Per l'orario legale usa sempre l'app Trenitalia/FS o il tabellone in stazione. Nessun dato viene salvato su server: tutto resta nel tuo browser.</p>
+  </div>
+</details>
+
+<footer>
+  costruito con dispetto verso Trenitalia · nessuna affiliazione con RFI · vai a vedere il codice sorgente se non ti fidi
+</footer>
+
+<script>
+/* =========================================================
+   CONFIG & STATE
+========================================================= */
+const STATIONS = [
+  { key:'ivrea',    name:'Ivrea',              url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=True' },
+  { key:'chivasso',  name:'Chivasso',           url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=True' },
+  { key:'torino',    name:'Torino P. Nuova',    url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=True' },
+];
+
+function getSettings(){
+  const proxy = localStorage.getItem('vadoNonVado_proxy') || 'https://api.allorigins.win/raw?url=';
+  const threshold = parseFloat(localStorage.getItem('vadoNonVado_threshold') || '8');
+  return { proxy, threshold };
+}
+
+/* =========================================================
+   CLOCK
+========================================================= */
+function pad(n){ return n.toString().padStart(2,'0'); }
+function tickClock(){
+  const now = new Date();
+  document.getElementById('clockTime').textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
+  document.getElementById('clockDate').textContent = `${pad(now.getDate())}/${pad(now.getMonth()+1)}/${now.getFullYear()}`;
+}
+tickClock();
+setInterval(tickClock, 1000);
+
+/* =========================================================
+   FLAP TEXT EFFECT (signature element)
+========================================================= */
+const FLAP_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ';
+function randChar(){ return FLAP_CHARS[Math.floor(Math.random()*FLAP_CHARS.length)]; }
+
+function flapRender(el, text){
+  el.innerHTML = '';
+  [...text].forEach(ch=>{
+    const holder = document.createElement('span');
+    holder.className = 'flap-char';
+    const inner = document.createElement('span');
+    inner.textContent = ch === ' ' ? '\u00A0' : ch;
+    holder.appendChild(inner);
+    el.appendChild(holder);
+  });
+}
+
+function flapAnimateTo(el, finalText, opts={}){
+  const cycles = opts.cycles || 10;
+  const stepMs = opts.stepMs || 45;
+  const chars = el.querySelectorAll('.flap-char');
+  const target = [...finalText];
+
+  // if length mismatch, rebuild first
+  if(chars.length !== target.length){
+    flapRender(el, finalText.split('').map(()=> ' ').join(''));
+  }
+  const cells = el.querySelectorAll('.flap-char');
+
+  cells.forEach((cell, i)=>{
+    const inner = cell.querySelector('span');
+    let count = 0;
+    const totalCycles = cycles + i; // stagger, later letters settle later
+    const iv = setInterval(()=>{
+      cell.classList.add('flipping');
+      if(count < totalCycles - 1){
+        inner.textContent = randChar() === ' ' ? '\u00A0' : randChar();
+      } else {
+        const finalChar = target[i];
+        inner.textContent = finalChar === ' ' ? '\u00A0' : finalChar;
+        clearInterval(iv);
+      }
+      count++;
+      setTimeout(()=>cell.classList.remove('flipping'), stepMs*0.8);
+    }, stepMs);
+  });
+}
+
+// animate the header title once on load
+flapRender(document.getElementById('titleFlap'), 'VADO O NON VADO');
+setTimeout(()=> flapAnimateTo(document.getElementById('titleFlap'), 'VADO O NON VADO', {cycles:14, stepMs:40}), 300);
+
+/* =========================================================
+   SCRAPING
+========================================================= */
+async function fetchStationBoard(station, proxy){
+  const target = proxy + encodeURIComponent(station.url);
+  const res = await fetch(target, { cache:'no-store' });
+  if(!res.ok) throw new Error(`HTTP ${res.status}`);
+  const html = await res.text();
+  return parseBoard(html);
+}
+
+function parseBoard(html){
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const table = doc.querySelector('table');
+  if(!table) throw new Error('Tabella non trovata nella pagina (il sito potrebbe aver cambiato struttura, o il proxy ha restituito una pagina di errore).');
+
+  const headerCells = [...table.querySelectorAll('thead th, tr:first-child th, tr:first-child td')]
+    .map(c => c.textContent.trim().toLowerCase());
+
+  // fallback: if no clean thead, use first row as header
+  let headerRow = table.querySelector('thead tr') || table.querySelector('tr');
+  let headers = [...headerRow.querySelectorAll('th,td')].map(c=>c.textContent.trim().toLowerCase());
+
+  const idx = (needle) => headers.findIndex(h => h.includes(needle));
+  const iTreno    = idx('treno');
+  const iCategoria= idx('categoria');
+  const iRitardo  = idx('ritardo');
+  const iOrario   = idx('orario');
+  const iBinario  = idx('binario');
+  const iLuogo    = idx('proven') >= 0 ? idx('proven') : idx('destinaz');
+
+  const bodyRows = [...table.querySelectorAll('tbody tr')];
+  const rows = bodyRows.length ? bodyRows : [...table.querySelectorAll('tr')].slice(1);
+
+  const trains = rows.map(row=>{
+    const cells = [...row.querySelectorAll('td,th')];
+    if(!cells.length) return null;
+    const text = (i) => i>=0 && cells[i] ? cells[i].textContent.trim() : '';
+    const fullRowText = row.textContent.toUpperCase();
+
+    const categoria = text(iCategoria);
+    const ritardoRaw = text(iRitardo);
+    const ritardo = parseInt(ritardoRaw.replace(/[^\d-]/g,''), 10);
+
+    return {
+      treno: text(iTreno) || '—',
+      categoria,
+      luogo: text(iLuogo),
+      orario: text(iOrario),
+      binario: text(iBinario),
+      ritardo: isNaN(ritardo) ? 0 : ritardo,
+      isBus: categoria.toUpperCase().includes('BUS'),
+      soppresso: fullRowText.includes('SOPPRESS'),
+    };
+  }).filter(Boolean);
+
+  return trains;
+}
+
+/* =========================================================
+   VERDICT LOGIC
+========================================================= */
+function computeStationStats(trains){
+  const real = trains.filter(t => !t.isBus); // le corse sostitutive Aosta non contano nel giudizio
+  const busCount = trains.filter(t => t.isBus).length;
+  const soppressi = real.filter(t => t.soppresso).length;
+  const delayed = real.filter(t => t.ritardo > 0);
+  const avgDelay = delayed.length ? delayed.reduce((s,t)=>s+t.ritardo,0)/delayed.length : 0;
+  const maxDelay = real.reduce((m,t)=>Math.max(m,t.ritardo), 0);
+  const worstTrain = real.find(t => t.ritardo === maxDelay);
+
+  return {
+    total: real.length,
+    delayedCount: delayed.length,
+    avgDelay,
+    maxDelay,
+    worstTrain,
+    soppressi,
+    busCount,
+  };
+}
+
+function stationScore(stats){
+  if(stats.total === 0) return 0;
+  const pctDelayed = stats.delayedCount / stats.total;
+  return stats.avgDelay * 0.6 + stats.maxDelay * 0.2 + pctDelayed*20 + stats.soppressi*15;
+}
+
+const VERDICTS = [
+  { max:6,  cls:'ok',     word:'VAI TRANQUILLO',
+    subs:[
+      'Oggi i treni sono più puntuali di uno svizzero in vacanza. Approfittane finché dura.',
+      'Ritardi minimi. È il momento di fidarsi, raro come un\'eclissi.',
+      'Il tabellone sorride. Anche i piccioni in banchina sembrano di buon umore.'
+    ]},
+  { max:14, cls:'warn',   word:'VAI, MA CON RISERVA',
+    subs:[
+      'Porta un libro, un power bank e la pazienza di un santo del calendario.',
+      'Si va, ma non prometterti nulla su quell\'appuntamento delle 18.',
+      'Ritardi presenti ma sopportabili. Livello "sospiro", non "crisi di nervi".'
+    ]},
+  { max:26, cls:'danger', word:'PENSACI DUE VOLTE',
+    subs:[
+      'I ritardi si accumulano più veloce delle tue scuse per il capo.',
+      'Se hai un\'alternativa, oggi è il giorno di usarla.',
+      'Il binario giusto esiste ancora, il treno che ci arriva puntuale un po\' meno.'
+    ]},
+  { max:Infinity, cls:'apoc', word:'NON ANDARE',
+    subs:[
+      'Prendi la macchina, il monopattino, un cavallo. Qualsiasi cosa tranne questi binari.',
+      'Anche i tabelloni hanno smesso di crederci.',
+      'Livello caos: superiore alla media. Oggi la linea sta facendo scena muta.'
+    ]},
+];
+
+function pickVerdict(score){
+  const v = VERDICTS.find(v => score <= v.max);
+  const sub = v.subs[Math.floor(Math.random()*v.subs.length)];
+  return { ...v, sub };
+}
+
+/* =========================================================
+   RENDER
+========================================================= */
+function renderStationCard(el, stationName, stats, error){
+  el.style.display = 'block';
+  if(error){
+    el.innerHTML = `
+      <div class="st-name">${stationName} <span class="st-pill danger">ERRORE</span></div>
+      <div class="st-error">${error}</div>`;
+    return;
+  }
+  const pillClass = stats.avgDelay <= 5 && stats.soppressi===0 ? 'ok' : (stats.avgDelay <= 12 ? 'warn' : 'danger');
+  const pillLabel = pillClass === 'ok' ? 'OK' : (pillClass === 'warn' ? 'MEH' : 'CAOS');
+
+  let note = '';
+  if(stats.soppressi > 0){
+    note += `⚠ ${stats.soppressi} corsa/e soppressa/e rilevata/e nel tabellone.<br>`;
+  }
+  if(stats.busCount > 0){
+    note += `ℹ ${stats.busCount} corsa/e bus sostitutivo (linea Aosta, esclusa dal calcolo).`;
+  }
+
+  el.innerHTML = `
+    <div class="st-name">${stationName} <span class="st-pill ${pillClass}">${pillLabel}</span></div>
+    <div class="st-row"><span>Treni monitorati</span><b>${stats.total}</b></div>
+    <div class="st-row"><span>In ritardo</span><b>${stats.delayedCount}</b></div>
+    <div class="st-row"><span>Ritardo medio</span><b>${stats.avgDelay.toFixed(1)} min</b></div>
+    <div class="st-row"><span>Ritardo peggiore</span><b>${stats.maxDelay} min ${stats.worstTrain ? '('+stats.worstTrain.treno+')' : ''}</b></div>
+    ${note ? `<div class="st-note">${note}</div>` : ''}
+  `;
+}
+
+/* =========================================================
+   MAIN FLOW
+========================================================= */
+const btn = document.getElementById('consultBtn');
+const statusLine = document.getElementById('statusLine');
+const verdictCard = document.getElementById('verdictCard');
+const verdictWordEl = document.getElementById('verdictWord');
+const verdictSubEl = document.getElementById('verdictSub');
+const verdictScoreEl = document.getElementById('verdictScore');
+
+btn.addEventListener('click', consultaIlFato);
+
+async function consultaIlFato(){
+  btn.disabled = true;
+  btn.textContent = 'STO GUARDANDO I BINARI…';
+  statusLine.textContent = '';
+  verdictCard.style.display = 'none';
+  STATIONS.forEach(s => document.getElementById(`card-${s.key}`).style.display = 'none');
+
+  const { proxy, threshold } = getSettings();
+  const loadingMsgs = ['Interrogo il tabellone di Ivrea…','Chiedo notizie a Chivasso…','Busso a Torino Porta Nuova…','Sommo i minuti di ritardo…'];
+  let msgIdx = 0;
+  const loadingIv = setInterval(()=>{
+    statusLine.textContent = loadingMsgs[msgIdx % loadingMsgs.length];
+    msgIdx++;
+  }, 900);
+
+  const results = [];
+  for(const station of STATIONS){
+    try{
+      const trains = await fetchStationBoard(station, proxy);
+      const stats = computeStationStats(trains);
+      results.push({ station, stats, error:null });
+    }catch(e){
+      results.push({ station, stats:null, error: e.message || 'Errore sconosciuto' });
+    }
+  }
+
+  clearInterval(loadingIv);
+  btn.disabled = false;
+  btn.textContent = 'CONSULTA IL FATO';
+
+  const okResults = results.filter(r => !r.error);
+  results.forEach(r=>{
+    renderStationCard(document.getElementById(`card-${r.station.key}`), r.station.name, r.stats, r.error);
+  });
+
+  if(okResults.length === 0){
+    statusLine.textContent = '';
+    verdictCard.style.display = 'block';
+    verdictCard.className = 'apoc';
+    flapRender(verdictWordEl, 'BOH');
+    setTimeout(()=>flapAnimateTo(verdictWordEl, 'BOH', {cycles:8, stepMs:40}), 100);
+    verdictSubEl.textContent = 'Nessuna stazione risponde: il proxy CORS è probabilmente giù. Prova a cambiarlo nelle impostazioni qui sotto.';
+    verdictScoreEl.textContent = '';
+    return;
+  }
+
+  statusLine.textContent = `Dati letti da ${okResults.length}/${STATIONS.length} stazioni.`;
+
+  const totalScore = okResults.reduce((s,r)=> s + stationScore(r.stats), 0) / okResults.length;
+  const hasSoppressi = okResults.some(r => r.stats.soppressi > 0);
+  const finalScore = hasSoppressi ? totalScore + 12 : totalScore;
+
+  const scaledScore = threshold !== 8 ? finalScore * (8/threshold) : finalScore;
+  const verdict = pickVerdict(scaledScore);
+
+  verdictCard.style.display = 'block';
+  verdictCard.className = verdict.cls;
+  flapRender(verdictWordEl, verdict.word);
+  setTimeout(()=>flapAnimateTo(verdictWordEl, verdict.word, {cycles:12, stepMs:42}), 100);
+  verdictSubEl.textContent = verdict.sub;
+  verdictScoreEl.textContent = `Indice caos: ${finalScore.toFixed(1)} · soglia impostata: ${threshold} min`;
+}
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+const proxySelect = document.getElementById('proxySelect');
+const proxyCustom = document.getElementById('proxyCustom');
+const thresholdInput = document.getElementById('thresholdInput');
+
+(function initSettings(){
+  const { proxy, threshold } = getSettings();
+  thresholdInput.value = threshold;
+  const known = [...proxySelect.options].some(o => o.value === proxy);
+  if(known){
+    proxySelect.value = proxy;
+  } else {
+    proxySelect.value = 'custom';
+    proxyCustom.style.display = 'block';
+    proxyCustom.value = proxy;
+  }
+})();
+
+proxySelect.addEventListener('change', ()=>{
+  proxyCustom.style.display = proxySelect.value === 'custom' ? 'block' : 'none';
+});
+
+document.getElementById('saveSettings').addEventListener('click', ()=>{
+  const proxy = proxySelect.value === 'custom' ? proxyCustom.value.trim() : proxySelect.value;
+  if(proxy) localStorage.setItem('vadoNonVado_proxy', proxy);
+  localStorage.setItem('vadoNonVado_threshold', thresholdInput.value || '8');
+  statusLine.textContent = 'Impostazioni salvate.';
+  setTimeout(()=> statusLine.textContent = '', 2000);
+});
+</script>
+</body>
+</html>
