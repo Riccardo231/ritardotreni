@@ -70,7 +70,6 @@ const PROXIES = [
   "https://api.allorigins.win/raw?url="
 ];
 
-// CORRETTO: Modificati gli URL di Ivrea da "True/False" a "true/false" per uniformità con le API RFI
 const STATIONS = [
   { key:'ivreaandata',    name:'Ivrea (Arrivi)',       url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=true' },
   { key:'ivrearitorno',   name:'Ivrea (Partenze)',     url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=false' },
@@ -142,10 +141,8 @@ if(titleFlap) {
   setTimeout(()=> flapAnimateTo(titleFlap, 'VADO O NON VADO', {cycles:14, stepMs:40}), 300);
 }
 
-// FILTRO DEI TRENI TARGET
 function isTargetTrain(train) {
   const luogo = (train.luogo || '').toUpperCase();
-  
   const matchesIvrea = luogo.includes('IVREA');
   const matchesTorino = luogo.includes('TORINO') || luogo.includes('TO.');
   const matchesNovara = luogo.includes('NOVARA');
@@ -155,10 +152,7 @@ function isTargetTrain(train) {
   if (matchesIvrea && matchesNovara) return true;
   if (matchesMilano && matchesTorino) return true;
   
-  if (matchesIvrea || matchesTorino || matchesNovara || matchesMilano) {
-    return true;
-  }
-
+  if (matchesIvrea || matchesTorino || matchesNovara || matchesMilano) return true;
   return false;
 }
 
@@ -176,7 +170,7 @@ async function fetchWithFallback(station) {
       console.warn(`Proxy ${i+1} fallito per ${station.name}, provo il successivo...`);
     }
   }
-  throw new Error(`Tutti i proxy CORS sono andati in errore. Ultimo errore: ${lastError.message}`);
+  throw new Error(`Tutti i proxy CORS in errore. Ultimo: ${lastError.message}`);
 }
 
 function parseBoard(html){
@@ -214,15 +208,15 @@ function parseBoard(html){
       orario: text(iOrario),
       ritardo: isNaN(ritardo) ? 0 : ritardo,
       isBus: categoria.toUpperCase().includes('BUS'),
-      soppresso: fullRowText.includes('SOPPRESS'),
+      soppresso: fullRowText.includes('SOPPRESS') || fullRowText.includes('CANCELL'),
     };
   }).filter(Boolean).filter(isTargetTrain);
 }
 
 function computeStationStats(trains){
   const real = trains.filter(t => !t.isBus);
-  const soppressi = real.filter(t => t.soppresso).length;
-  const delayed = real.filter(t => t.ritardo > 0 && !t.soppresso); // Esclude i soppressi dal computo dei minuti di ritardo standard
+  const soppressiTrains = real.filter(t => t.soppresso);
+  const delayed = real.filter(t => t.ritardo > 0 && !t.soppresso);
   const avgDelay = delayed.length ? delayed.reduce((s,t)=>s+t.ritardo,0)/delayed.length : 0;
   const maxDelay = real.reduce((m,t)=>Math.max(m,t.ritardo), 0);
   const worstTrain = real.find(t => t.ritardo === maxDelay);
@@ -233,7 +227,8 @@ function computeStationStats(trains){
     avgDelay,
     maxDelay,
     worstTrain,
-    soppressi,
+    soppressi: soppressiTrains.length,
+    soppressiTrains,
     delayedTrains: delayed
   };
 }
@@ -256,32 +251,52 @@ function pickVerdict(score){
   return { ...v, sub: v.subs[Math.floor(Math.random()*v.subs.length)] };
 }
 
+// DETTAGLIO STAZIONE: Genera i dati completi visualizzati a schermo
 function renderStationCard(el, stationName, stats, error){
-  if(!el) return; // FIX: Impedisce al codice di rompersi se manca il div nell'HTML
+  if(!el) return; 
   el.style.display = 'block';
+  
   if(error){
     el.innerHTML = `<div class="st-name">${stationName} <span class="st-pill danger">ERRORE</span></div><div class="st-error">${error}</div>`;
     return;
   }
-  const pillClass = stats.avgDelay <= 5 && stats.soppressi===0 ? 'ok' : (stats.avgDelay <= 12 ? 'warn' : 'danger');
+  
+  const pillClass = stats.avgDelay <= 5 && stats.soppressi === 0 ? 'ok' : (stats.avgDelay <= 12 ? 'warn' : 'danger');
   const pillLabel = pillClass === 'ok' ? 'OK' : (pillClass === 'warn' ? 'MEH' : 'CAOS');
 
-  let delayListHtml = '';
-  if(stats.delayedTrains && stats.delayedTrains.length > 0) {
-    delayListHtml += `<div class="delay-list-title">Treni in ritardo:</div><ul class="delay-list">`;
-    stats.delayedTrains.forEach(t => {
-      delayListHtml += `<li>Treno <b>${t.treno}</b> (${t.orario}) per/da ${t.luogo}: <b>+${t.ritardo} min</b></li>`;
+  let listHtml = '';
+  
+  // Se ci sono treni soppressi, mostrali per primi in rosso ed evidenziati
+  if(stats.soppressiTrains && stats.soppressiTrains.length > 0) {
+    listHtml += `<div class="delay-list-title" style="color:var(--danger)">Treni SOPPRESSI:</div><ul class="delay-list">`;
+    stats.soppressiTrains.forEach(t => {
+      listHtml += `<li style="border-left: 3px solid var(--danger); padding-left: 5px;">Treno <b>${t.treno}</b> (${t.orario}) per/da ${t.luogo}: <b style="color:var(--danger)">SOPPRESSO</b></li>`;
     });
-    delayListHtml += `</ul>`;
-  } else if(stats.total > 0) {
-    delayListHtml += `<div class="st-note" style="color:var(--ok)">Nessun treno target in ritardo al momento.</div>`;
+    listHtml += `</ul>`;
+  }
+
+  // Mostra la lista dei treni in ritardo
+  if(stats.delayedTrains && stats.delayedTrains.length > 0) {
+    listHtml += `<div class="delay-list-title">Treni in ritardo:</div><ul class="delay-list">`;
+    stats.delayedTrains.forEach(t => {
+      listHtml += `<li>Treno <b>${t.treno}</b> (${t.orario}) per/da ${t.luogo}: <b>+${t.ritardo} min</b></li>`;
+    });
+    listHtml += `</ul>`;
+  } 
+  
+  // Se la stazione è pulita e ci sono treni attivi
+  if(stats.delayedCount === 0 && stats.soppressi === 0 && stats.total > 0) {
+    listHtml += `<div class="st-note" style="color:var(--ok); margin-top:10px;">🟢 Nessun ritardo o soppressione su questa stazione.</div>`;
+  } else if (stats.total === 0) {
+    listHtml += `<div class="st-note" style="color:gray; margin-top:10px;">Nessun treno target rilevato al momento.</div>`;
   }
 
   el.innerHTML = `
     <div class="st-name">${stationName} <span class="st-pill ${pillClass}">${pillLabel}</span></div>
-    <div class="st-row"><span>Treni mirati</span><b>${stats.total}</b></div>
+    <div class="st-row"><span>Treni monitorati</span><b>${stats.total}</b></div>
     <div class="st-row"><span>Ritardo medio</span><b>${stats.avgDelay.toFixed(1)} min</b></div>
-    ${delayListHtml}
+    <div class="st-row"><span>Soppressi</span><b style="${stats.soppressi > 0 ? 'color:var(--danger)' : ''}">${stats.soppressi}</b></div>
+    ${listHtml}
   `;
 }
 
