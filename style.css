@@ -1,5 +1,4 @@
-<style>
-  :root{
+ :root{
     --navy:#0B1B2B;
     --navy-deep:#060F1A;
     --amber:#FFB627;
@@ -180,4 +179,3 @@
   .settings-box input{ width:100%; background:rgba(0,0,0,0.3); border:1px solid var(--line); color:var(--cream); padding:8px 10px; border-radius:4px; font-family:'Space Mono',monospace; font-size:12px; margin-top:4px; }
   .settings-box button{ margin-top:12px; background:transparent; border:1px solid var(--amber-dim); color:var(--amber); padding:8px 14px; border-radius:4px; font-family:'Space Mono',monospace; font-size:11px; cursor:pointer; }
   footer{ text-align:center; font-size:11px; color:rgba(244,239,230,0.35); padding:20px; font-family:'Space Mono',monospace; }
-</style>
