@@ -16,7 +16,7 @@
     <div class="brand">
       <span class="eyebrow">Direttrici Selezionate · Canavese & Milano</span>
       <div class="flap-title" id="titleFlap">VADO O NON VADO</div>
-      <div class="subtitle">Monitoraggio selettivo automatizzato tramite GitHub Actions. I ritardi aggregati estraggono il verdetto definitivo a pagina spenta.</div>
+      <div class="subtitle">Monitoraggio selettivo per i treni Ivrea-Torino, Ivrea-Novara e Milano-Torino. Sincronizzato con l'automazione h24 o via Proxy Locale.</div>
     </div>
     <div class="clock-box">
       <div class="label">Ora attuale</div>
@@ -28,13 +28,13 @@
 
 <main>
   <div class="cta-wrap">
-    <button id="consultBtn">AGGIORNA TABELLONE</button>
-    <div class="cta-hint">Caricamento dell'ultimo stato memorizzato sul server h24</div>
+    <button id="consultBtn">CONSULTA IL FATO</button>
+    <div class="cta-hint">Tenta il caricamento cloud o forza la scansione proxy locale se premi il tasto</div>
   </div>
 
-  <div class="status-line" id="statusLine">Sincronizzazione in corso...</div>
+  <div class="status-line" id="statusLine">Inizializzazione...</div>
 
-  <div id="verdictCard">
+  <div id="verdictCard" style="display:none;">
     <div class="verdict-eyebrow">Il tabellone ha parlato</div>
     <div class="flap-word" id="verdictWord"></div>
     <div id="verdictSub"></div>
@@ -43,10 +43,10 @@
 
   <div id="dailyTrendCard" style="background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.1); padding: 15px; margin-bottom: 25px; border-radius: 8px;">
     <div style="font-family:'Space Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; color: #aaa;">
-      📊 Andamento della Giornata (Scansione automatica server)
+      📊 Andamento della Giornata (Sincronizzato Cloud / Locale)
     </div>
     <div id="trendTimeline" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px;">
-        </div>
+    </div>
   </div>
 
   <div id="stations">
@@ -59,38 +59,66 @@
   </div>
 </main>
 
+<details>
+  <summary>Impostazioni & Note Linee</summary>
+  <div class="settings-box">
+    <label for="thresholdInput">Soglia ritardo "meglio la macchina" (minuti medi)</label>
+    <input type="number" id="thresholdInput" value="12" min="1" max="60">
+    <button id="saveSettings">Salva impostazioni</button>
+    <button id="clearLogBtn" style="background:#555; margin-left:10px;">Azzera Storico Locale</button>
+    <p style="margin-top:14px; font-size:11px; opacity:0.7;">Filtri attivi: Vengono estratti solo i treni da/per Ivrea, Torino, Novara e Milano Centrale.</p>
+  </div>
+</details>
+
 <footer>
-  costruito con dispetto verso Trenitalia · automazione cloud h24 · tracking 45m · 2026
+  costruito con dispetto verso Trenitalia · cloud h24 + proxy di riserva · 2026
 </footer>
 
 <script>
-// --- CONFIGURAZIONE REPOSITORY GITHUB ---
-// Sostituisci questi due valori con quelli del tuo account GitHub per puntare al file JSON corretto
-const GITHUB_USERNAME = "Riccardo231; 
-const REPOSITORY_NAME = "ritardotreni"; 
+// --- CONFIGURAZIONE GITHUB ---
+// CAMBIA QUESTI DUE VALORI CON I TUOI DATI DI GITHUB!
+const GITHUB_USERNAME = "IL_TUO_USERNAME"; 
+const REPOSITORY_NAME = "IL_TUO_REPOSITORY"; 
 const DATA_URL = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPOSITORY_NAME}/main/stato_treni.json`;
 
-const STATION_NAMES = {
-  'ivreaandata': 'Ivrea (Arrivi)',
-  'ivrearitorno': 'Ivrea (Partenze)',
-  'chivassoandata': 'Chivasso (Arrivi)',
-  'chivassoritorno': 'Chivasso (Partenze)',
-  'torinoandata': 'Torino P. Nuova (Arr)',
-  'torinoritorno': 'Torino P. Nuova (Part)'
-};
+const PROXIES = [
+  "https://corsproxy.io/?url=",
+  "https://api.codetabs.com/v1/proxy?quest=",
+  "https://api.allorigins.win/raw?url="
+];
 
-// ORA E DATA SULLO SCHERMO
+const STATIONS = [
+  { key:'ivreaandata',    name:'Ivrea (Arrivi)',        url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=true' },
+  { key:'ivrearitorno',   name:'Ivrea (Partenze)',      url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=false' },
+  { key:'chivassoandata',  name:'Chivasso (Arrivi)',     url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=true' },
+  { key:'chivassoritorno', name:'Chivasso (Partenze)',   url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=false' },
+  { key:'torinoandata',    name:'Torino P. Nuova (Arr)', url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=true' },
+  { key:'torinoritorno',   name:'Torino P. Nuova (Part)', url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=false' },
+];
+
+function getThreshold(){
+  return parseFloat(localStorage.getItem('vadoNonVado_threshold') || '12');
+}
+
+let ultimoControlloData = new Date().toDateString();
+
 function tickClock(){
   const now = new Date();
   const clockTime = document.getElementById('clockTime');
   const clockDate = document.getElementById('clockDate');
   if(clockTime) clockTime.textContent = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
   if(clockDate) clockDate.textContent = `${now.getDate().toString().padStart(2,'0')}/${(now.getMonth()+1).toString().padStart(2,'0')}/${now.getFullYear()}`;
+  
+  if (now.toDateString() !== ultimoControlloData) {
+    ultimoControlloData = now.toDateString();
+    localStorage.removeItem('vadoNonVado_dailyLog');
+    renderTimeline();
+  }
 }
 tickClock();
 setInterval(tickClock, 1000);
 
-// EFFETTO FLAP BOARD
+// EFFETTO FLAP
 const FLAP_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ';
 function randChar(){ return FLAP_CHARS[Math.floor(Math.random()*FLAP_CHARS.length)]; }
 
@@ -139,8 +167,163 @@ if(titleFlap) {
   setTimeout(()=> flapAnimateTo(titleFlap, 'VADO O NON VADO', {cycles:14, stepMs:40}), 300);
 }
 
-// CARICAMENTO DATI GENERATI DAL SERVER (GITHUB ACTIONS)
-async function caricaDatiDalServer() {
+function isTargetTrain(train) {
+  const luogo = (train.luogo || '').toUpperCase();
+  return luogo.includes('IVREA') || luogo.includes('TORINO') || luogo.includes('TO.') || luogo.includes('NOVARA') || luogo.includes('MILANO') || luogo.includes('MI.');
+}
+
+async function fetchWithFallback(station) {
+  let lastError = null;
+  for (let i = 0; i < PROXIES.length; i++) {
+    try {
+      const target = PROXIES[i] + encodeURIComponent(station.url);
+      const res = await fetch(target, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const html = await res.text();
+      return parseBoard(html);
+    } catch (e) {
+      lastError = e;
+      console.warn(`Proxy ${i+1} fallito per ${station.name}...`);
+    }
+  }
+  throw new Error(`Proxy falliti: ${lastError.message}`);
+}
+
+function parseBoard(html){
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const table = doc.querySelector('table');
+  if(!table) throw new Error('Dati tabella non trovati.');
+
+  let headerRow = table.querySelector('thead tr') || table.querySelector('tr');
+  let headers = [...headerRow.querySelectorAll('th,td')].map(c=>c.textContent.trim().toLowerCase());
+
+  const idx = (needle) => headers.findIndex(h => h.includes(needle));
+  const iTreno = idx('treno'), iCategoria = idx('categoria'), iRitardo = idx('ritardo'), iOrario = idx('orario');
+  const iLuogo = idx('proven') >= 0 ? idx('proven') : idx('destinaz');
+
+  const bodyRows = [...table.querySelectorAll('tbody tr')];
+  const rows = bodyRows.length ? bodyRows : [...table.querySelectorAll('tr')].slice(1);
+
+  return rows.map(row=>{
+    const cells = [...row.querySelectorAll('td,th')];
+    if(!cells.length) return null;
+    const text = (i) => i>=0 && cells[i] ? cells[i].textContent.trim() : '';
+    const fullRowText = row.textContent.toUpperCase();
+    const categoria = text(iCategoria);
+    const ritardoRaw = text(iRitardo);
+    const ritardo = parseInt(ritardoRaw.replace(/[^\d-]/g,''), 10);
+
+    return {
+      treno: text(iTreno) || '—',
+      categoria,
+      luogo: text(iLuogo),
+      orario: text(iOrario),
+      ritardo: isNaN(ritardo) ? 0 : ritardo,
+      isBus: categoria.toUpperCase().includes('BUS'),
+      soppresso: fullRowText.includes('SOPPRESS') || fullRowText.includes('CANCELL'),
+    };
+  }).filter(Boolean).filter(isTargetTrain);
+}
+
+function computeStationStats(trains){
+  const real = trains.filter(t => !t.isBus);
+  const soppressiTrains = real.filter(t => t.soppresso);
+  const delayed = real.filter(t => t.ritardo > 0 && !t.soppresso);
+  const avgDelay = delayed.length ? delayed.reduce((s,t)=>s+t.ritardo,0)/delayed.length : 0;
+  const maxDelay = real.reduce((m,t)=>Math.max(m,t.ritardo), 0);
+
+  return {
+    total: real.length,
+    delayedCount: delayed.length,
+    avgDelay,
+    maxDelay,
+    soppressi: soppressiTrains.length,
+    soppressiTrains,
+    delayedTrains: delayed
+  };
+}
+
+function stationScore(stats){
+  if(stats.total === 0) return 0;
+  return stats.avgDelay * 0.6 + stats.maxDelay * 0.2 + (stats.delayedCount / stats.total)*20 + stats.soppressi*15;
+}
+
+const VERDICTS = [
+  { max:6,  cls:'ok',     word:'VAI TRANQUILLO', subs:['Treni in linea con le aspettative.']},
+  { max:14, cls:'warn',   word:'VAI CON RISERVA', subs:['Qualche accumulo di ritardo qua e là.']},
+  { max:26, cls:'danger', word:'PENSACI DUE VOLTE', subs:['Iniziano i ritardi pesanti sulle tratte principali.']},
+  { max:Infinity, cls:'apoc', word:'NON ANDARE', subs:['Il caos ha preso il scomparso sulla linea.']},
+];
+
+function pickVerdict(score){
+  const v = VERDICTS.find(v => score <= v.max);
+  return { ...v, sub: v.subs[0] };
+}
+
+function renderStationCard(el, stationName, stats, error){
+  if(!el) return; 
+  el.style.display = 'block';
+  if(error){
+    el.innerHTML = `<div class="st-name">${stationName} <span class="st-pill danger">VUOTO</span></div><div class="st-error" style="font-size:11px; opacity:0.5;">In attesa di scansione manuale o server.</div>`;
+    return;
+  }
+  const pillClass = stats.avgDelay <= 5 && stats.soppressi === 0 ? 'ok' : (stats.avgDelay <= 12 ? 'warn' : 'danger');
+  const pillLabel = pillClass === 'ok' ? 'OK' : (pillClass === 'warn' ? 'MEH' : 'CAOS');
+
+  let listHtml = '';
+  if(stats.soppressiTrains?.length > 0) {
+    listHtml += `<div class="delay-list-title" style="color:var(--danger)">SOPPRESSI:</div><ul class="delay-list">`;
+    stats.soppressiTrains.forEach(t => { listHtml += `<li><b>${t.treno}</b>: <b style="color:var(--danger)">SOPPRESSO</b></li>`; });
+    listHtml += `</ul>`;
+  }
+  if(stats.delayedTrains?.length > 0) {
+    listHtml += `<div class="delay-list-title">In ritardo:</div><ul class="delay-list">`;
+    stats.delayedTrains.forEach(t => { listHtml += `<li><b>${t.treno}</b> (${t.orario}): <b>+${t.ritardo} min</b></li>`; });
+    listHtml += `</ul>`;
+  }
+  if(stats.delayedCount === 0 && stats.soppressi === 0 && stats.total > 0) {
+    listHtml += `<div class="st-note" style="color:var(--ok); margin-top:10px;">🟢 Tutto regolare.</div>`;
+  }
+
+  el.innerHTML = `
+    <div class="st-name">${stationName} <span class="st-pill ${pillClass}">${pillLabel}</span></div>
+    <div class="st-row"><span>Treni monitorati</span><b>${stats.total}</b></div>
+    <div class="st-row"><span>Ritardo medio</span><b>${stats.avgDelay.toFixed(1)} min</b></div>
+    <div class="st-row"><span>Soppressi</span><b>${stats.soppressi}</b></div>
+    ${listHtml}
+  `;
+}
+
+function salvaInStorico(score, verdictClass) {
+  const logIniziale = JSON.parse(localStorage.getItem('vadoNonVado_dailyLog') || '[]');
+  const now = new Date();
+  const oraCorrente = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+  if (logIniziale.length > 0 && logIniziale[logIniziale.length - 1].ora === oraCorrente) return; 
+  logIniziale.push({ ora: oraCorrente, score: score, classe: verdictClass });
+  localStorage.setItem('vadoNonVado_dailyLog', JSON.stringify(logIniziale));
+  renderTimeline(logIniziale);
+}
+
+function renderTimeline(forcedLogs = null) {
+  const container = document.getElementById('trendTimeline');
+  if (!container) return;
+  const logs = forcedLogs || JSON.parse(localStorage.getItem('vadoNonVado_dailyLog') || '[]');
+  if (logs.length === 0) {
+    container.innerHTML = `<span style="color:gray; font-size:11px; font-family:'Space Mono';">Nessuna scansione registrata oggi nel database locale.</span>`;
+    return;
+  }
+  container.innerHTML = '';
+  logs.forEach(log => {
+    const item = document.createElement('div');
+    item.style.cssText = `background: rgba(0,0,0,0.4); border-left: 4px solid var(--${log.classe === 'apoc' ? 'danger' : log.classe}); padding: 6px 12px; min-width: 85px; border-radius: 4px; font-family: 'Space Mono', monospace; text-align: center;`;
+    let emoji = log.classe === 'warn' ? '🟡' : log.classe === 'danger' ? '🟠' : log.classe === 'apoc' ? '🔴' : '🟢';
+    item.innerHTML = `<div style="font-size:11px; opacity:0.6;">${log.ora}</div><div style="font-size:14px; margin:2px 0;">${emoji}</div><div style="font-size:11px; font-weight:bold;">Indice: ${log.score.toFixed(1)}</div>`;
+    container.appendChild(item);
+  });
+}
+
+// SCANSIONE LOCALE CON PROXY DI EMERGENZA
+async function forzaScansioneLocale(){
   const btn = document.getElementById('consultBtn');
   const statusLine = document.getElementById('statusLine');
   const verdictCard = document.getElementById('verdictCard');
@@ -148,145 +331,118 @@ async function caricaDatiDalServer() {
   const verdictSubEl = document.getElementById('verdictSub');
   const verdictScoreEl = document.getElementById('verdictScore');
 
-  if(btn) { btn.disabled = true; btn.textContent = 'INTERROGO IL SERVER...'; }
-  if(statusLine) statusLine.textContent = 'Recupero dei dati registrati in background...';
+  btn.disabled = true;
+  btn.textContent = 'STO GUARDANDO I BINARI VIA PROXY…';
+  statusLine.textContent = 'Scansione diretta in corso sulle stazioni RFI...';
+  
+  const threshold = getThreshold();
+  const results = [];
+
+  for(const station of STATIONS){
+    try{
+      const trains = await fetchWithFallback(station);
+      const stats = computeStationStats(trains);
+      results.push({ station, stats, error:null });
+    }catch(e){
+      results.push({ station, stats:null, error: e.message });
+    }
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'CONSULTA IL FATO';
+
+  const okResults = results.filter(r => !r.error);
+  results.forEach(r=>{
+    renderStationCard(document.getElementById(`card-${r.station.key}`), r.station.name, r.stats, r.error);
+  });
+
+  if(okResults.length === 0){
+    statusLine.textContent = 'Tutti i proxy CORS falliti. Avvia le azioni GitHub per abilitare il database h24.';
+    return;
+  }
+
+  statusLine.textContent = `Aggiornato localmente via proxy alle ${new Date().toLocaleTimeString().slice(0,5)}.`;
+  const totalScore = okResults.reduce((s,r)=> s + stationScore(r.stats), 0) / okResults.length;
+  const scaledScore = threshold !== 8 ? totalScore * (8/threshold) : totalScore;
+  const verdict = pickVerdict(scaledScore);
+
+  verdictCard.style.display = 'block';
+  verdictCard.className = verdict.cls;
+  flapRender(verdictWordEl, verdict.word);
+  setTimeout(()=>flapAnimateTo(verdictWordEl, verdict.word, {cycles:12, stepMs:42}), 100);
+  if(verdictSubEl) verdictSubEl.textContent = verdict.sub;
+  if(verdictScoreEl) verdictScoreEl.textContent = `Indice caos: ${totalScore.toFixed(1)} (Proxy)`;
+
+  salvaInStorico(totalScore, verdict.cls);
+}
+
+// SINCRONIZZAZIONE SERVER GITHUB
+async function inizializzaE_Sincronizza() {
+  const statusLine = document.getElementById('statusLine');
+  const verdictCard = document.getElementById('verdictCard');
+  const verdictWordEl = document.getElementById('verdictWord');
+  const verdictSubEl = document.getElementById('verdictSub');
+  const verdictScoreEl = document.getElementById('verdictScore');
+
+  statusLine.textContent = 'Controllo database h24 su GitHub...';
+  
+  // Prepariamo le schede vuote per evitare la pagina vuota in caso di caricamento lento
+  STATIONS.forEach(s => {
+    renderStationCard(document.getElementById(`card-${s.key}`), s.name, null, "In attesa");
+  });
+  renderTimeline();
 
   try {
-    // Il parametro cache: 'no-store' evita che il browser mostri dati vecchi salvati in locale
     const res = await fetch(DATA_URL, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`HTTP ${res.status} - File non ancora creato o repository privato`);
+    if (!res.ok) throw new Error("File JSON non ancora creato o repository privato.");
     
     const data = await res.json();
+    statusLine.textContent = `Sincronizzato! Ultimo controllo cloud: ${data.lastUpdate || 'Ora sconosciuta'}`;
 
-    if(btn) { btn.disabled = false; btn.textContent = 'AGGIORNA TABELLONE'; }
-    if(statusLine) statusLine.textContent = `Ultima scansione server automatica: ${data.lastUpdate || 'Non disponibile'}`;
-
-    // 1. Renderizzazione Verdetto Principale
-    if(verdictCard && data.verdettoAttuale) {
+    if(data.verdettoAttuale) {
       verdictCard.style.display = 'block';
       verdictCard.className = data.verdettoAttuale.cls;
       flapRender(verdictWordEl, data.verdettoAttuale.word);
-      setTimeout(()=>flapAnimateTo(verdictWordEl, data.verdettoAttuale.word, {cycles:12, stepMs:42}), 100);
+      setTimeout(()=>flapAnimateTo(verdictWordEl, data.verdettoAttuale.word, {cycles:10, stepMs:40}), 100);
       if(verdictSubEl) verdictSubEl.textContent = data.verdettoAttuale.sub;
-      if(verdictScoreEl) verdictScoreEl.textContent = `Indice caos calcolato: ${data.totalScore.toFixed(1)}`;
+      if(verdictScoreEl) verdictScoreEl.textContent = `Indice caos calcolato sul server: ${data.totalScore.toFixed(1)}`;
     }
 
-    // 2. Renderizzazione Timeline Giornaliera
-    renderTimelineServer(data.timeline || []);
+    if(data.timeline) renderTimeline(data.timeline);
 
-    // 3. Renderizzazione singole schede stazioni
     if(data.stazioni) {
-      Object.keys(STATION_NAMES).forEach(key => {
-        const cardEl = document.getElementById(`card-${key}`);
-        const infoStazione = data.stazioni[key];
-        if(cardEl && infoStazione) {
-          renderStationCard(cardEl, STATION_NAMES[key], infoStazione.stats, infoStazione.error);
-        }
+      STATIONS.forEach(s => {
+        const info = data.stazioni[s.key];
+        if(info) renderStationCard(document.getElementById(`card-${s.key}`), s.name, info.stats, info.error);
       });
     }
-
-  } catch (e) {
-    console.error(e);
-    if(btn) { btn.disabled = false; btn.textContent = 'RICEVI DATI'; }
-    if(statusLine) statusLine.textContent = `Errore di sincronizzazione: ${e.message}`;
-    if(verdictCard) {
-      verdictCard.style.display = 'block';
-      verdictCard.className = 'apoc';
-      flapRender(verdictWordEl, 'ERRORE');
-      if(verdictSubEl) verdictSubEl.textContent = "Verifica che il file json sia accessibile e che i dati nel workflow siano corretti.";
-    }
+  } catch(e) {
+    console.log("GitHub JSON non trovato o non pronto. Modalità manuale/proxy abilitata.", e.message);
+    statusLine.textContent = "Nessun dato cloud trovato. Premi il tasto sopra per scansionare adesso via proxy.";
   }
 }
 
-// RENDER TIMELINE GIORNALIERA
-function renderTimelineServer(logs) {
-  const container = document.getElementById('trendTimeline');
-  if (!container) return;
-  
-  if (logs.length === 0) {
-    container.innerHTML = `<span style="color:gray; font-size:11px; font-family:'Space Mono';">Nessun log registrato dal server per la giornata odierna.</span>`;
-    return;
+// BINDING TASTI E AVVIO
+document.getElementById('consultBtn').addEventListener('click', forzaScansioneLocale);
+
+const thresholdInput = document.getElementById('thresholdInput');
+if(thresholdInput) thresholdInput.value = getThreshold();
+
+document.getElementById('saveSettings').addEventListener('click', ()=>{
+  const val = document.getElementById('thresholdInput')?.value || '12';
+  localStorage.setItem('vadoNonVado_threshold', val);
+  document.getElementById('statusLine').textContent = 'Impostazioni salvate.';
+});
+
+document.getElementById('clearLogBtn').addEventListener('click', () => {
+  if(confirm("Vuoi cancellare la cronologia dei ritardi locali?")) {
+    localStorage.removeItem('vadoNonVado_dailyLog');
+    renderTimeline([]);
   }
-  
-  container.innerHTML = '';
-  logs.forEach(log => {
-    const item = document.createElement('div');
-    item.style.cssText = `
-      background: rgba(0,0,0,0.4);
-      border-left: 4px solid var(--${log.classe === 'apoc' ? 'danger' : log.classe});
-      padding: 6px 12px;
-      min-width: 85px;
-      border-radius: 4px;
-      font-family: 'Space Mono', monospace;
-      text-align: center;
-    `;
-    
-    let emoji = '🟢';
-    if(log.classe === 'warn') emoji = '🟡';
-    if(log.classe === 'danger') emoji = '🟠';
-    if(log.classe === 'apoc') emoji = '🔴';
+});
 
-    item.innerHTML = `
-      <div style="font-size:11px; opacity:0.6;">${log.ora}</div>
-      <div style="font-size:14px; margin:2px 0;">${emoji}</div>
-      <div style="font-size:11px; font-weight:bold;">Indice: ${log.score.toFixed(1)}</div>
-    `;
-    container.appendChild(item);
-  });
-}
-
-// RENDER DELLE SINGOLE SCHEDE STAZIONE
-function renderStationCard(el, stationName, stats, error){
-  if(!el) return; 
-  el.style.display = 'block';
-  
-  if(error){
-    el.innerHTML = `<div class="st-name">${stationName} <span class="st-pill danger">ERRORE</span></div><div class="st-error">${error}</div>`;
-    return;
-  }
-  
-  const pillClass = stats.avgDelay <= 5 && stats.soppressi === 0 ? 'ok' : (stats.avgDelay <= 12 ? 'warn' : 'danger');
-  const pillLabel = pillClass === 'ok' ? 'OK' : (pillClass === 'warn' ? 'MEH' : 'CAOS');
-
-  let listHtml = '';
-  
-  if(stats.soppressiTrains && stats.soppressiTrains.length > 0) {
-    listHtml += `<div class="delay-list-title" style="color:var(--danger)">Treni SOPPRESSI:</div><ul class="delay-list">`;
-    stats.soppressiTrains.forEach(t => {
-      listHtml += `<li style="border-left: 3px solid var(--danger); padding-left: 5px;">Treno <b>${t.treno}</b> (${t.orario}) per/da ${t.luogo}: <b style="color:var(--danger)">SOPPRESSO</b></li>`;
-    });
-    listHtml += `</ul>`;
-  }
-
-  if(stats.delayedTrains && stats.delayedTrains.length > 0) {
-    listHtml += `<div class="delay-list-title">Treni in ritardo:</div><ul class="delay-list">`;
-    stats.delayedTrains.forEach(t => {
-      listHtml += `<li>Treno <b>${t.treno}</b> (${t.orario}) per/da ${t.luogo}: <b>+${t.ritardo} min</b></li>`;
-    });
-    listHtml += `</ul>`;
-  } 
-  
-  if(stats.delayedCount === 0 && stats.soppressi === 0 && stats.total > 0) {
-    listHtml += `<div class="st-note" style="color:var(--ok); margin-top:10px;">🟢 Nessun ritardo o soppressione.</div>`;
-  } else if (stats.total === 0) {
-    listHtml += `<div class="st-note" style="color:gray; margin-top:10px;">Nessun treno target rilevato al momento.</div>`;
-  }
-
-  el.innerHTML = `
-    <div class="st-name">${stationName} <span class="st-pill ${pillClass}">${pillLabel}</span></div>
-    <div class="st-row"><span>Treni monitorati</span><b>${stats.total}</b></div>
-    <div class="st-row"><span>Ritardo medio</span><b>${stats.avgDelay.toFixed(1)} min</b></div>
-    <div class="st-row"><span>Soppressi</span><b style="${stats.soppressi > 0 ? 'color:var(--danger)' : ''}">${stats.soppressi}</b></div>
-    ${listHtml}
-  `;
-}
-
-// ASCOLTO DEL PULSANTE DI AGGIORNAMENTO MANUALE
-const btn = document.getElementById('consultBtn');
-if(btn) btn.addEventListener('click', caricaDatiDalServer);
-
-// CARICAMENTO AUTOMATICO ALL'APERTURA DELLA PAGINA
-caricaDatiDalServer();
+// Primo tentativo di lettura automatico all'avvio
+inizializzaE_Sincronizza();
 </script>
 </body>
 </html>
