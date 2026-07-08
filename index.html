@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-  
 </head>
 <body>
 
@@ -42,10 +41,21 @@
     <div id="verdictScore"></div>
   </div>
 
+  <div id="dailyTrendCard" style="background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.1); padding: 15px; margin-bottom: 25px; border-radius: 8px;">
+    <div style="font-family:'Space Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; color: #aaa;">
+      📊 Andamento della Giornata (Scansione ogni 45 min)
+    </div>
+    <div id="trendTimeline" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px;">
+      </div>
+  </div>
+
   <div id="stations">
-    <div class="station-card" id="card-ivrea"></div>
-    <div class="station-card" id="card-chivasso"></div>
-    <div class="station-card" id="card-torino"></div>
+    <div class="station-card" id="card-ivreaandata"></div>
+    <div class="station-card" id="card-ivrearitorno"></div>
+    <div class="station-card" id="card-chivassoandata"></div>
+    <div class="station-card" id="card-chivassoritorno"></div>
+    <div class="station-card" id="card-torinoandata"></div>
+    <div class="station-card" id="card-torinoritorno"></div>
   </div>
 </main>
 
@@ -55,12 +65,13 @@
     <label for="thresholdInput">Soglia ritardo "meglio la macchina" (minuti medi)</label>
     <input type="number" id="thresholdInput" value="12" min="1" max="60">
     <button id="saveSettings">Salva impostazioni</button>
+    <button id="clearLogBtn" style="background:#555; margin-left:10px;">Azzera Storico Odierno</button>
     <p style="margin-top:14px; font-size:11px; opacity:0.7;">Filtri attivi: Vengono estratti solo i treni da/per Ivrea, Torino, Novara e Milano Centrale.</p>
   </div>
 </details>
 
 <footer>
-  costruito con dispetto verso Trenitalia · proxy a rotazione automatica · 2026
+  costruito con dispetto verso Trenitalia · proxy a rotazione automatica · tracking 45m · 2026
 </footer>
 
 <script>
@@ -71,10 +82,10 @@ const PROXIES = [
 ];
 
 const STATIONS = [
-  { key:'ivreaandata',    name:'Ivrea (Arrivi)',       url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=true' },
-  { key:'ivrearitorno',   name:'Ivrea (Partenze)',     url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=false' },
-  { key:'chivassoandata',  name:'Chivasso (Arrivi)',    url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=true' },
-  { key:'chivassoritorno', name:'Chivasso (Partenze)',  url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=false' },
+  { key:'ivreaandata',    name:'Ivrea (Arrivi)',        url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=true' },
+  { key:'ivrearitorno',   name:'Ivrea (Partenze)',      url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=false' },
+  { key:'chivassoandata',  name:'Chivasso (Arrivi)',     url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=true' },
+  { key:'chivassoritorno', name:'Chivasso (Partenze)',   url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=false' },
   { key:'torinoandata',    name:'Torino P. Nuova (Arr)', url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=true' },
   { key:'torinoritorno',   name:'Torino P. Nuova (Part)', url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=false' },
 ];
@@ -83,16 +94,28 @@ function getThreshold(){
   return parseFloat(localStorage.getItem('vadoNonVado_threshold') || '12');
 }
 
+// GESTIONE ORA E TIMER 45 MINUTI
+let ultimoControlloData = new Date().toDateString();
+
 function tickClock(){
   const now = new Date();
   const clockTime = document.getElementById('clockTime');
   const clockDate = document.getElementById('clockDate');
   if(clockTime) clockTime.textContent = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
   if(clockDate) clockDate.textContent = `${now.getDate().toString().padStart(2,'0')}/${(now.getMonth()+1).toString().padStart(2,'0')}/${now.getFullYear()}`;
+  
+  // Reset automatico a fine giornata (cambio data)
+  if (now.toDateString() !== ultimoControlloData) {
+    ultimoControlloData = now.toDateString();
+    localStorage.removeItem('vadoNonVado_dailyLog');
+    renderTimeline();
+    console.log("Nuovo giorno rilevato: Storico azzerato.");
+  }
 }
 tickClock();
 setInterval(tickClock, 1000);
 
+// EFFETTO FLAP
 const FLAP_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ';
 function randChar(){ return FLAP_CHARS[Math.floor(Math.random()*FLAP_CHARS.length)]; }
 
@@ -251,7 +274,6 @@ function pickVerdict(score){
   return { ...v, sub: v.subs[Math.floor(Math.random()*v.subs.length)] };
 }
 
-// DETTAGLIO STAZIONE: Genera i dati completi visualizzati a schermo
 function renderStationCard(el, stationName, stats, error){
   if(!el) return; 
   el.style.display = 'block';
@@ -266,7 +288,6 @@ function renderStationCard(el, stationName, stats, error){
 
   let listHtml = '';
   
-  // Se ci sono treni soppressi, mostrali per primi in rosso ed evidenziati
   if(stats.soppressiTrains && stats.soppressiTrains.length > 0) {
     listHtml += `<div class="delay-list-title" style="color:var(--danger)">Treni SOPPRESSI:</div><ul class="delay-list">`;
     stats.soppressiTrains.forEach(t => {
@@ -275,7 +296,6 @@ function renderStationCard(el, stationName, stats, error){
     listHtml += `</ul>`;
   }
 
-  // Mostra la lista dei treni in ritardo
   if(stats.delayedTrains && stats.delayedTrains.length > 0) {
     listHtml += `<div class="delay-list-title">Treni in ritardo:</div><ul class="delay-list">`;
     stats.delayedTrains.forEach(t => {
@@ -284,7 +304,6 @@ function renderStationCard(el, stationName, stats, error){
     listHtml += `</ul>`;
   } 
   
-  // Se la stazione è pulita e ci sono treni attivi
   if(stats.delayedCount === 0 && stats.soppressi === 0 && stats.total > 0) {
     listHtml += `<div class="st-note" style="color:var(--ok); margin-top:10px;">🟢 Nessun ritardo o soppressione su questa stazione.</div>`;
   } else if (stats.total === 0) {
@@ -300,6 +319,66 @@ function renderStationCard(el, stationName, stats, error){
   `;
 }
 
+// INTEGRAZIONE TIMELINE GIORNALIERA
+function salvaInStorico(score, verdictClass) {
+  const logIniziale = JSON.parse(localStorage.getItem('vadoNonVado_dailyLog') || '[]');
+  const now = new Date();
+  const oraCorrente = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+  
+  // Evita duplicati ravvicinati (se l'utente clicca freneticamente, non intasiamo il grafico)
+  if (logIniziale.length > 0) {
+    const ultimoLog = logIniziale[logIniziale.length - 1];
+    if (ultimoLog.ora === oraCorrente) return; 
+  }
+  
+  logIniziale.push({
+    ora: oraCorrente,
+    score: score,
+    classe: verdictClass
+  });
+  
+  localStorage.setItem('vadoNonVado_dailyLog', JSON.stringify(logIniziale));
+  renderTimeline();
+}
+
+function renderTimeline() {
+  const container = document.getElementById('trendTimeline');
+  if (!container) return;
+  
+  const logs = JSON.parse(localStorage.getItem('vadoNonVado_dailyLog') || '[]');
+  
+  if (logs.length === 0) {
+    container.innerHTML = `<span style="color:gray; font-size:11px; font-family:'Space Mono';">Nessuna scansione registrata oggi. Premi "Consulta il Fato".</span>`;
+    return;
+  }
+  
+  container.innerHTML = '';
+  logs.forEach(log => {
+    const item = document.createElement('div');
+    item.style.cssText = `
+      background: rgba(0,0,0,0.4);
+      border-left: 4px solid var(--${log.classe === 'apoc' ? 'danger' : log.classe});
+      padding: 6px 12px;
+      min-width: 85px;
+      border-radius: 4px;
+      font-family: 'Space Mono', monospace;
+      text-align: center;
+    `;
+    
+    let emoji = '🟢';
+    if(log.classe === 'warn') emoji = '🟡';
+    if(log.classe === 'danger') emoji = '🟠';
+    if(log.classe === 'apoc') emoji = '🔴';
+
+    item.innerHTML = `
+      <div style="font-size:11px; opacity:0.6;">${log.ora}</div>
+      <div style="font-size:14px; margin:2px 0;">${emoji}</div>
+      <div style="font-size:11px; font-weight:bold;">Indice: ${log.score.toFixed(1)}</div>
+    `;
+    container.appendChild(item);
+  });
+}
+
 const btn = document.getElementById('consultBtn');
 const statusLine = document.getElementById('statusLine');
 const verdictCard = document.getElementById('verdictCard');
@@ -307,21 +386,17 @@ const verdictWordEl = document.getElementById('verdictWord');
 const verdictSubEl = document.getElementById('verdictSub');
 const verdictScoreEl = document.getElementById('verdictScore');
 
-if(btn) btn.addEventListener('click', consultaIlFato);
+if(btn) btn.addEventListener('click', () => consultaIlFato(false));
 
-async function consultaIlFato(){
+async function consultaIlFato(isAutomated = false){
   if(!btn || !statusLine || !verdictCard) return;
 
-  btn.disabled = true;
-  btn.textContent = 'STO GUARDANDO I BINARI…';
-  statusLine.textContent = 'Test dei proxy e caricamento stazioni in corso...';
-  verdictCard.style.display = 'none';
+  if(!isAutomated) {
+    btn.disabled = true;
+    btn.textContent = 'STO GUARDANDO I BINARI…';
+  }
+  statusLine.textContent = isAutomated ? 'Scansione ciclica in corso...' : 'Test dei proxy e caricamento stazioni in corso...';
   
-  STATIONS.forEach(s => {
-    const el = document.getElementById(`card-${s.key}`);
-    if(el) el.style.display = 'none';
-  });
-
   const threshold = getThreshold();
   const results = [];
 
@@ -349,12 +424,12 @@ async function consultaIlFato(){
     verdictCard.className = 'apoc';
     flapRender(verdictWordEl, 'BOH');
     setTimeout(()=>flapAnimateTo(verdictWordEl, 'BOH', {cycles:8, stepMs:40}), 100);
-    if(verdictSubEl) verdictSubEl.textContent = 'Tutti i proxy CORS pubblici hanno fallito la risposta. Riprova tra pochi secondi.';
+    if(verdictSubEl) verdictSubEl.textContent = 'Tutti i proxy CORS pubblici hanno fallito. Riprova.';
     if(verdictScoreEl) verdictScoreEl.textContent = '';
     return;
   }
 
-  statusLine.textContent = `Aggiornato con successo. Analizzate stazioni attive.`;
+  statusLine.textContent = `Aggiornato alle ${new Date().toLocaleTimeString().slice(0,5)}.`;
 
   const totalScore = okResults.reduce((s,r)=> s + stationScore(r.stats), 0) / okResults.length;
   const scaledScore = threshold !== 8 ? totalScore * (8/threshold) : totalScore;
@@ -365,9 +440,24 @@ async function consultaIlFato(){
   flapRender(verdictWordEl, verdict.word);
   setTimeout(()=>flapAnimateTo(verdictWordEl, verdict.word, {cycles:12, stepMs:42}), 100);
   if(verdictSubEl) verdictSubEl.textContent = verdict.sub;
-  if(verdictScoreEl) verdictScoreEl.textContent = `Indice caos calcolato sulle tratte selezionate: ${totalScore.toFixed(1)}`;
+  if(verdictScoreEl) verdictScoreEl.textContent = `Indice caos calcolato: ${totalScore.toFixed(1)}`;
+
+  // Registro l'andamento nello storico locale
+  salvaInStorico(totalScore, verdict.cls);
 }
 
+// INIZIALIZZAZIONE DELLA PAGINA AL CARICAMENTO
+renderTimeline();
+
+// Scansione ciclica programmata (Ogni 45 minuti)
+const INTERVALLO_45_MIN = 45 * 60 * 1000;
+setInterval(() => {
+  console.log("Esecuzione scansione automatica programmata...");
+  consultaIlFato(true);
+}, INTERVALLO_45_MIN);
+
+
+// IMPOSTAZIONI DI AZZERAMENTO E INPUT
 const thresholdInput = document.getElementById('thresholdInput');
 if(thresholdInput) thresholdInput.value = getThreshold();
 
@@ -378,6 +468,16 @@ if(saveSettings) {
     localStorage.setItem('vadoNonVado_threshold', val || '8');
     if(statusLine) statusLine.textContent = 'Impostazioni salvate.';
     setTimeout(()=> { if(statusLine) statusLine.textContent = ''; }, 2000);
+  });
+}
+
+const clearLogBtn = document.getElementById('clearLogBtn');
+if(clearLogBtn) {
+  clearLogBtn.addEventListener('click', () => {
+    if(confirm("Vuoi cancellare la cronologia dei ritardi di oggi?")) {
+      localStorage.removeItem('vadoNonVado_dailyLog');
+      renderTimeline();
+    }
   });
 }
 </script>
