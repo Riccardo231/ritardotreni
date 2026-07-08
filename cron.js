@@ -1,11 +1,5 @@
 const fs = require('fs');
 
-const PROXIES = [
-  "https://corsproxy.io/?url=",
-  "https://api.codetabs.com/v1/proxy?quest=",
-  "https://api.allorigins.win/raw?url="
-];
-
 const STATIONS = [
   { key:'ivreaandata',    name:'Ivrea (Arrivi)',        url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=true' },
   { key:'ivrearitorno',   name:'Ivrea (Partenze)',      url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=false' },
@@ -83,23 +77,25 @@ function parseBoardRegex(html) {
   return trains;
 }
 
-async function fetchWithFallback(station) {
-  let lastError = null;
-  for (let i = 0; i < PROXIES.length; i++) {
-    try {
-      const response = await fetch(PROXIES[i] + encodeURIComponent(station.url), { signal: AbortSignal.timeout(10000) });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const html = await response.text();
-      return parseBoardRegex(html);
-    } catch (e) {
-      lastError = e;
-    }
-  }
-  throw lastError || new Error("Tutti i proxy hanno fallito");
+// Chiamata DIRETTA senza proxy
+async function fetchDiretto(station) {
+  const response = await fetch(station.url, {
+    method: 'GET',
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+      'Accept-Language': 'it-IT,it;q=0.9,en;q=0.8'
+    },
+    signal: AbortSignal.timeout(15000) // 15 secondi di tolleranza
+  });
+  
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const html = await response.text();
+  return parseBoardRegex(html);
 }
 
 async function run() {
-  console.log("Inizio scansione cloud...");
+  console.log("Inizio scansione diretta cloud...");
   const databaseFile = 'stato_treni.json';
   let database = { timeline: [], stazioni: {} };
 
@@ -125,7 +121,8 @@ async function run() {
 
   for (const station of STATIONS) {
     try {
-      const trains = await fetchWithFallback(station);
+      // Usiamo il fetch diretto
+      const trains = await fetchDiretto(station);
       
       const real = trains.filter(t => !t.isBus);
       const soppressiTrains = real.filter(t => t.soppresso);
@@ -148,6 +145,10 @@ async function run() {
       database.stazioni[station.key] = { stats, error: null };
       totalScoreSum += score;
       okStationsCount++;
+      
+      // Aspetta 1 secondo tra una richiesta e l'altra per evitare ban da RFI
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
     } catch (e) {
       console.error(`Errore stazione ${station.name}:`, e.message);
       database.stazioni[station.key] = { stats: null, error: e.message };
