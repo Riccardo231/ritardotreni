@@ -17,14 +17,14 @@ Ivrea, Chivasso e Torino Porta Nuova e sputa un verdetto: **vai o non vai**.
 
 ## Deploy su GitHub Pages (5 minuti)
 
-1. Crea un nuovo repository su GitHub (es. `vado-o-non-vado`).
+1. Crea un nuovo repository su GitHub (es. `ritardotreni`).
 2. Carica il file `index.html` nella root del repository (drag & drop dalla
    pagina web di GitHub va benissimo, non serve git da terminale).
 3. Vai su **Settings → Pages**.
 4. In "Build and deployment", scegli **Deploy from a branch**, branch `main`,
    cartella `/ (root)`.
 5. Salva. Dopo 1-2 minuti l'app sarà live su
-   `https://<tuo-utente>.github.io/vado-o-non-vado/`.
+   `https://riccardo231.github.io/ritardotreni/`.
 
 ## Se il verdetto dice sempre "BOH"
 
