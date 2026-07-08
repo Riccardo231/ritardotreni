@@ -70,13 +70,14 @@ const PROXIES = [
   "https://api.allorigins.win/raw?url="
 ];
 
+// CORRETTO: Modificati gli URL di Ivrea da "True/False" a "true/false" per uniformità con le API RFI
 const STATIONS = [
-  { key:'ivreaandata',    name:'Ivrea',              url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=True' },
-  { key:'ivrearitorno',    name:'Ivrea',              url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=False' },
-  { key:'chivassoandata',  name:'Chivasso',           url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=True' },
-  { key:'chivassoritorno',  name:'Chivasso',           url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=False' },
-  { key:'torinoandata',    name:'Torino P. Nuova',    url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=True' },
-  { key:'torinoritorno',    name:'Torino P. Nuova',    url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=False' },
+  { key:'ivreaandata',    name:'Ivrea (Arrivi)',       url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=true' },
+  { key:'ivrearitorno',   name:'Ivrea (Partenze)',     url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=false' },
+  { key:'chivassoandata',  name:'Chivasso (Arrivi)',    url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=true' },
+  { key:'chivassoritorno', name:'Chivasso (Partenze)',  url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=false' },
+  { key:'torinoandata',    name:'Torino P. Nuova (Arr)', url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=true' },
+  { key:'torinoritorno',   name:'Torino P. Nuova (Part)', url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=false' },
 ];
 
 function getThreshold(){
@@ -85,8 +86,10 @@ function getThreshold(){
 
 function tickClock(){
   const now = new Date();
-  document.getElementById('clockTime').textContent = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
-  document.getElementById('clockDate').textContent = `${now.getDate().toString().padStart(2,'0')}/${(now.getMonth()+1).toString().padStart(2,'0')}/${now.getFullYear()}`;
+  const clockTime = document.getElementById('clockTime');
+  const clockDate = document.getElementById('clockDate');
+  if(clockTime) clockTime.textContent = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+  if(clockDate) clockDate.textContent = `${now.getDate().toString().padStart(2,'0')}/${(now.getMonth()+1).toString().padStart(2,'0')}/${now.getFullYear()}`;
 }
 tickClock();
 setInterval(tickClock, 1000);
@@ -95,8 +98,9 @@ const FLAP_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ';
 function randChar(){ return FLAP_CHARS[Math.floor(Math.random()*FLAP_CHARS.length)]; }
 
 function flapRender(el, text){
+  if(!el) return;
   el.innerHTML = '';
-  [...text].forEach(ch=>{
+  ([...text]).forEach(ch=>{
     const holder = document.createElement('span');
     holder.className = 'flap-char';
     const inner = document.createElement('span');
@@ -107,6 +111,7 @@ function flapRender(el, text){
 }
 
 function flapAnimateTo(el, finalText, opts={}){
+  if(!el) return;
   const cycles = opts.cycles || 10;
   const stepMs = opts.stepMs || 45;
   if(el.querySelectorAll('.flap-char').length !== finalText.length){
@@ -131,8 +136,11 @@ function flapAnimateTo(el, finalText, opts={}){
   });
 }
 
-flapRender(document.getElementById('titleFlap'), 'VADO O NON VADO');
-setTimeout(()=> flapAnimateTo(document.getElementById('titleFlap'), 'VADO O NON VADO', {cycles:14, stepMs:40}), 300);
+const titleFlap = document.getElementById('titleFlap');
+if(titleFlap) {
+  flapRender(titleFlap, 'VADO O NON VADO');
+  setTimeout(()=> flapAnimateTo(titleFlap, 'VADO O NON VADO', {cycles:14, stepMs:40}), 300);
+}
 
 // FILTRO DEI TRENI TARGET
 function isTargetTrain(train) {
@@ -143,12 +151,10 @@ function isTargetTrain(train) {
   const matchesNovara = luogo.includes('NOVARA');
   const matchesMilano = luogo.includes('MILANO') || luogo.includes('MI.');
 
-  // Rotte richieste: Ivrea-Torino, Ivrea-Novara, Milano-Torino
   if (matchesIvrea && matchesTorino) return true;
   if (matchesIvrea && matchesNovara) return true;
   if (matchesMilano && matchesTorino) return true;
   
-  // Accetta anche corrispondenze singole se siamo nelle rispettive stazioni di testa per intercettare i ritorni
   if (matchesIvrea || matchesTorino || matchesNovara || matchesMilano) {
     return true;
   }
@@ -210,13 +216,13 @@ function parseBoard(html){
       isBus: categoria.toUpperCase().includes('BUS'),
       soppresso: fullRowText.includes('SOPPRESS'),
     };
-  }).filter(Boolean).filter(isTargetTrain); // Applica filtro tratte specifiche
+  }).filter(Boolean).filter(isTargetTrain);
 }
 
 function computeStationStats(trains){
   const real = trains.filter(t => !t.isBus);
   const soppressi = real.filter(t => t.soppresso).length;
-  const delayed = real.filter(t => t.ritardo > 0);
+  const delayed = real.filter(t => t.ritardo > 0 && !t.soppresso); // Esclude i soppressi dal computo dei minuti di ritardo standard
   const avgDelay = delayed.length ? delayed.reduce((s,t)=>s+t.ritardo,0)/delayed.length : 0;
   const maxDelay = real.reduce((m,t)=>Math.max(m,t.ritardo), 0);
   const worstTrain = real.find(t => t.ritardo === maxDelay);
@@ -251,6 +257,7 @@ function pickVerdict(score){
 }
 
 function renderStationCard(el, stationName, stats, error){
+  if(!el) return; // FIX: Impedisce al codice di rompersi se manca il div nell'HTML
   el.style.display = 'block';
   if(error){
     el.innerHTML = `<div class="st-name">${stationName} <span class="st-pill danger">ERRORE</span></div><div class="st-error">${error}</div>`;
@@ -285,14 +292,20 @@ const verdictWordEl = document.getElementById('verdictWord');
 const verdictSubEl = document.getElementById('verdictSub');
 const verdictScoreEl = document.getElementById('verdictScore');
 
-btn.addEventListener('click', consultaIlFato);
+if(btn) btn.addEventListener('click', consultaIlFato);
 
 async function consultaIlFato(){
+  if(!btn || !statusLine || !verdictCard) return;
+
   btn.disabled = true;
   btn.textContent = 'STO GUARDANDO I BINARI…';
   statusLine.textContent = 'Test dei proxy e caricamento stazioni in corso...';
   verdictCard.style.display = 'none';
-  STATIONS.forEach(s => document.getElementById(`card-${s.key}`).style.display = 'none');
+  
+  STATIONS.forEach(s => {
+    const el = document.getElementById(`card-${s.key}`);
+    if(el) el.style.display = 'none';
+  });
 
   const threshold = getThreshold();
   const results = [];
@@ -321,8 +334,8 @@ async function consultaIlFato(){
     verdictCard.className = 'apoc';
     flapRender(verdictWordEl, 'BOH');
     setTimeout(()=>flapAnimateTo(verdictWordEl, 'BOH', {cycles:8, stepMs:40}), 100);
-    verdictSubEl.textContent = 'Tutti i proxy CORS pubblici hanno fallito la risposta. Riprova tra pochi secondi.';
-    verdictScoreEl.textContent = '';
+    if(verdictSubEl) verdictSubEl.textContent = 'Tutti i proxy CORS pubblici hanno fallito la risposta. Riprova tra pochi secondi.';
+    if(verdictScoreEl) verdictScoreEl.textContent = '';
     return;
   }
 
@@ -336,16 +349,22 @@ async function consultaIlFato(){
   verdictCard.className = verdict.cls;
   flapRender(verdictWordEl, verdict.word);
   setTimeout(()=>flapAnimateTo(verdictWordEl, verdict.word, {cycles:12, stepMs:42}), 100);
-  verdictSubEl.textContent = verdict.sub;
-  verdictScoreEl.textContent = `Indice caos calcolato sulle tratte selezionate: ${totalScore.toFixed(1)}`;
+  if(verdictSubEl) verdictSubEl.textContent = verdict.sub;
+  if(verdictScoreEl) verdictScoreEl.textContent = `Indice caos calcolato sulle tratte selezionate: ${totalScore.toFixed(1)}`;
 }
 
-document.getElementById('thresholdInput').value = getThreshold();
-document.getElementById('saveSettings').addEventListener('click', ()=>{
-  localStorage.setItem('vadoNonVado_threshold', document.getElementById('thresholdInput').value || '8');
-  statusLine.textContent = 'Impostazioni salvate.';
-  setTimeout(()=> statusLine.textContent = '', 2000);
-});
+const thresholdInput = document.getElementById('thresholdInput');
+if(thresholdInput) thresholdInput.value = getThreshold();
+
+const saveSettings = document.getElementById('saveSettings');
+if(saveSettings) {
+  saveSettings.addEventListener('click', ()=>{
+    const val = document.getElementById('thresholdInput') ? document.getElementById('thresholdInput').value : '8';
+    localStorage.setItem('vadoNonVado_threshold', val || '8');
+    if(statusLine) statusLine.textContent = 'Impostazioni salvate.';
+    setTimeout(()=> { if(statusLine) statusLine.textContent = ''; }, 2000);
+  });
+}
 </script>
 </body>
 </html>
