@@ -16,7 +16,7 @@
     <div class="brand">
       <span class="eyebrow">Direttrici Selezionate · Canavese & Milano</span>
       <div class="flap-title" id="titleFlap">VADO O NON VADO</div>
-      <div class="subtitle">Monitoraggio selettivo per i treni Ivrea-Torino, Ivrea-Novara e Milano-Torino. I ritardi aggregati estraggono il verdetto definitivo.</div>
+      <div class="subtitle">Monitoraggio selettivo automatizzato tramite GitHub Actions. I ritardi aggregati estraggono il verdetto definitivo a pagina spenta.</div>
     </div>
     <div class="clock-box">
       <div class="label">Ora attuale</div>
@@ -28,11 +28,11 @@
 
 <main>
   <div class="cta-wrap">
-    <button id="consultBtn">CONSULTA IL FATO</button>
-    <div class="cta-hint">Scansione automatica multi-proxy sui tabelloni live RFI</div>
+    <button id="consultBtn">AGGIORNA TABELLONE</button>
+    <div class="cta-hint">Caricamento dell'ultimo stato memorizzato sul server h24</div>
   </div>
 
-  <div class="status-line" id="statusLine"></div>
+  <div class="status-line" id="statusLine">Sincronizzazione in corso...</div>
 
   <div id="verdictCard">
     <div class="verdict-eyebrow">Il tabellone ha parlato</div>
@@ -43,10 +43,10 @@
 
   <div id="dailyTrendCard" style="background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.1); padding: 15px; margin-bottom: 25px; border-radius: 8px;">
     <div style="font-family:'Space Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; color: #aaa;">
-      📊 Andamento della Giornata (Scansione ogni 45 min)
+      📊 Andamento della Giornata (Scansione automatica server)
     </div>
     <div id="trendTimeline" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px;">
-      </div>
+        </div>
   </div>
 
   <div id="stations">
@@ -59,63 +59,38 @@
   </div>
 </main>
 
-<details>
-  <summary>Impostazioni & Note Linee</summary>
-  <div class="settings-box">
-    <label for="thresholdInput">Soglia ritardo "meglio la macchina" (minuti medi)</label>
-    <input type="number" id="thresholdInput" value="12" min="1" max="60">
-    <button id="saveSettings">Salva impostazioni</button>
-    <button id="clearLogBtn" style="background:#555; margin-left:10px;">Azzera Storico Odierno</button>
-    <p style="margin-top:14px; font-size:11px; opacity:0.7;">Filtri attivi: Vengono estratti solo i treni da/per Ivrea, Torino, Novara e Milano Centrale.</p>
-  </div>
-</details>
-
 <footer>
-  costruito con dispetto verso Trenitalia · proxy a rotazione automatica · tracking 45m · 2026
+  costruito con dispetto verso Trenitalia · automazione cloud h24 · tracking 45m · 2026
 </footer>
 
 <script>
-const PROXIES = [
-  "https://corsproxy.io/?url=",
-  "https://api.codetabs.com/v1/proxy?quest=",
-  "https://api.allorigins.win/raw?url="
-];
+// --- CONFIGURAZIONE REPOSITORY GITHUB ---
+// Sostituisci questi due valori con quelli del tuo account GitHub per puntare al file JSON corretto
+const GITHUB_USERNAME = "IL_TUO_USERNAME"; 
+const REPOSITORY_NAME = "IL_TUO_REPOSITORY"; 
+const DATA_URL = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPOSITORY_NAME}/main/stato_treni.json`;
 
-const STATIONS = [
-  { key:'ivreaandata',    name:'Ivrea (Arrivi)',        url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=true' },
-  { key:'ivrearitorno',   name:'Ivrea (Partenze)',      url:'https://iechub.rfi.it/ArriviPartenze/ArrivalsDepartures/Monitor?placeId=1508&arrivals=false' },
-  { key:'chivassoandata',  name:'Chivasso (Arrivi)',     url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=true' },
-  { key:'chivassoritorno', name:'Chivasso (Partenze)',   url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=1105&arrivals=false' },
-  { key:'torinoandata',    name:'Torino P. Nuova (Arr)', url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=true' },
-  { key:'torinoritorno',   name:'Torino P. Nuova (Part)', url:'https://iechub.rfi.it/ArriviPartenze/arrivalsdepartures/Monitor?placeId=2876&arrivals=false' },
-];
+const STATION_NAMES = {
+  'ivreaandata': 'Ivrea (Arrivi)',
+  'ivrearitorno': 'Ivrea (Partenze)',
+  'chivassoandata': 'Chivasso (Arrivi)',
+  'chivassoritorno': 'Chivasso (Partenze)',
+  'torinoandata': 'Torino P. Nuova (Arr)',
+  'torinoritorno': 'Torino P. Nuova (Part)'
+};
 
-function getThreshold(){
-  return parseFloat(localStorage.getItem('vadoNonVado_threshold') || '12');
-}
-
-// GESTIONE ORA E TIMER 45 MINUTI
-let ultimoControlloData = new Date().toDateString();
-
+// ORA E DATA SULLO SCHERMO
 function tickClock(){
   const now = new Date();
   const clockTime = document.getElementById('clockTime');
   const clockDate = document.getElementById('clockDate');
   if(clockTime) clockTime.textContent = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
   if(clockDate) clockDate.textContent = `${now.getDate().toString().padStart(2,'0')}/${(now.getMonth()+1).toString().padStart(2,'0')}/${now.getFullYear()}`;
-  
-  // Reset automatico a fine giornata (cambio data)
-  if (now.toDateString() !== ultimoControlloData) {
-    ultimoControlloData = now.toDateString();
-    localStorage.removeItem('vadoNonVado_dailyLog');
-    renderTimeline();
-    console.log("Nuovo giorno rilevato: Storico azzerato.");
-  }
 }
 tickClock();
 setInterval(tickClock, 1000);
 
-// EFFETTO FLAP
+// EFFETTO FLAP BOARD
 const FLAP_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ';
 function randChar(){ return FLAP_CHARS[Math.floor(Math.random()*FLAP_CHARS.length)]; }
 
@@ -164,116 +139,103 @@ if(titleFlap) {
   setTimeout(()=> flapAnimateTo(titleFlap, 'VADO O NON VADO', {cycles:14, stepMs:40}), 300);
 }
 
-function isTargetTrain(train) {
-  const luogo = (train.luogo || '').toUpperCase();
-  const matchesIvrea = luogo.includes('IVREA');
-  const matchesTorino = luogo.includes('TORINO') || luogo.includes('TO.');
-  const matchesNovara = luogo.includes('NOVARA');
-  const matchesMilano = luogo.includes('MILANO') || luogo.includes('MI.');
+// CARICAMENTO DATI GENERATI DAL SERVER (GITHUB ACTIONS)
+async function caricaDatiDalServer() {
+  const btn = document.getElementById('consultBtn');
+  const statusLine = document.getElementById('statusLine');
+  const verdictCard = document.getElementById('verdictCard');
+  const verdictWordEl = document.getElementById('verdictWord');
+  const verdictSubEl = document.getElementById('verdictSub');
+  const verdictScoreEl = document.getElementById('verdictScore');
 
-  if (matchesIvrea && matchesTorino) return true;
-  if (matchesIvrea && matchesNovara) return true;
-  if (matchesMilano && matchesTorino) return true;
-  
-  if (matchesIvrea || matchesTorino || matchesNovara || matchesMilano) return true;
-  return false;
-}
+  if(btn) { btn.disabled = true; btn.textContent = 'INTERROGO IL SERVER...'; }
+  if(statusLine) statusLine.textContent = 'Recupero dei dati registrati in background...';
 
-async function fetchWithFallback(station) {
-  let lastError = null;
-  for (let i = 0; i < PROXIES.length; i++) {
-    try {
-      const target = PROXIES[i] + encodeURIComponent(station.url);
-      const res = await fetch(target, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const html = await res.text();
-      return parseBoard(html);
-    } catch (e) {
-      lastError = e;
-      console.warn(`Proxy ${i+1} fallito per ${station.name}, provo il successivo...`);
+  try {
+    // Il parametro cache: 'no-store' evita che il browser mostri dati vecchi salvati in locale
+    const res = await fetch(DATA_URL, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status} - File non ancora creato o repository privato`);
+    
+    const data = await res.json();
+
+    if(btn) { btn.disabled = false; btn.textContent = 'AGGIORNA TABELLONE'; }
+    if(statusLine) statusLine.textContent = `Ultima scansione server automatica: ${data.lastUpdate || 'Non disponibile'}`;
+
+    // 1. Renderizzazione Verdetto Principale
+    if(verdictCard && data.verdettoAttuale) {
+      verdictCard.style.display = 'block';
+      verdictCard.className = data.verdettoAttuale.cls;
+      flapRender(verdictWordEl, data.verdettoAttuale.word);
+      setTimeout(()=>flapAnimateTo(verdictWordEl, data.verdettoAttuale.word, {cycles:12, stepMs:42}), 100);
+      if(verdictSubEl) verdictSubEl.textContent = data.verdettoAttuale.sub;
+      if(verdictScoreEl) verdictScoreEl.textContent = `Indice caos calcolato: ${data.totalScore.toFixed(1)}`;
+    }
+
+    // 2. Renderizzazione Timeline Giornaliera
+    renderTimelineServer(data.timeline || []);
+
+    // 3. Renderizzazione singole schede stazioni
+    if(data.stazioni) {
+      Object.keys(STATION_NAMES).forEach(key => {
+        const cardEl = document.getElementById(`card-${key}`);
+        const infoStazione = data.stazioni[key];
+        if(cardEl && infoStazione) {
+          renderStationCard(cardEl, STATION_NAMES[key], infoStazione.stats, infoStazione.error);
+        }
+      });
+    }
+
+  } catch (e) {
+    console.error(e);
+    if(btn) { btn.disabled = false; btn.textContent = 'RICEVI DATI'; }
+    if(statusLine) statusLine.textContent = `Errore di sincronizzazione: ${e.message}`;
+    if(verdictCard) {
+      verdictCard.style.display = 'block';
+      verdictCard.className = 'apoc';
+      flapRender(verdictWordEl, 'ERRORE');
+      if(verdictSubEl) verdictSubEl.textContent = "Verifica che il file json sia accessibile e che i dati nel workflow siano corretti.";
     }
   }
-  throw new Error(`Tutti i proxy CORS in errore. Ultimo: ${lastError.message}`);
 }
 
-function parseBoard(html){
-  const doc = new DOMParser().parseFromString(html, 'text/html');
-  const table = doc.querySelector('table');
-  if(!table) throw new Error('Struttura dati non trovata.');
+// RENDER TIMELINE GIORNALIERA
+function renderTimelineServer(logs) {
+  const container = document.getElementById('trendTimeline');
+  if (!container) return;
+  
+  if (logs.length === 0) {
+    container.innerHTML = `<span style="color:gray; font-size:11px; font-family:'Space Mono';">Nessun log registrato dal server per la giornata odierna.</span>`;
+    return;
+  }
+  
+  container.innerHTML = '';
+  logs.forEach(log => {
+    const item = document.createElement('div');
+    item.style.cssText = `
+      background: rgba(0,0,0,0.4);
+      border-left: 4px solid var(--${log.classe === 'apoc' ? 'danger' : log.classe});
+      padding: 6px 12px;
+      min-width: 85px;
+      border-radius: 4px;
+      font-family: 'Space Mono', monospace;
+      text-align: center;
+    `;
+    
+    let emoji = '🟢';
+    if(log.classe === 'warn') emoji = '🟡';
+    if(log.classe === 'danger') emoji = '🟠';
+    if(log.classe === 'apoc') emoji = '🔴';
 
-  let headerRow = table.querySelector('thead tr') || table.querySelector('tr');
-  let headers = [...headerRow.querySelectorAll('th,td')].map(c=>c.textContent.trim().toLowerCase());
-
-  const idx = (needle) => headers.findIndex(h => h.includes(needle));
-  const iTreno    = idx('treno');
-  const iCategoria= idx('categoria');
-  const iRitardo  = idx('ritardo');
-  const iOrario   = idx('orario');
-  const iLuogo    = idx('proven') >= 0 ? idx('proven') : idx('destinaz');
-
-  const bodyRows = [...table.querySelectorAll('tbody tr')];
-  const rows = bodyRows.length ? bodyRows : [...table.querySelectorAll('tr')].slice(1);
-
-  return rows.map(row=>{
-    const cells = [...row.querySelectorAll('td,th')];
-    if(!cells.length) return null;
-    const text = (i) => i>=0 && cells[i] ? cells[i].textContent.trim() : '';
-    const fullRowText = row.textContent.toUpperCase();
-
-    const categoria = text(iCategoria);
-    const ritardoRaw = text(iRitardo);
-    const ritardo = parseInt(ritardoRaw.replace(/[^\d-]/g,''), 10);
-
-    return {
-      treno: text(iTreno) || '—',
-      categoria,
-      luogo: text(iLuogo),
-      orario: text(iOrario),
-      ritardo: isNaN(ritardo) ? 0 : ritardo,
-      isBus: categoria.toUpperCase().includes('BUS'),
-      soppresso: fullRowText.includes('SOPPRESS') || fullRowText.includes('CANCELL'),
-    };
-  }).filter(Boolean).filter(isTargetTrain);
+    item.innerHTML = `
+      <div style="font-size:11px; opacity:0.6;">${log.ora}</div>
+      <div style="font-size:14px; margin:2px 0;">${emoji}</div>
+      <div style="font-size:11px; font-weight:bold;">Indice: ${log.score.toFixed(1)}</div>
+    `;
+    container.appendChild(item);
+  });
 }
 
-function computeStationStats(trains){
-  const real = trains.filter(t => !t.isBus);
-  const soppressiTrains = real.filter(t => t.soppresso);
-  const delayed = real.filter(t => t.ritardo > 0 && !t.soppresso);
-  const avgDelay = delayed.length ? delayed.reduce((s,t)=>s+t.ritardo,0)/delayed.length : 0;
-  const maxDelay = real.reduce((m,t)=>Math.max(m,t.ritardo), 0);
-  const worstTrain = real.find(t => t.ritardo === maxDelay);
-
-  return {
-    total: real.length,
-    delayedCount: delayed.length,
-    avgDelay,
-    maxDelay,
-    worstTrain,
-    soppressi: soppressiTrains.length,
-    soppressiTrains,
-    delayedTrains: delayed
-  };
-}
-
-function stationScore(stats){
-  if(stats.total === 0) return 0;
-  const pctDelayed = stats.delayedCount / stats.total;
-  return stats.avgDelay * 0.6 + stats.maxDelay * 0.2 + pctDelayed*20 + stats.soppressi*15;
-}
-
-const VERDICTS = [
-  { max:6,  cls:'ok',     word:'VAI TRANQUILLO', subs:['Treni in linea con le aspettative. Puoi fidarti.','Tutto pulito, vai liscio.']},
-  { max:14, cls:'warn',   word:'VAI CON RISERVA', subs:['Qualche accumulo di ritardo qua e là. Occhio.','Livello sbattimento moderato.']},
-  { max:26, cls:'danger', word:'PENSACI DUE VOLTE', subs:['Iniziano i ritardi pesanti sulle tratte principali. Prendi l\'auto se puoi.']},
-  { max:Infinity, cls:'apoc', word:'NON ANDARE', subs:['Il caos ha preso il sopravvento sulla linea. Evita assolutamente i binari.']},
-];
-
-function pickVerdict(score){
-  const v = VERDICTS.find(v => score <= v.max);
-  return { ...v, sub: v.subs[Math.floor(Math.random()*v.subs.length)] };
-}
-
+// RENDER DELLE SINGOLE SCHEDE STAZIONE
 function renderStationCard(el, stationName, stats, error){
   if(!el) return; 
   el.style.display = 'block';
@@ -305,7 +267,7 @@ function renderStationCard(el, stationName, stats, error){
   } 
   
   if(stats.delayedCount === 0 && stats.soppressi === 0 && stats.total > 0) {
-    listHtml += `<div class="st-note" style="color:var(--ok); margin-top:10px;">🟢 Nessun ritardo o soppressione su questa stazione.</div>`;
+    listHtml += `<div class="st-note" style="color:var(--ok); margin-top:10px;">🟢 Nessun ritardo o soppressione.</div>`;
   } else if (stats.total === 0) {
     listHtml += `<div class="st-note" style="color:gray; margin-top:10px;">Nessun treno target rilevato al momento.</div>`;
   }
@@ -319,167 +281,12 @@ function renderStationCard(el, stationName, stats, error){
   `;
 }
 
-// INTEGRAZIONE TIMELINE GIORNALIERA
-function salvaInStorico(score, verdictClass) {
-  const logIniziale = JSON.parse(localStorage.getItem('vadoNonVado_dailyLog') || '[]');
-  const now = new Date();
-  const oraCorrente = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
-  
-  // Evita duplicati ravvicinati (se l'utente clicca freneticamente, non intasiamo il grafico)
-  if (logIniziale.length > 0) {
-    const ultimoLog = logIniziale[logIniziale.length - 1];
-    if (ultimoLog.ora === oraCorrente) return; 
-  }
-  
-  logIniziale.push({
-    ora: oraCorrente,
-    score: score,
-    classe: verdictClass
-  });
-  
-  localStorage.setItem('vadoNonVado_dailyLog', JSON.stringify(logIniziale));
-  renderTimeline();
-}
-
-function renderTimeline() {
-  const container = document.getElementById('trendTimeline');
-  if (!container) return;
-  
-  const logs = JSON.parse(localStorage.getItem('vadoNonVado_dailyLog') || '[]');
-  
-  if (logs.length === 0) {
-    container.innerHTML = `<span style="color:gray; font-size:11px; font-family:'Space Mono';">Nessuna scansione registrata oggi. Premi "Consulta il Fato".</span>`;
-    return;
-  }
-  
-  container.innerHTML = '';
-  logs.forEach(log => {
-    const item = document.createElement('div');
-    item.style.cssText = `
-      background: rgba(0,0,0,0.4);
-      border-left: 4px solid var(--${log.classe === 'apoc' ? 'danger' : log.classe});
-      padding: 6px 12px;
-      min-width: 85px;
-      border-radius: 4px;
-      font-family: 'Space Mono', monospace;
-      text-align: center;
-    `;
-    
-    let emoji = '🟢';
-    if(log.classe === 'warn') emoji = '🟡';
-    if(log.classe === 'danger') emoji = '🟠';
-    if(log.classe === 'apoc') emoji = '🔴';
-
-    item.innerHTML = `
-      <div style="font-size:11px; opacity:0.6;">${log.ora}</div>
-      <div style="font-size:14px; margin:2px 0;">${emoji}</div>
-      <div style="font-size:11px; font-weight:bold;">Indice: ${log.score.toFixed(1)}</div>
-    `;
-    container.appendChild(item);
-  });
-}
-
+// ASCOLTO DEL PULSANTE DI AGGIORNAMENTO MANUALE
 const btn = document.getElementById('consultBtn');
-const statusLine = document.getElementById('statusLine');
-const verdictCard = document.getElementById('verdictCard');
-const verdictWordEl = document.getElementById('verdictWord');
-const verdictSubEl = document.getElementById('verdictSub');
-const verdictScoreEl = document.getElementById('verdictScore');
+if(btn) btn.addEventListener('click', caricaDatiDalServer);
 
-if(btn) btn.addEventListener('click', () => consultaIlFato(false));
-
-async function consultaIlFato(isAutomated = false){
-  if(!btn || !statusLine || !verdictCard) return;
-
-  if(!isAutomated) {
-    btn.disabled = true;
-    btn.textContent = 'STO GUARDANDO I BINARI…';
-  }
-  statusLine.textContent = isAutomated ? 'Scansione ciclica in corso...' : 'Test dei proxy e caricamento stazioni in corso...';
-  
-  const threshold = getThreshold();
-  const results = [];
-
-  for(const station of STATIONS){
-    try{
-      const trains = await fetchWithFallback(station);
-      const stats = computeStationStats(trains);
-      results.push({ station, stats, error:null });
-    }catch(e){
-      results.push({ station, stats:null, error: e.message });
-    }
-  }
-
-  btn.disabled = false;
-  btn.textContent = 'CONSULTA IL FATO';
-
-  const okResults = results.filter(r => !r.error);
-  results.forEach(r=>{
-    renderStationCard(document.getElementById(`card-${r.station.key}`), r.station.name, r.stats, r.error);
-  });
-
-  if(okResults.length === 0){
-    statusLine.textContent = '';
-    verdictCard.style.display = 'block';
-    verdictCard.className = 'apoc';
-    flapRender(verdictWordEl, 'BOH');
-    setTimeout(()=>flapAnimateTo(verdictWordEl, 'BOH', {cycles:8, stepMs:40}), 100);
-    if(verdictSubEl) verdictSubEl.textContent = 'Tutti i proxy CORS pubblici hanno fallito. Riprova.';
-    if(verdictScoreEl) verdictScoreEl.textContent = '';
-    return;
-  }
-
-  statusLine.textContent = `Aggiornato alle ${new Date().toLocaleTimeString().slice(0,5)}.`;
-
-  const totalScore = okResults.reduce((s,r)=> s + stationScore(r.stats), 0) / okResults.length;
-  const scaledScore = threshold !== 8 ? totalScore * (8/threshold) : totalScore;
-  const verdict = pickVerdict(scaledScore);
-
-  verdictCard.style.display = 'block';
-  verdictCard.className = verdict.cls;
-  flapRender(verdictWordEl, verdict.word);
-  setTimeout(()=>flapAnimateTo(verdictWordEl, verdict.word, {cycles:12, stepMs:42}), 100);
-  if(verdictSubEl) verdictSubEl.textContent = verdict.sub;
-  if(verdictScoreEl) verdictScoreEl.textContent = `Indice caos calcolato: ${totalScore.toFixed(1)}`;
-
-  // Registro l'andamento nello storico locale
-  salvaInStorico(totalScore, verdict.cls);
-}
-
-// INIZIALIZZAZIONE DELLA PAGINA AL CARICAMENTO
-renderTimeline();
-
-// Scansione ciclica programmata (Ogni 45 minuti)
-const INTERVALLO_45_MIN = 45 * 60 * 1000;
-setInterval(() => {
-  console.log("Esecuzione scansione automatica programmata...");
-  consultaIlFato(true);
-}, INTERVALLO_45_MIN);
-
-
-// IMPOSTAZIONI DI AZZERAMENTO E INPUT
-const thresholdInput = document.getElementById('thresholdInput');
-if(thresholdInput) thresholdInput.value = getThreshold();
-
-const saveSettings = document.getElementById('saveSettings');
-if(saveSettings) {
-  saveSettings.addEventListener('click', ()=>{
-    const val = document.getElementById('thresholdInput') ? document.getElementById('thresholdInput').value : '8';
-    localStorage.setItem('vadoNonVado_threshold', val || '8');
-    if(statusLine) statusLine.textContent = 'Impostazioni salvate.';
-    setTimeout(()=> { if(statusLine) statusLine.textContent = ''; }, 2000);
-  });
-}
-
-const clearLogBtn = document.getElementById('clearLogBtn');
-if(clearLogBtn) {
-  clearLogBtn.addEventListener('click', () => {
-    if(confirm("Vuoi cancellare la cronologia dei ritardi di oggi?")) {
-      localStorage.removeItem('vadoNonVado_dailyLog');
-      renderTimeline();
-    }
-  });
-}
+// CARICAMENTO AUTOMATICO ALL'APERTURA DELLA PAGINA
+caricaDatiDalServer();
 </script>
 </body>
 </html>
