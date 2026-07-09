@@ -24,24 +24,21 @@
       "ora": "14:44",
       "score": 1.5802469135802468,
       "classe": "ok"
+    },
+    {
+      "ora": "17:48",
+      "score": 4.7407407407407405,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 8,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
+      "stats": null,
+      "error": "The operation was aborted due to timeout"
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -52,46 +49,16 @@
       "error": null
     },
     "chivassoandata": {
-      "stats": {
-        "total": 27,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2026",
-            "orario": "14:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 5
-          }
-        ]
-      },
-      "error": null
+      "stats": null,
+      "error": "The operation was aborted due to timeout"
     },
     "chivassoritorno": {
-      "stats": {
-        "total": 27,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2026",
-            "orario": "14:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          }
-        ]
-      },
-      "error": null
+      "stats": null,
+      "error": "The operation was aborted due to timeout"
     },
     "torinoandata": {
       "stats": {
-        "total": 10,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -104,19 +71,26 @@
     "torinoritorno": {
       "stats": {
         "total": 9,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 15,
+        "maxDelay": 15,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2057",
+            "orario": "17:35",
+            "luogo": "NOVARA",
+            "ritardo": 15
+          }
+        ]
       },
       "error": null
     }
   },
   "dataLog": "09/07/2026",
-  "lastUpdate": "09/07/2026, 14:44:48",
-  "totalScore": 1.5802469135802468,
+  "lastUpdate": "09/07/2026, 17:48:14",
+  "totalScore": 4.7407407407407405,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
