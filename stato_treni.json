@@ -29,16 +29,36 @@
       "ora": "17:48",
       "score": 4.7407407407407405,
       "classe": "ok"
+    },
+    {
+      "ora": "20:04",
+      "score": 4.52729044834308,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": null,
-      "error": "The operation was aborted due to timeout"
+      "stats": {
+        "total": 4,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "11380",
+            "orario": "21:08",
+            "luogo": "NOVARA",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -49,16 +69,46 @@
       "error": null
     },
     "chivassoandata": {
-      "stats": null,
-      "error": "The operation was aborted due to timeout"
+      "stats": {
+        "total": 19,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "11380",
+            "orario": "20:20",
+            "luogo": "NOVARA",
+            "ritardo": 10
+          }
+        ]
+      },
+      "error": null
     },
     "chivassoritorno": {
-      "stats": null,
-      "error": "The operation was aborted due to timeout"
+      "stats": {
+        "total": 18,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "11380",
+            "orario": "20:23",
+            "luogo": "IVREA",
+            "ritardo": 10
+          }
+        ]
+      },
+      "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -70,27 +120,20 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "total": 4,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2057",
-            "orario": "17:35",
-            "luogo": "NOVARA",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     }
   },
   "dataLog": "09/07/2026",
-  "lastUpdate": "09/07/2026, 17:48:14",
-  "totalScore": 4.7407407407407405,
+  "lastUpdate": "09/07/2026, 20:04:22",
+  "totalScore": 4.52729044834308,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
