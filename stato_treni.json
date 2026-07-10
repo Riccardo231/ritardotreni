@@ -14,12 +14,17 @@
       "ora": "06:02",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "10:12",
+      "score": 1.75,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,7 +48,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 26,
+        "total": 25,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -55,7 +60,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 26,
+        "total": 27,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -67,19 +72,26 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 8,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2016",
+            "orario": "10:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -91,8 +103,8 @@
     }
   },
   "dataLog": "10/07/2026",
-  "lastUpdate": "10/07/2026, 06:02:09",
-  "totalScore": 0,
+  "lastUpdate": "10/07/2026, 10:12:23",
+  "totalScore": 1.75,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
