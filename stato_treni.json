@@ -1,77 +1,7 @@
 {
   "timeline": [
     {
-      "ora": "00:44",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "01:43",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "03:12",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "06:47",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "09:15",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "11:10",
-      "score": 1.222222222222222,
-      "classe": "ok"
-    },
-    {
-      "ora": "12:46",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "13:58",
-      "score": 4.646825396825396,
-      "classe": "ok"
-    },
-    {
-      "ora": "15:46",
-      "score": 8.600255427841635,
-      "classe": "warn"
-    },
-    {
-      "ora": "17:02",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "18:36",
-      "score": 0.7948717948717948,
-      "classe": "ok"
-    },
-    {
-      "ora": "19:41",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "20:38",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:54",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "22:59",
+      "ora": "00:01",
       "score": 0,
       "classe": "ok"
     }
@@ -103,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -115,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 3,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -139,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 0,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -150,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "11/07/2026",
-  "lastUpdate": "11/07/2026, 22:59:41",
+  "dataLog": "12/07/2026",
+  "lastUpdate": "12/07/2026, 00:01:23",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
