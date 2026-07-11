@@ -49,16 +49,29 @@
       "ora": "17:02",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "18:36",
+      "score": 0.7948717948717948,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": null,
-      "error": "The operation was aborted due to timeout"
+      "stats": {
+        "total": 5,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -69,12 +82,27 @@
       "error": null
     },
     "chivassoandata": {
-      "stats": null,
-      "error": "The operation was aborted due to timeout"
+      "stats": {
+        "total": 26,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "26226",
+            "orario": "18:31",
+            "luogo": "TORINO LINGOTTO",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 28,
+        "total": 24,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -98,7 +126,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -110,8 +138,8 @@
     }
   },
   "dataLog": "11/07/2026",
-  "lastUpdate": "11/07/2026, 17:02:53",
-  "totalScore": 0,
+  "lastUpdate": "11/07/2026, 18:36:35",
+  "totalScore": 0.7948717948717948,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
