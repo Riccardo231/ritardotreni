@@ -39,12 +39,17 @@
       "ora": "18:39",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "20:22",
+      "score": 2.142156862745098,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -56,7 +61,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 5,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -68,31 +73,57 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 28,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 17,
+        "delayedCount": 2,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11380",
+            "orario": "20:20",
+            "luogo": "NOVARA",
+            "ritardo": 5
+          },
+          {
+            "treno": "2038",
+            "orario": "20:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 26,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 16,
+        "delayedCount": 2,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11380",
+            "orario": "20:23",
+            "luogo": "IVREA",
+            "ritardo": 5
+          },
+          {
+            "treno": "2038",
+            "orario": "20:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -104,7 +135,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 7,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -116,8 +147,8 @@
     }
   },
   "dataLog": "13/07/2026",
-  "lastUpdate": "13/07/2026, 18:39:14",
-  "totalScore": 0,
+  "lastUpdate": "13/07/2026, 20:22:29",
+  "totalScore": 2.142156862745098,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
