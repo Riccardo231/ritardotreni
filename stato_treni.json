@@ -29,12 +29,17 @@
       "ora": "13:44",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "15:51",
+      "score": 2.5,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -70,19 +75,25 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 27,
+        "total": 26,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "26274",
+            "orario": "16:27",
+            "luogo": "TORINO LINGOTTO"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 9,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -94,7 +105,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -106,8 +117,8 @@
     }
   },
   "dataLog": "13/07/2026",
-  "lastUpdate": "13/07/2026, 13:44:38",
-  "totalScore": 0,
+  "lastUpdate": "13/07/2026, 15:51:18",
+  "totalScore": 2.5,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
