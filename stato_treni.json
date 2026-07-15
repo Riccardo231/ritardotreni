@@ -19,12 +19,17 @@
       "ora": "06:34",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "09:00",
+      "score": 1.4615384615384617,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -36,7 +41,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -60,19 +65,26 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 27,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 26,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2719",
+            "orario": "08:52",
+            "luogo": "IVREA",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,8 +108,8 @@
     }
   },
   "dataLog": "15/07/2026",
-  "lastUpdate": "15/07/2026, 06:34:19",
-  "totalScore": 0,
+  "lastUpdate": "15/07/2026, 09:00:56",
+  "totalScore": 1.4615384615384617,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
