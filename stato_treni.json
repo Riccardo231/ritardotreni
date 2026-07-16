@@ -59,12 +59,17 @@
       "ora": "22:35",
       "score": 14.333333333333334,
       "classe": "danger"
+    },
+    {
+      "ora": "23:47",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -88,7 +93,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 4,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -100,39 +105,25 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 4,
-        "delayedCount": 1,
-        "avgDelay": 50,
-        "maxDelay": 50,
+        "total": 0,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2040",
-            "orario": "21:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 50
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 4,
-        "delayedCount": 1,
-        "avgDelay": 45,
-        "maxDelay": 45,
+        "total": 1,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2040",
-            "orario": "22:10",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 45
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -150,11 +141,11 @@
     }
   },
   "dataLog": "16/07/2026",
-  "lastUpdate": "16/07/2026, 22:35:47",
-  "totalScore": 14.333333333333334,
+  "lastUpdate": "16/07/2026, 23:47:28",
+  "totalScore": 0,
   "verdettoAttuale": {
-    "cls": "danger",
-    "word": "PENSACI DUE VOLTE",
-    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
