@@ -54,22 +54,15 @@
       "ora": "21:23",
       "score": 16.74074074074074,
       "classe": "danger"
+    },
+    {
+      "ora": "22:35",
+      "score": 14.333333333333334,
+      "classe": "danger"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 2,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 1,
         "delayedCount": 0,
@@ -81,31 +74,36 @@
       },
       "error": null
     },
-    "chivassoandata": {
+    "ivrearitorno": {
       "stats": {
-        "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 40,
-        "maxDelay": 40,
+        "total": 0,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2040",
-            "orario": "21:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 40
-          }
-        ]
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "chivassoandata": {
+      "stats": {
+        "total": 4,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 9,
+        "total": 4,
         "delayedCount": 1,
-        "avgDelay": 40,
-        "maxDelay": 40,
+        "avgDelay": 50,
+        "maxDelay": 50,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -113,7 +111,7 @@
             "treno": "2040",
             "orario": "21:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 40
+            "ritardo": 50
           }
         ]
       },
@@ -121,10 +119,10 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 5,
+        "total": 4,
         "delayedCount": 1,
-        "avgDelay": 35,
-        "maxDelay": 35,
+        "avgDelay": 45,
+        "maxDelay": 45,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -132,7 +130,7 @@
             "treno": "2040",
             "orario": "22:10",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 35
+            "ritardo": 45
           }
         ]
       },
@@ -140,7 +138,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -152,8 +150,8 @@
     }
   },
   "dataLog": "16/07/2026",
-  "lastUpdate": "16/07/2026, 21:23:23",
-  "totalScore": 16.74074074074074,
+  "lastUpdate": "16/07/2026, 22:35:47",
+  "totalScore": 14.333333333333334,
   "verdettoAttuale": {
     "cls": "danger",
     "word": "PENSACI DUE VOLTE",
