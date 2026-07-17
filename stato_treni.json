@@ -19,12 +19,17 @@
       "ora": "11:30",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "13:09",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,7 +101,7 @@
     }
   },
   "dataLog": "17/07/2026",
-  "lastUpdate": "17/07/2026, 11:30:36",
+  "lastUpdate": "17/07/2026, 13:09:48",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
