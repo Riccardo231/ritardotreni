@@ -4,12 +4,17 @@
       "ora": "00:01",
       "score": 61.72222222222222,
       "classe": "apoc"
+    },
+    {
+      "ora": "01:37",
+      "score": 104.6111111111111,
+      "classe": "apoc"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 0,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -33,10 +38,10 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 2,
+        "total": 5,
         "delayedCount": 2,
-        "avgDelay": 132.5,
-        "maxDelay": 135,
+        "avgDelay": 227.5,
+        "maxDelay": 235,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -44,13 +49,13 @@
             "treno": "2042",
             "orario": "22:40",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 130
+            "ritardo": 220
           },
           {
             "treno": "2044",
             "orario": "23:40",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 135
+            "ritardo": 235
           }
         ]
       },
@@ -58,10 +63,10 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 2,
+        "total": 6,
         "delayedCount": 2,
-        "avgDelay": 132.5,
-        "maxDelay": 135,
+        "avgDelay": 227.5,
+        "maxDelay": 235,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -69,13 +74,13 @@
             "treno": "2042",
             "orario": "22:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 130
+            "ritardo": 220
           },
           {
             "treno": "2044",
             "orario": "23:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 135
+            "ritardo": 235
           }
         ]
       },
@@ -84,23 +89,29 @@
     "torinoandata": {
       "stats": {
         "total": 3,
-        "delayedCount": 2,
-        "avgDelay": 130,
-        "maxDelay": 130,
+        "delayedCount": 3,
+        "avgDelay": 263.3333333333333,
+        "maxDelay": 340,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
+            "treno": "9958",
+            "orario": "22:46",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 340
+          },
+          {
             "treno": "2042",
             "orario": "23:06",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 130
+            "ritardo": 220
           },
           {
             "treno": "2044",
             "orario": "00:06",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 130
+            "ritardo": 230
           }
         ]
       },
@@ -108,7 +119,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 1,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -120,8 +131,8 @@
     }
   },
   "dataLog": "19/07/2026",
-  "lastUpdate": "19/07/2026, 00:01:58",
-  "totalScore": 61.72222222222222,
+  "lastUpdate": "19/07/2026, 01:37:17",
+  "totalScore": 104.6111111111111,
   "verdettoAttuale": {
     "cls": "apoc",
     "word": "NON ANDARE",
