@@ -19,6 +19,11 @@
       "ora": "06:32",
       "score": 5.571428571428572,
       "classe": "ok"
+    },
+    {
+      "ora": "08:33",
+      "score": 1.037037037037037,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -48,45 +53,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 28,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2013",
-            "orario": "06:18",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 20
-          }
-        ]
-      },
-      "error": null
-    },
-    "chivassoritorno": {
-      "stats": {
-        "total": 28,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2013",
-            "orario": "06:20",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 20
-          }
-        ]
-      },
-      "error": null
-    },
-    "torinoandata": {
-      "stats": {
-        "total": 10,
+        "total": 26,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,9 +63,40 @@
       },
       "error": null
     },
+    "chivassoritorno": {
+      "stats": {
+        "total": 25,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "torinoandata": {
+      "stats": {
+        "total": 9,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "9900",
+            "orario": "08:36",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
+    },
     "torinoritorno": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -110,8 +108,8 @@
     }
   },
   "dataLog": "18/07/2026",
-  "lastUpdate": "18/07/2026, 06:32:49",
-  "totalScore": 5.571428571428572,
+  "lastUpdate": "18/07/2026, 08:33:38",
+  "totalScore": 1.037037037037037,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
