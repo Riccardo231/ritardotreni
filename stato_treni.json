@@ -1,85 +1,15 @@
 {
   "timeline": [
     {
-      "ora": "00:33",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "01:36",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "03:07",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "06:32",
-      "score": 5.571428571428572,
-      "classe": "ok"
-    },
-    {
-      "ora": "08:33",
-      "score": 1.037037037037037,
-      "classe": "ok"
-    },
-    {
-      "ora": "10:27",
-      "score": 2.9091710758377425,
-      "classe": "ok"
-    },
-    {
-      "ora": "12:04",
-      "score": 1.6904761904761905,
-      "classe": "ok"
-    },
-    {
-      "ora": "14:39",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "16:10",
-      "score": 1.037037037037037,
-      "classe": "ok"
-    },
-    {
-      "ora": "17:39",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "18:38",
-      "score": 4.996913580246914,
-      "classe": "ok"
-    },
-    {
-      "ora": "19:42",
-      "score": 19.526315789473685,
-      "classe": "danger"
-    },
-    {
-      "ora": "20:39",
-      "score": 3.4230769230769234,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:54",
-      "score": 7.198412698412699,
-      "classe": "warn"
-    },
-    {
-      "ora": "22:59",
-      "score": 35.55555555555555,
+      "ora": "00:01",
+      "score": 61.72222222222222,
       "classe": "apoc"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -103,10 +33,10 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 3,
+        "total": 2,
         "delayedCount": 2,
-        "avgDelay": 62.5,
-        "maxDelay": 90,
+        "avgDelay": 132.5,
+        "maxDelay": 135,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -114,13 +44,13 @@
             "treno": "2042",
             "orario": "22:40",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 90
+            "ritardo": 130
           },
           {
             "treno": "2044",
             "orario": "23:40",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 35
+            "ritardo": 135
           }
         ]
       },
@@ -130,8 +60,8 @@
       "stats": {
         "total": 2,
         "delayedCount": 2,
-        "avgDelay": 62.5,
-        "maxDelay": 90,
+        "avgDelay": 132.5,
+        "maxDelay": 135,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -139,13 +69,13 @@
             "treno": "2042",
             "orario": "22:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 90
+            "ritardo": 130
           },
           {
             "treno": "2044",
             "orario": "23:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 35
+            "ritardo": 135
           }
         ]
       },
@@ -153,10 +83,10 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 2,
+        "total": 3,
         "delayedCount": 2,
-        "avgDelay": 55,
-        "maxDelay": 80,
+        "avgDelay": 130,
+        "maxDelay": 130,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -164,13 +94,13 @@
             "treno": "2042",
             "orario": "23:06",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 80
+            "ritardo": 130
           },
           {
             "treno": "2044",
             "orario": "00:06",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 30
+            "ritardo": 130
           }
         ]
       },
@@ -178,7 +108,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 0,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -189,9 +119,9 @@
       "error": null
     }
   },
-  "dataLog": "18/07/2026",
-  "lastUpdate": "18/07/2026, 22:59:28",
-  "totalScore": 35.55555555555555,
+  "dataLog": "19/07/2026",
+  "lastUpdate": "19/07/2026, 00:01:58",
+  "totalScore": 61.72222222222222,
   "verdettoAttuale": {
     "cls": "apoc",
     "word": "NON ANDARE",
