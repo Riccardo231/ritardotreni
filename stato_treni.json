@@ -59,35 +59,15 @@
       "ora": "19:42",
       "score": 19.526315789473685,
       "classe": "danger"
+    },
+    {
+      "ora": "20:39",
+      "score": 3.4230769230769234,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 4,
-        "delayedCount": 2,
-        "avgDelay": 32.5,
-        "maxDelay": 35,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "11378",
-            "orario": "20:08",
-            "luogo": "NOVARA",
-            "ritardo": 35
-          },
-          {
-            "treno": "11384",
-            "orario": "21:08",
-            "luogo": "NOVARA",
-            "ritardo": 30
-          }
-        ]
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 3,
         "delayedCount": 0,
@@ -99,32 +79,38 @@
       },
       "error": null
     },
-    "chivassoandata": {
+    "ivrearitorno": {
       "stats": {
-        "total": 20,
-        "delayedCount": 3,
-        "avgDelay": 33.333333333333336,
-        "maxDelay": 40,
+        "total": 2,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "chivassoandata": {
+      "stats": {
+        "total": 13,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "11362",
+            "orario": "21:37",
+            "luogo": "IVREA"
+          }
+        ],
         "delayedTrains": [
           {
-            "treno": "11378",
-            "orario": "19:20",
-            "luogo": "NOVARA",
-            "ritardo": 40
-          },
-          {
-            "treno": "2036",
-            "orario": "19:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 25
-          },
-          {
-            "treno": "11384",
-            "orario": "20:20",
-            "luogo": "NOVARA",
-            "ritardo": 35
+            "treno": "28732",
+            "orario": "21:55",
+            "luogo": "IVREA",
+            "ritardo": 5
           }
         ]
       },
@@ -132,57 +118,31 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 19,
-        "delayedCount": 3,
-        "avgDelay": 33.333333333333336,
-        "maxDelay": 40,
+        "total": 12,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "11378",
-            "orario": "19:23",
-            "luogo": "IVREA",
-            "ritardo": 40
-          },
-          {
-            "treno": "2036",
-            "orario": "19:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 25
-          },
-          {
-            "treno": "11384",
-            "orario": "20:23",
-            "luogo": "IVREA",
-            "ritardo": 35
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "total": 6,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2036",
-            "orario": "20:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 20
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -194,11 +154,11 @@
     }
   },
   "dataLog": "18/07/2026",
-  "lastUpdate": "18/07/2026, 19:42:12",
-  "totalScore": 19.526315789473685,
+  "lastUpdate": "18/07/2026, 20:39:15",
+  "totalScore": 3.4230769230769234,
   "verdettoAttuale": {
-    "cls": "danger",
-    "word": "PENSACI DUE VOLTE",
-    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
