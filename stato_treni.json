@@ -14,12 +14,17 @@
       "ora": "03:07",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "06:32",
+      "score": 5.571428571428572,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 2,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 4,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,31 +48,45 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 11,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 28,
+        "delayedCount": 1,
+        "avgDelay": 20,
+        "maxDelay": 20,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2013",
+            "orario": "06:18",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 20
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 13,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 28,
+        "delayedCount": 1,
+        "avgDelay": 20,
+        "maxDelay": 20,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2013",
+            "orario": "06:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 20
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 2,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -91,8 +110,8 @@
     }
   },
   "dataLog": "18/07/2026",
-  "lastUpdate": "18/07/2026, 03:07:01",
-  "totalScore": 0,
+  "lastUpdate": "18/07/2026, 06:32:49",
+  "totalScore": 5.571428571428572,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
