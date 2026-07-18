@@ -64,12 +64,17 @@
       "ora": "20:39",
       "score": 3.4230769230769234,
       "classe": "ok"
+    },
+    {
+      "ora": "21:54",
+      "score": 7.198412698412699,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 3,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -81,7 +86,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -93,24 +98,18 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 13,
+        "total": 7,
         "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "11362",
-            "orario": "21:37",
-            "luogo": "IVREA"
-          }
-        ],
+        "avgDelay": 15,
+        "maxDelay": 15,
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "28732",
-            "orario": "21:55",
-            "luogo": "IVREA",
-            "ritardo": 5
+            "treno": "2042",
+            "orario": "22:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 15
           }
         ]
       },
@@ -118,31 +117,45 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 12,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 6,
+        "delayedCount": 1,
+        "avgDelay": 15,
+        "maxDelay": 15,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2042",
+            "orario": "22:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 15
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 6,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 4,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2042",
+            "orario": "23:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 3,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -154,11 +167,11 @@
     }
   },
   "dataLog": "18/07/2026",
-  "lastUpdate": "18/07/2026, 20:39:15",
-  "totalScore": 3.4230769230769234,
+  "lastUpdate": "18/07/2026, 21:54:02",
+  "totalScore": 7.198412698412699,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
