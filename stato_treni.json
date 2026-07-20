@@ -19,6 +19,11 @@
       "ora": "07:22",
       "score": 1.5897435897435896,
       "classe": "ok"
+    },
+    {
+      "ora": "10:29",
+      "score": 11.873456790123456,
+      "classe": "warn"
     }
   ],
   "stazioni": {
@@ -36,7 +41,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -49,44 +54,6 @@
     "chivassoandata": {
       "stats": {
         "total": 26,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2052",
-            "orario": "08:08",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 5
-          }
-        ]
-      },
-      "error": null
-    },
-    "chivassoritorno": {
-      "stats": {
-        "total": 26,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2052",
-            "orario": "08:10",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          }
-        ]
-      },
-      "error": null
-    },
-    "torinoandata": {
-      "stats": {
-        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,9 +63,47 @@
       },
       "error": null
     },
-    "torinoritorno": {
+    "chivassoritorno": {
+      "stats": {
+        "total": 27,
+        "delayedCount": 1,
+        "avgDelay": 45,
+        "maxDelay": 45,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2016",
+            "orario": "09:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 45
+          }
+        ]
+      },
+      "error": null
+    },
+    "torinoandata": {
       "stats": {
         "total": 8,
+        "delayedCount": 1,
+        "avgDelay": 40,
+        "maxDelay": 40,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2016",
+            "orario": "10:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 40
+          }
+        ]
+      },
+      "error": null
+    },
+    "torinoritorno": {
+      "stats": {
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -110,11 +115,11 @@
     }
   },
   "dataLog": "20/07/2026",
-  "lastUpdate": "20/07/2026, 07:22:46",
-  "totalScore": 1.5897435897435896,
+  "lastUpdate": "20/07/2026, 10:29:13",
+  "totalScore": 11.873456790123456,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
