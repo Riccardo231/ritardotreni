@@ -1,57 +1,7 @@
 {
   "timeline": [
     {
-      "ora": "00:35",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "01:41",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "03:15",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "07:22",
-      "score": 1.5897435897435896,
-      "classe": "ok"
-    },
-    {
-      "ora": "10:29",
-      "score": 11.873456790123456,
-      "classe": "warn"
-    },
-    {
-      "ora": "13:29",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "15:30",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "17:33",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "19:09",
-      "score": 1.222222222222222,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:17",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "22:54",
+      "ora": "00:07",
       "score": 0,
       "classe": "ok"
     }
@@ -59,7 +9,7 @@
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -83,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -95,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -107,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 2,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -119,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 0,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -130,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "20/07/2026",
-  "lastUpdate": "20/07/2026, 22:54:10",
+  "dataLog": "21/07/2026",
+  "lastUpdate": "21/07/2026, 00:07:20",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
