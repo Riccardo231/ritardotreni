@@ -39,16 +39,29 @@
       "ora": "16:49",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "18:36",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": null,
-      "error": "The operation was aborted due to timeout"
+      "stats": {
+        "total": 6,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -84,7 +97,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 10,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,7 +109,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -108,7 +121,7 @@
     }
   },
   "dataLog": "21/07/2026",
-  "lastUpdate": "21/07/2026, 16:49:42",
+  "lastUpdate": "21/07/2026, 18:36:10",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
