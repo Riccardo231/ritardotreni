@@ -24,12 +24,17 @@
       "ora": "09:37",
       "score": 8.33974358974359,
       "classe": "warn"
+    },
+    {
+      "ora": "12:08",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 5,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -41,7 +46,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -54,63 +59,36 @@
     "chivassoandata": {
       "stats": {
         "total": 26,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2016",
-            "orario": "09:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 20
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 26,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "total": 27,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2016",
-            "orario": "09:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 20
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
         "total": 8,
-        "delayedCount": 2,
-        "avgDelay": 12.5,
-        "maxDelay": 20,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2716",
-            "orario": "09:35",
-            "luogo": "IVREA",
-            "ritardo": 5
-          },
-          {
-            "treno": "2016",
-            "orario": "10:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 20
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -128,11 +106,11 @@
     }
   },
   "dataLog": "21/07/2026",
-  "lastUpdate": "21/07/2026, 09:37:40",
-  "totalScore": 8.33974358974359,
+  "lastUpdate": "21/07/2026, 12:08:37",
+  "totalScore": 0,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
