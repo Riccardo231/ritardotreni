@@ -1,62 +1,7 @@
 {
   "timeline": [
     {
-      "ora": "00:11",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "01:44",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "03:17",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "06:58",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "09:41",
-      "score": 1.5897435897435896,
-      "classe": "ok"
-    },
-    {
-      "ora": "12:06",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "14:14",
-      "score": 1.5802469135802468,
-      "classe": "ok"
-    },
-    {
-      "ora": "16:54",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "18:40",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "20:02",
-      "score": 3.7870370370370368,
-      "classe": "ok"
-    },
-    {
-      "ora": "22:01",
-      "score": 5,
-      "classe": "ok"
-    },
-    {
-      "ora": "23:45",
+      "ora": "01:04",
       "score": 0,
       "classe": "ok"
     }
@@ -88,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 0,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -100,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 0,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -112,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -124,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 0,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -135,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "23/07/2026",
-  "lastUpdate": "23/07/2026, 23:45:51",
+  "dataLog": "24/07/2026",
+  "lastUpdate": "24/07/2026, 01:04:26",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
