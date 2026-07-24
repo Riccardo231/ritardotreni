@@ -14,12 +14,17 @@
       "ora": "06:54",
       "score": 2.5,
       "classe": "ok"
+    },
+    {
+      "ora": "09:36",
+      "score": 8.583333333333334,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -47,35 +52,11 @@
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "chivassoritorno": {
-      "stats": {
-        "total": 26,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "torinoandata": {
-      "stats": {
-        "total": 11,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
         "soppressi": 1,
         "soppressiTrains": [
           {
-            "treno": "2010",
-            "orario": "07:06",
+            "treno": "2022",
+            "orario": "12:40",
             "luogo": "MILANO CENTRALE"
           }
         ],
@@ -83,9 +64,52 @@
       },
       "error": null
     },
+    "chivassoritorno": {
+      "stats": {
+        "total": 25,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2022",
+            "orario": "12:42",
+            "luogo": "TORINO PORTA NUOVA"
+          }
+        ],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "torinoandata": {
+      "stats": {
+        "total": 8,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2022",
+            "orario": "13:06",
+            "luogo": "MILANO CENTRALE"
+          }
+        ],
+        "delayedTrains": [
+          {
+            "treno": "2716",
+            "orario": "09:35",
+            "luogo": "IVREA",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
+    },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -97,11 +121,11 @@
     }
   },
   "dataLog": "24/07/2026",
-  "lastUpdate": "24/07/2026, 06:54:31",
-  "totalScore": 2.5,
+  "lastUpdate": "24/07/2026, 09:36:59",
+  "totalScore": 8.583333333333334,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
