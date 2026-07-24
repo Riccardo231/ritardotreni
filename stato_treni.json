@@ -39,12 +39,17 @@
       "ora": "20:05",
       "score": 26.456209969367865,
       "classe": "apoc"
+    },
+    {
+      "ora": "22:04",
+      "score": 2.5,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 4,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -56,7 +61,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -68,78 +73,34 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 19,
-        "delayedCount": 3,
-        "avgDelay": 31.666666666666668,
-        "maxDelay": 45,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "2040",
-            "orario": "21:40",
-            "luogo": "MILANO CENTRALE"
-          }
-        ],
-        "delayedTrains": [
-          {
-            "treno": "2041",
-            "orario": "20:18",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 45
-          },
-          {
-            "treno": "26230",
-            "orario": "20:31",
-            "luogo": "TORINO LINGOTTO",
-            "ritardo": 40
-          },
-          {
-            "treno": "2038",
-            "orario": "20:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 10
-          }
-        ]
+        "total": 6,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 18,
-        "delayedCount": 2,
-        "avgDelay": 27.5,
-        "maxDelay": 45,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "2040",
-            "orario": "21:42",
-            "luogo": "TORINO PORTA NUOVA"
-          }
-        ],
-        "delayedTrains": [
-          {
-            "treno": "2041",
-            "orario": "20:20",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 45
-          },
-          {
-            "treno": "2038",
-            "orario": "20:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 10
-          }
-        ]
+        "total": 6,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 7,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
+        "total": 4,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 1,
         "soppressiTrains": [
           {
@@ -148,43 +109,29 @@
             "luogo": "MILANO CENTRALE"
           }
         ],
-        "delayedTrains": [
-          {
-            "treno": "2038",
-            "orario": "21:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 10
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
-        "delayedCount": 1,
-        "avgDelay": 50,
-        "maxDelay": 50,
+        "total": 1,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2041",
-            "orario": "19:54",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 50
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     }
   },
   "dataLog": "24/07/2026",
-  "lastUpdate": "24/07/2026, 20:05:48",
-  "totalScore": 26.456209969367865,
+  "lastUpdate": "24/07/2026, 22:04:15",
+  "totalScore": 2.5,
   "verdettoAttuale": {
-    "cls": "apoc",
-    "word": "NON ANDARE",
-    "sub": "Il caos ha preso il sopravvento sulla linea."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
