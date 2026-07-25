@@ -49,24 +49,36 @@
       "ora": "19:09",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "20:41",
+      "score": 15.003885003885003,
+      "classe": "danger"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 4,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 3,
+        "delayedCount": 1,
+        "avgDelay": 30,
+        "maxDelay": 30,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11384",
+            "orario": "21:08",
+            "luogo": "NOVARA",
+            "ritardo": 30
+          }
+        ]
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -78,31 +90,45 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 11,
+        "delayedCount": 1,
+        "avgDelay": 35,
+        "maxDelay": 35,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11384",
+            "orario": "20:20",
+            "luogo": "NOVARA",
+            "ritardo": 35
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 13,
+        "delayedCount": 1,
+        "avgDelay": 35,
+        "maxDelay": 35,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11384",
+            "orario": "20:23",
+            "luogo": "IVREA",
+            "ritardo": 35
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 7,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -114,7 +140,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -126,11 +152,11 @@
     }
   },
   "dataLog": "25/07/2026",
-  "lastUpdate": "25/07/2026, 19:09:01",
-  "totalScore": 0,
+  "lastUpdate": "25/07/2026, 20:41:12",
+  "totalScore": 15.003885003885003,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "danger",
+    "word": "PENSACI DUE VOLTE",
+    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
   }
 }
