@@ -19,12 +19,17 @@
       "ora": "09:23",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "11:22",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 5,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -36,7 +41,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,7 +101,7 @@
     }
   },
   "dataLog": "25/07/2026",
-  "lastUpdate": "25/07/2026, 09:23:13",
+  "lastUpdate": "25/07/2026, 11:22:03",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
