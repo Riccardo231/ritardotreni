@@ -19,12 +19,17 @@
       "ora": "09:40",
       "score": 3.4007936507936507,
       "classe": "ok"
+    },
+    {
+      "ora": "12:57",
+      "score": 3.973913043478261,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 5,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -36,7 +41,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -49,35 +54,34 @@
     "chivassoandata": {
       "stats": {
         "total": 21,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2016",
-            "orario": "09:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
+        "total": 23,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "26332",
+            "orario": "13:52",
+            "luogo": "TORINO LINGOTTO"
+          }
+        ],
         "delayedTrains": [
           {
-            "treno": "2016",
-            "orario": "09:42",
-            "luogo": "TORINO PORTA NUOVA",
+            "treno": "2727",
+            "orario": "13:00",
+            "luogo": "IVREA",
             "ritardo": 5
           }
         ]
@@ -85,33 +89,12 @@
       "error": null
     },
     "torinoandata": {
-      "stats": {
-        "total": 10,
-        "delayedCount": 2,
-        "avgDelay": 7.5,
-        "maxDelay": 10,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2716",
-            "orario": "09:35",
-            "luogo": "IVREA",
-            "ritardo": 5
-          },
-          {
-            "treno": "2054",
-            "orario": "09:55",
-            "luogo": "NOVARA",
-            "ritardo": 10
-          }
-        ]
-      },
-      "error": null
+      "stats": null,
+      "error": "The operation was aborted due to timeout"
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -123,8 +106,8 @@
     }
   },
   "dataLog": "27/07/2026",
-  "lastUpdate": "27/07/2026, 09:40:57",
-  "totalScore": 3.4007936507936507,
+  "lastUpdate": "27/07/2026, 12:57:03",
+  "totalScore": 3.973913043478261,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
