@@ -29,24 +29,36 @@
       "ora": "14:26",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "17:06",
+      "score": 2.053030303030303,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
         "total": 8,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2735",
+            "orario": "17:23",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -70,7 +82,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -82,19 +94,26 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 10,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 11,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2030",
+            "orario": "17:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 10,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -106,8 +125,8 @@
     }
   },
   "dataLog": "28/07/2026",
-  "lastUpdate": "28/07/2026, 14:26:21",
-  "totalScore": 0,
+  "lastUpdate": "28/07/2026, 17:06:38",
+  "totalScore": 2.053030303030303,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
