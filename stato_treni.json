@@ -14,12 +14,17 @@
       "ora": "06:53",
       "score": 1.037037037037037,
       "classe": "ok"
+    },
+    {
+      "ora": "09:48",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -55,7 +60,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -67,7 +72,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -79,27 +84,20 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 8,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2005",
-            "orario": "07:10",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     }
   },
   "dataLog": "29/07/2026",
-  "lastUpdate": "29/07/2026, 06:53:10",
-  "totalScore": 1.037037037037037,
+  "lastUpdate": "29/07/2026, 09:48:00",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
