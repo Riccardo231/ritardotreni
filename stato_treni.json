@@ -34,23 +34,34 @@
       "ora": "17:34",
       "score": 74.98134920634922,
       "classe": "apoc"
+    },
+    {
+      "ora": "18:58",
+      "score": 63.709341865863614,
+      "classe": "apoc"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
         "total": 6,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "delayedCount": 2,
+        "avgDelay": 7.5,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "11374",
-            "orario": "18:08",
+            "treno": "11376",
+            "orario": "19:08",
             "luogo": "NOVARA",
-            "ritardo": 15
+            "ritardo": 5
+          },
+          {
+            "treno": "2739",
+            "orario": "19:23",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 10
           }
         ]
       },
@@ -58,40 +69,24 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "2736",
-            "orario": "18:41",
-            "luogo": "TORINO PORTA NUOVA"
-          }
-        ],
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": []
       },
       "error": null
     },
     "chivassoandata": {
       "stats": {
-        "total": 24,
-        "delayedCount": 8,
-        "avgDelay": 48.75,
-        "maxDelay": 180,
-        "soppressi": 4,
+        "total": 22,
+        "delayedCount": 3,
+        "avgDelay": 75,
+        "maxDelay": 125,
+        "soppressi": 2,
         "soppressiTrains": [
-          {
-            "treno": "11334",
-            "orario": "17:37",
-            "luogo": "IVREA"
-          },
-          {
-            "treno": "2737",
-            "orario": "17:48",
-            "luogo": "TORINO PORTA NUOVA"
-          },
           {
             "treno": "2736",
             "orario": "19:06",
@@ -105,52 +100,22 @@
         ],
         "delayedTrains": [
           {
-            "treno": "2026",
-            "orario": "14:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 180
-          },
-          {
-            "treno": "2030",
-            "orario": "16:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 70
-          },
-          {
-            "treno": "11374",
-            "orario": "17:14",
-            "luogo": "NOVARA",
-            "ritardo": 20
-          },
-          {
-            "treno": "2035",
-            "orario": "17:18",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 25
-          },
-          {
-            "treno": "2032",
-            "orario": "17:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 35
-          },
-          {
-            "treno": "2037",
-            "orario": "18:18",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          },
-          {
-            "treno": "11376",
-            "orario": "18:20",
-            "luogo": "NOVARA",
-            "ritardo": 10
-          },
-          {
             "treno": "2034",
             "orario": "18:40",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 45
+            "ritardo": 125
+          },
+          {
+            "treno": "2739",
+            "orario": "18:48",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 20
+          },
+          {
+            "treno": "2041",
+            "orario": "20:18",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 80
           }
         ]
       },
@@ -158,17 +123,12 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
-        "delayedCount": 9,
-        "avgDelay": 66.11111111111111,
-        "maxDelay": 200,
-        "soppressi": 3,
+        "total": 23,
+        "delayedCount": 5,
+        "avgDelay": 53,
+        "maxDelay": 125,
+        "soppressi": 2,
         "soppressiTrains": [
-          {
-            "treno": "11334",
-            "orario": "17:40",
-            "luogo": "NOVARA"
-          },
           {
             "treno": "2736",
             "orario": "19:10",
@@ -182,58 +142,34 @@
         ],
         "delayedTrains": [
           {
-            "treno": "2029",
-            "orario": "14:20",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 200
-          },
-          {
-            "treno": "2026",
-            "orario": "14:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 180
-          },
-          {
-            "treno": "2030",
-            "orario": "16:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 70
-          },
-          {
-            "treno": "2035",
-            "orario": "17:20",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 25
-          },
-          {
-            "treno": "11374",
-            "orario": "17:23",
-            "luogo": "IVREA",
-            "ritardo": 20
-          },
-          {
-            "treno": "2032",
-            "orario": "17:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 35
-          },
-          {
             "treno": "2037",
             "orario": "18:20",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 10
-          },
-          {
-            "treno": "11376",
-            "orario": "18:23",
-            "luogo": "IVREA",
-            "ritardo": 10
+            "ritardo": 35
           },
           {
             "treno": "2034",
             "orario": "18:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 45
+            "ritardo": 125
+          },
+          {
+            "treno": "11336",
+            "orario": "18:49",
+            "luogo": "NOVARA",
+            "ritardo": 5
+          },
+          {
+            "treno": "2739",
+            "orario": "18:52",
+            "luogo": "IVREA",
+            "ritardo": 20
+          },
+          {
+            "treno": "2041",
+            "orario": "20:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 80
           }
         ]
       },
@@ -241,17 +177,12 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 12,
-        "delayedCount": 5,
-        "avgDelay": 64,
-        "maxDelay": 170,
-        "soppressi": 3,
+        "total": 10,
+        "delayedCount": 1,
+        "avgDelay": 120,
+        "maxDelay": 120,
+        "soppressi": 2,
         "soppressiTrains": [
-          {
-            "treno": "2732",
-            "orario": "17:35",
-            "luogo": "IVREA"
-          },
           {
             "treno": "2736",
             "orario": "19:35",
@@ -265,34 +196,10 @@
         ],
         "delayedTrains": [
           {
-            "treno": "2026",
-            "orario": "15:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 170
-          },
-          {
-            "treno": "2030",
-            "orario": "17:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 60
-          },
-          {
-            "treno": "2032",
-            "orario": "18:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 30
-          },
-          {
-            "treno": "2004",
-            "orario": "18:50",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 20
-          },
-          {
             "treno": "2034",
             "orario": "19:06",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 40
+            "ritardo": 120
           }
         ]
       },
@@ -300,30 +207,24 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
-        "delayedCount": 3,
-        "avgDelay": 23.333333333333332,
-        "maxDelay": 40,
+        "total": 7,
+        "delayedCount": 2,
+        "avgDelay": 42.5,
+        "maxDelay": 80,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2035",
-            "orario": "16:54",
+            "treno": "2039",
+            "orario": "18:54",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 40
+            "ritardo": 5
           },
           {
-            "treno": "2057",
-            "orario": "17:35",
-            "luogo": "NOVARA",
-            "ritardo": 20
-          },
-          {
-            "treno": "2037",
-            "orario": "17:54",
+            "treno": "2041",
+            "orario": "19:54",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 10
+            "ritardo": 80
           }
         ]
       },
@@ -331,8 +232,8 @@
     }
   },
   "dataLog": "29/07/2026",
-  "lastUpdate": "29/07/2026, 17:34:30",
-  "totalScore": 74.98134920634922,
+  "lastUpdate": "29/07/2026, 18:58:35",
+  "totalScore": 63.709341865863614,
   "verdettoAttuale": {
     "cls": "apoc",
     "word": "NON ANDARE",
