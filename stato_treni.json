@@ -24,22 +24,15 @@
       "ora": "10:41",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "12:53",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 6,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 7,
         "delayedCount": 0,
@@ -51,31 +44,7 @@
       },
       "error": null
     },
-    "chivassoandata": {
-      "stats": {
-        "total": 22,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "chivassoritorno": {
-      "stats": {
-        "total": 22,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "torinoandata": {
+    "ivrearitorno": {
       "stats": {
         "total": 8,
         "delayedCount": 0,
@@ -87,9 +56,45 @@
       },
       "error": null
     },
-    "torinoritorno": {
+    "chivassoandata": {
+      "stats": {
+        "total": 20,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "chivassoritorno": {
+      "stats": {
+        "total": 23,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "torinoandata": {
       "stats": {
         "total": 9,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "torinoritorno": {
+      "stats": {
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -101,7 +106,7 @@
     }
   },
   "dataLog": "30/07/2026",
-  "lastUpdate": "30/07/2026, 10:41:43",
+  "lastUpdate": "30/07/2026, 12:53:38",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
