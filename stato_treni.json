@@ -44,28 +44,15 @@
       "ora": "19:09",
       "score": 16.956521739130434,
       "classe": "danger"
+    },
+    {
+      "ora": "21:02",
+      "score": 2.8333333333333335,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 6,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "11376",
-            "orario": "19:08",
-            "luogo": "NOVARA"
-          }
-        ],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 3,
         "delayedCount": 0,
@@ -77,45 +64,44 @@
       },
       "error": null
     },
+    "ivrearitorno": {
+      "stats": {
+        "total": 1,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
     "chivassoandata": {
       "stats": {
-        "total": 23,
-        "delayedCount": 1,
-        "avgDelay": 40,
-        "maxDelay": 40,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "11340",
-            "orario": "20:37",
-            "luogo": "IVREA"
-          }
-        ],
-        "delayedTrains": [
-          {
-            "treno": "2056",
-            "orario": "19:10",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 40
-          }
-        ]
+        "total": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
+        "total": 12,
         "delayedCount": 1,
-        "avgDelay": 40,
-        "maxDelay": 40,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2056",
-            "orario": "19:14",
-            "luogo": "TORINO LINGOTTO",
-            "ritardo": 40
+            "treno": "2743",
+            "orario": "20:52",
+            "luogo": "IVREA",
+            "ritardo": 10
           }
         ]
       },
@@ -123,7 +109,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 10,
+        "total": 6,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -131,9 +117,9 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2006",
-            "orario": "19:55",
-            "luogo": "MILANO PORTA GARIBALDI",
+            "treno": "2038",
+            "orario": "21:06",
+            "luogo": "MILANO CENTRALE",
             "ritardo": 5
           }
         ]
@@ -142,7 +128,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -154,11 +140,11 @@
     }
   },
   "dataLog": "30/07/2026",
-  "lastUpdate": "30/07/2026, 19:09:37",
-  "totalScore": 16.956521739130434,
+  "lastUpdate": "30/07/2026, 21:02:21",
+  "totalScore": 2.8333333333333335,
   "verdettoAttuale": {
-    "cls": "danger",
-    "word": "PENSACI DUE VOLTE",
-    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
