@@ -49,22 +49,15 @@
       "ora": "21:02",
       "score": 2.8333333333333335,
       "classe": "ok"
+    },
+    {
+      "ora": "22:47",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 3,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 1,
         "delayedCount": 0,
@@ -76,9 +69,21 @@
       },
       "error": null
     },
+    "ivrearitorno": {
+      "stats": {
+        "total": 0,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
     "chivassoandata": {
       "stats": {
-        "total": 10,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -90,45 +95,31 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 12,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
+        "total": 2,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2743",
-            "orario": "20:52",
-            "luogo": "IVREA",
-            "ritardo": 10
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 6,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 2,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2038",
-            "orario": "21:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -140,8 +131,8 @@
     }
   },
   "dataLog": "30/07/2026",
-  "lastUpdate": "30/07/2026, 21:02:21",
-  "totalScore": 2.8333333333333335,
+  "lastUpdate": "30/07/2026, 22:47:59",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
