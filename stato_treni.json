@@ -19,6 +19,11 @@
       "ora": "07:18",
       "score": 4.203703703703703,
       "classe": "ok"
+    },
+    {
+      "ora": "10:21",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -28,21 +33,15 @@
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "11352",
-            "orario": "07:39",
-            "luogo": "NOVARA"
-          }
-        ],
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": []
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -65,20 +64,12 @@
       "error": null
     },
     "chivassoritorno": {
-      "stats": {
-        "total": 21,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
+      "stats": null,
+      "error": "The operation was aborted due to timeout"
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -91,26 +82,19 @@
     "torinoritorno": {
       "stats": {
         "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2005",
-            "orario": "07:10",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 10
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     }
   },
   "dataLog": "31/07/2026",
-  "lastUpdate": "31/07/2026, 07:18:05",
-  "totalScore": 4.203703703703703,
+  "lastUpdate": "31/07/2026, 10:21:36",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
