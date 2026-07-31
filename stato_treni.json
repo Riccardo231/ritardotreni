@@ -49,6 +49,11 @@
       "ora": "21:44",
       "score": 6.4523809523809526,
       "classe": "warn"
+    },
+    {
+      "ora": "22:47",
+      "score": 4.444444444444444,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -78,56 +83,42 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 7,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "total": 3,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2040",
-            "orario": "21:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 7,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "total": 2,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2040",
-            "orario": "21:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 4,
+        "total": 3,
         "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "avgDelay": 25,
+        "maxDelay": 25,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2040",
-            "orario": "22:10",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 5
+            "treno": "2742",
+            "orario": "22:35",
+            "luogo": "IVREA",
+            "ritardo": 25
           }
         ]
       },
@@ -135,7 +126,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -147,11 +138,11 @@
     }
   },
   "dataLog": "31/07/2026",
-  "lastUpdate": "31/07/2026, 21:44:49",
-  "totalScore": 6.4523809523809526,
+  "lastUpdate": "31/07/2026, 22:47:35",
+  "totalScore": 4.444444444444444,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
