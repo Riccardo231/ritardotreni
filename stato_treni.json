@@ -34,85 +34,87 @@
       "ora": "15:19",
       "score": 14.173913043478262,
       "classe": "danger"
+    },
+    {
+      "ora": "17:48",
+      "score": 6.671957671957672,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 10,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "11370",
-            "orario": "16:08",
-            "luogo": "NOVARA"
-          }
-        ],
-        "delayedTrains": [
-          {
-            "treno": "11368",
-            "orario": "15:11",
-            "luogo": "NOVARA",
-            "ritardo": 5
-          }
-        ]
+        "total": 7,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 9,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "11334",
-            "orario": "16:50",
-            "luogo": "NOVARA"
-          }
-        ],
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": []
       },
       "error": null
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 2,
-        "soppressiTrains": [
-          {
-            "treno": "11370",
-            "orario": "15:20",
-            "luogo": "NOVARA"
-          },
-          {
-            "treno": "11334",
-            "orario": "17:37",
-            "luogo": "IVREA"
-          }
-        ],
+        "total": 21,
+        "delayedCount": 2,
+        "avgDelay": 10,
+        "maxDelay": 15,
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2028",
-            "orario": "15:40",
-            "luogo": "MILANO CENTRALE",
+            "treno": "2737",
+            "orario": "17:48",
+            "luogo": "TORINO PORTA NUOVA",
             "ritardo": 5
+          },
+          {
+            "treno": "2057",
+            "orario": "18:03",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 15
           }
         ]
       },
       "error": null
     },
     "chivassoritorno": {
-      "stats": null,
-      "error": "The operation was aborted due to timeout"
+      "stats": {
+        "total": 21,
+        "delayedCount": 2,
+        "avgDelay": 10,
+        "maxDelay": 15,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2737",
+            "orario": "17:52",
+            "luogo": "IVREA",
+            "ritardo": 5
+          },
+          {
+            "treno": "2057",
+            "orario": "18:04",
+            "luogo": "NOVARA",
+            "ritardo": 15
+          }
+        ]
+      },
+      "error": null
     },
     "torinoandata": {
       "stats": {
@@ -129,22 +131,29 @@
     "torinoritorno": {
       "stats": {
         "total": 9,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 20,
+        "maxDelay": 20,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2057",
+            "orario": "17:35",
+            "luogo": "NOVARA",
+            "ritardo": 20
+          }
+        ]
       },
       "error": null
     }
   },
   "dataLog": "31/07/2026",
-  "lastUpdate": "31/07/2026, 15:19:45",
-  "totalScore": 14.173913043478262,
+  "lastUpdate": "31/07/2026, 17:48:52",
+  "totalScore": 6.671957671957672,
   "verdettoAttuale": {
-    "cls": "danger",
-    "word": "PENSACI DUE VOLTE",
-    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
