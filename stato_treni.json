@@ -29,76 +29,80 @@
       "ora": "13:12",
       "score": 7.848631239935588,
       "classe": "warn"
+    },
+    {
+      "ora": "15:19",
+      "score": 14.173913043478262,
+      "classe": "danger"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 8,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
+        "total": 10,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "11370",
+            "orario": "16:08",
+            "luogo": "NOVARA"
+          }
+        ],
+        "delayedTrains": [
+          {
+            "treno": "11368",
+            "orario": "15:11",
+            "luogo": "NOVARA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "11334",
+            "orario": "16:50",
+            "luogo": "NOVARA"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "chivassoritorno": {
-      "stats": {
         "total": 23,
-        "delayedCount": 1,
-        "avgDelay": 50,
-        "maxDelay": 50,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "11365",
-            "orario": "12:23",
-            "luogo": "IVREA",
-            "ritardo": 50
-          }
-        ]
-      },
-      "error": null
-    },
-    "torinoandata": {
-      "stats": {
-        "total": 9,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 2,
+        "soppressiTrains": [
+          {
+            "treno": "11370",
+            "orario": "15:20",
+            "luogo": "NOVARA"
+          },
+          {
+            "treno": "11334",
+            "orario": "17:37",
+            "luogo": "IVREA"
+          }
+        ],
         "delayedTrains": [
           {
-            "treno": "2022",
-            "orario": "13:06",
+            "treno": "2028",
+            "orario": "15:40",
             "luogo": "MILANO CENTRALE",
             "ritardo": 5
           }
@@ -106,9 +110,25 @@
       },
       "error": null
     },
+    "chivassoritorno": {
+      "stats": null,
+      "error": "The operation was aborted due to timeout"
+    },
+    "torinoandata": {
+      "stats": {
+        "total": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
     "torinoritorno": {
       "stats": {
-        "total": 7,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -120,11 +140,11 @@
     }
   },
   "dataLog": "31/07/2026",
-  "lastUpdate": "31/07/2026, 13:12:41",
-  "totalScore": 7.848631239935588,
+  "lastUpdate": "31/07/2026, 15:19:45",
+  "totalScore": 14.173913043478262,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "danger",
+    "word": "PENSACI DUE VOLTE",
+    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
   }
 }
