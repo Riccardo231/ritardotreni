@@ -14,24 +14,35 @@
       "ora": "03:17",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "07:18",
+      "score": 4.203703703703703,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 2,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "11352",
+            "orario": "07:39",
+            "luogo": "NOVARA"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,7 +54,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 4,
+        "total": 21,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -55,7 +66,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 3,
+        "total": 21,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -67,7 +78,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 3,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -80,19 +91,26 @@
     "torinoritorno": {
       "stats": {
         "total": 9,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2005",
+            "orario": "07:10",
+            "luogo": "MILANO PORTA GARIBALDI",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     }
   },
   "dataLog": "31/07/2026",
-  "lastUpdate": "31/07/2026, 03:17:21",
-  "totalScore": 0,
+  "lastUpdate": "31/07/2026, 07:18:05",
+  "totalScore": 4.203703703703703,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
