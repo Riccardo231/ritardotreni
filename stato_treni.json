@@ -24,12 +24,17 @@
       "ora": "10:21",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "13:12",
+      "score": 7.848631239935588,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -41,7 +46,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -64,24 +69,46 @@
       "error": null
     },
     "chivassoritorno": {
-      "stats": null,
-      "error": "The operation was aborted due to timeout"
+      "stats": {
+        "total": 23,
+        "delayedCount": 1,
+        "avgDelay": 50,
+        "maxDelay": 50,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "11365",
+            "orario": "12:23",
+            "luogo": "IVREA",
+            "ritardo": 50
+          }
+        ]
+      },
+      "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 9,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2022",
+            "orario": "13:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -93,11 +120,11 @@
     }
   },
   "dataLog": "31/07/2026",
-  "lastUpdate": "31/07/2026, 10:21:36",
-  "totalScore": 0,
+  "lastUpdate": "31/07/2026, 13:12:41",
+  "totalScore": 7.848631239935588,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
