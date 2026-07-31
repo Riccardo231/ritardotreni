@@ -39,12 +39,17 @@
       "ora": "17:48",
       "score": 6.671957671957672,
       "classe": "warn"
+    },
+    {
+      "ora": "19:46",
+      "score": 0.8518518518518517,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -56,7 +61,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -68,49 +73,30 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
-        "delayedCount": 2,
-        "avgDelay": 10,
-        "maxDelay": 15,
+        "total": 17,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2737",
-            "orario": "17:48",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          },
-          {
-            "treno": "2057",
-            "orario": "18:03",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
-        "delayedCount": 2,
-        "avgDelay": 10,
-        "maxDelay": 15,
+        "total": 18,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2737",
-            "orario": "17:52",
-            "luogo": "IVREA",
-            "ritardo": 5
-          },
-          {
-            "treno": "2057",
-            "orario": "18:04",
+            "treno": "11338",
+            "orario": "19:40",
             "luogo": "NOVARA",
-            "ritardo": 15
+            "ritardo": 5
           }
         ]
       },
@@ -118,7 +104,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 10,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -130,30 +116,23 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "total": 5,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2057",
-            "orario": "17:35",
-            "luogo": "NOVARA",
-            "ritardo": 20
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     }
   },
   "dataLog": "31/07/2026",
-  "lastUpdate": "31/07/2026, 17:48:52",
-  "totalScore": 6.671957671957672,
+  "lastUpdate": "31/07/2026, 19:46:41",
+  "totalScore": 0.8518518518518517,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
