@@ -14,12 +14,17 @@
       "ora": "03:19",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "07:01",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 2,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 4,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,7 +48,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 10,
+        "total": 19,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -55,7 +60,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 9,
+        "total": 19,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -66,20 +71,12 @@
       "error": null
     },
     "torinoandata": {
-      "stats": {
-        "total": 3,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
+      "stats": null,
+      "error": "The operation was aborted due to timeout"
     },
     "torinoritorno": {
       "stats": {
-        "total": 6,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -91,7 +88,7 @@
     }
   },
   "dataLog": "01/08/2026",
-  "lastUpdate": "01/08/2026, 03:19:54",
+  "lastUpdate": "01/08/2026, 07:01:51",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
