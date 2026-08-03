@@ -29,6 +29,11 @@
       "ora": "14:32",
       "score": 1,
       "classe": "ok"
+    },
+    {
+      "ora": "17:31",
+      "score": 11,
+      "classe": "warn"
     }
   ],
   "stazioni": {
@@ -38,20 +43,32 @@
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "11374",
+            "orario": "18:08",
+            "luogo": "NOVARA"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "11336",
+            "orario": "17:50",
+            "luogo": "NOVARA"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
@@ -62,20 +79,32 @@
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "11336",
+            "orario": "18:37",
+            "luogo": "IVREA"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "11336",
+            "orario": "18:49",
+            "luogo": "NOVARA"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
@@ -90,9 +119,9 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2726",
-            "orario": "14:35",
-            "luogo": "IVREA",
+            "treno": "2038",
+            "orario": "21:06",
+            "luogo": "MILANO CENTRALE",
             "ritardo": 5
           }
         ]
@@ -101,7 +130,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -113,11 +142,11 @@
     }
   },
   "dataLog": "03/08/2026",
-  "lastUpdate": "03/08/2026, 14:32:47",
-  "totalScore": 1,
+  "lastUpdate": "03/08/2026, 17:31:40",
+  "totalScore": 11,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
