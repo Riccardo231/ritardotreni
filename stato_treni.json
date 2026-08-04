@@ -1,57 +1,7 @@
 {
   "timeline": [
     {
-      "ora": "00:13",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "01:49",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "05:25",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "08:15",
-      "score": 0.8253968253968255,
-      "classe": "ok"
-    },
-    {
-      "ora": "11:30",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "13:49",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "16:33",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "18:32",
-      "score": 5.92018006148441,
-      "classe": "ok"
-    },
-    {
-      "ora": "20:18",
-      "score": 5.164835164835165,
-      "classe": "ok"
-    },
-    {
-      "ora": "22:13",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "23:58",
+      "ora": "01:13",
       "score": 0,
       "classe": "ok"
     }
@@ -83,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 0,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -95,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 0,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -107,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -119,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 1,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -130,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "04/08/2026",
-  "lastUpdate": "04/08/2026, 23:58:00",
+  "dataLog": "05/08/2026",
+  "lastUpdate": "05/08/2026, 01:13:19",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
