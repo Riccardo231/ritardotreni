@@ -14,10 +14,19 @@
       "ora": "06:49",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "09:45",
+      "score": 0.9904761904761905,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
+      "stats": null,
+      "error": "The operation was aborted due to timeout"
+    },
+    "ivrearitorno": {
       "stats": {
         "total": 6,
         "delayedCount": 0,
@@ -29,21 +38,9 @@
       },
       "error": null
     },
-    "ivrearitorno": {
-      "stats": {
-        "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
     "chivassoandata": {
       "stats": {
-        "total": 21,
+        "total": 20,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -55,19 +52,26 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 21,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11318",
+            "orario": "09:40",
+            "luogo": "NOVARA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -79,7 +83,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -91,8 +95,8 @@
     }
   },
   "dataLog": "05/08/2026",
-  "lastUpdate": "05/08/2026, 06:49:00",
-  "totalScore": 0,
+  "lastUpdate": "05/08/2026, 09:45:16",
+  "totalScore": 0.9904761904761905,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
