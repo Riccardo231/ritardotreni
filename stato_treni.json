@@ -24,12 +24,17 @@
       "ora": "09:44",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "12:19",
+      "score": 3.0370370370370368,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 5,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -41,7 +46,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -53,7 +58,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 20,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -65,7 +70,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
+        "total": 23,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -77,19 +82,26 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 9,
+        "delayedCount": 1,
+        "avgDelay": 20,
+        "maxDelay": 20,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2020",
+            "orario": "12:06",
+            "luogo": "MILANO PORTA GARIBALDI",
+            "ritardo": 20
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -101,8 +113,8 @@
     }
   },
   "dataLog": "06/08/2026",
-  "lastUpdate": "06/08/2026, 09:44:46",
-  "totalScore": 0,
+  "lastUpdate": "06/08/2026, 12:19:20",
+  "totalScore": 3.0370370370370368,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
