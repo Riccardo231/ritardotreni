@@ -29,18 +29,30 @@
       "ora": "12:19",
       "score": 3.0370370370370368,
       "classe": "ok"
+    },
+    {
+      "ora": "14:30",
+      "score": 1.7037037037037035,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 9,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2729",
+            "orario": "14:23",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
@@ -82,20 +94,13 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "total": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2020",
-            "orario": "12:06",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 20
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -113,8 +118,8 @@
     }
   },
   "dataLog": "06/08/2026",
-  "lastUpdate": "06/08/2026, 12:19:20",
-  "totalScore": 3.0370370370370368,
+  "lastUpdate": "06/08/2026, 14:30:19",
+  "totalScore": 1.7037037037037035,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
