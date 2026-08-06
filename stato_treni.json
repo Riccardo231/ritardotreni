@@ -1,42 +1,7 @@
 {
   "timeline": [
     {
-      "ora": "00:16",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "01:40",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "03:07",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "06:49",
-      "score": 2.96969696969697,
-      "classe": "ok"
-    },
-    {
-      "ora": "09:44",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "12:19",
-      "score": 3.0370370370370368,
-      "classe": "ok"
-    },
-    {
-      "ora": "14:30",
-      "score": 1.7037037037037035,
-      "classe": "ok"
-    },
-    {
-      "ora": "17:00",
+      "ora": "00:36",
       "score": 0,
       "classe": "ok"
     }
@@ -44,7 +9,7 @@
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -56,7 +21,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -68,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -80,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -92,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -104,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -115,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "06/08/2026",
-  "lastUpdate": "06/08/2026, 17:00:15",
+  "dataLog": "07/08/2026",
+  "lastUpdate": "07/08/2026, 00:36:22",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
