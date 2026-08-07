@@ -1,77 +1,7 @@
 {
   "timeline": [
     {
-      "ora": "00:36",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "03:38",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "06:14",
-      "score": 2.2261904761904763,
-      "classe": "ok"
-    },
-    {
-      "ora": "08:00",
-      "score": 0.8333333333333334,
-      "classe": "ok"
-    },
-    {
-      "ora": "10:00",
-      "score": 1.492063492063492,
-      "classe": "ok"
-    },
-    {
-      "ora": "11:43",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "12:37",
-      "score": 7.5,
-      "classe": "warn"
-    },
-    {
-      "ora": "13:33",
-      "score": 8.046442687747037,
-      "classe": "warn"
-    },
-    {
-      "ora": "14:29",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "16:00",
-      "score": 0.9696969696969697,
-      "classe": "ok"
-    },
-    {
-      "ora": "17:38",
-      "score": 6.6231884057971016,
-      "classe": "warn"
-    },
-    {
-      "ora": "18:35",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:39",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "22:23",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "23:22",
+      "ora": "00:18",
       "score": 0,
       "classe": "ok"
     }
@@ -115,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -127,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -139,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 0,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -150,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "07/08/2026",
-  "lastUpdate": "07/08/2026, 23:22:48",
+  "dataLog": "08/08/2026",
+  "lastUpdate": "08/08/2026, 00:18:44",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
