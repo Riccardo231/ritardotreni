@@ -29,6 +29,11 @@
       "ora": "11:43",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "12:37",
+      "score": 7.5,
+      "classe": "warn"
     }
   ],
   "stazioni": {
@@ -62,8 +67,14 @@
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2022",
+            "orario": "12:40",
+            "luogo": "MILANO CENTRALE"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
@@ -74,8 +85,14 @@
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2022",
+            "orario": "12:42",
+            "luogo": "TORINO PORTA NUOVA"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
@@ -86,8 +103,14 @@
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2022",
+            "orario": "13:06",
+            "luogo": "MILANO CENTRALE"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
@@ -106,11 +129,11 @@
     }
   },
   "dataLog": "07/08/2026",
-  "lastUpdate": "07/08/2026, 11:43:02",
-  "totalScore": 0,
+  "lastUpdate": "07/08/2026, 12:37:37",
+  "totalScore": 7.5,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
