@@ -54,6 +54,11 @@
       "ora": "12:14",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "13:12",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -119,7 +124,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -131,7 +136,7 @@
     }
   },
   "dataLog": "08/08/2026",
-  "lastUpdate": "08/08/2026, 12:14:06",
+  "lastUpdate": "08/08/2026, 13:12:32",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
