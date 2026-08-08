@@ -44,6 +44,11 @@
       "ora": "10:21",
       "score": 2.714285714285714,
       "classe": "ok"
+    },
+    {
+      "ora": "11:21",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -61,7 +66,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -73,7 +78,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 20,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -85,39 +90,25 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
+        "total": 23,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2718",
-            "orario": "10:10",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 10
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
         "total": 6,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2718",
-            "orario": "10:35",
-            "luogo": "IVREA",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -135,8 +126,8 @@
     }
   },
   "dataLog": "08/08/2026",
-  "lastUpdate": "08/08/2026, 10:21:52",
-  "totalScore": 2.714285714285714,
+  "lastUpdate": "08/08/2026, 11:21:43",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
