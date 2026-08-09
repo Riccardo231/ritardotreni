@@ -89,29 +89,15 @@
       "ora": "19:16",
       "score": 8.833333333333334,
       "classe": "warn"
+    },
+    {
+      "ora": "20:15",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 4,
-        "delayedCount": 1,
-        "avgDelay": 60,
-        "maxDelay": 60,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2739",
-            "orario": "19:23",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 60
-          }
-        ]
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 3,
         "delayedCount": 0,
@@ -123,9 +109,21 @@
       },
       "error": null
     },
+    "ivrearitorno": {
+      "stats": {
+        "total": 1,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
     "chivassoandata": {
       "stats": {
-        "total": 17,
+        "total": 13,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -137,7 +135,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 17,
+        "total": 12,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -149,7 +147,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -161,7 +159,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -173,11 +171,11 @@
     }
   },
   "dataLog": "09/08/2026",
-  "lastUpdate": "09/08/2026, 19:16:24",
-  "totalScore": 8.833333333333334,
+  "lastUpdate": "09/08/2026, 20:15:35",
+  "totalScore": 0,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
