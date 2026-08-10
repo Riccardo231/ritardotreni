@@ -54,6 +54,11 @@
       "ora": "16:07",
       "score": 1.222222222222222,
       "classe": "ok"
+    },
+    {
+      "ora": "17:41",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -71,7 +76,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -83,7 +88,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 26,
+        "total": 28,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -95,7 +100,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 26,
+        "total": 27,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -107,26 +112,13 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 12,
-        "delayedCount": 2,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2028",
-            "orario": "16:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 5
-          },
-          {
-            "treno": "2004",
-            "orario": "18:50",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -144,8 +136,8 @@
     }
   },
   "dataLog": "10/08/2026",
-  "lastUpdate": "10/08/2026, 16:07:17",
-  "totalScore": 1.222222222222222,
+  "lastUpdate": "10/08/2026, 17:41:27",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
