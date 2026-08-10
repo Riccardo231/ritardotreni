@@ -79,6 +79,11 @@
       "ora": "21:43",
       "score": 16.476190476190478,
       "classe": "danger"
+    },
+    {
+      "ora": "22:26",
+      "score": 3,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -108,7 +113,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 7,
+        "total": 4,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -116,9 +121,9 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "11342",
-            "orario": "21:37",
-            "luogo": "IVREA",
+            "treno": "2045",
+            "orario": "22:18",
+            "luogo": "TORINO PORTA NUOVA",
             "ritardo": 5
           }
         ]
@@ -127,7 +132,26 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 6,
+        "total": 4,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2045",
+            "orario": "22:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
+    },
+    "torinoandata": {
+      "stats": {
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -137,28 +161,9 @@
       },
       "error": null
     },
-    "torinoandata": {
-      "stats": {
-        "total": 5,
-        "delayedCount": 1,
-        "avgDelay": 110,
-        "maxDelay": 110,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2006",
-            "orario": "19:55",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 110
-          }
-        ]
-      },
-      "error": null
-    },
     "torinoritorno": {
       "stats": {
-        "total": 2,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -170,11 +175,11 @@
     }
   },
   "dataLog": "10/08/2026",
-  "lastUpdate": "10/08/2026, 21:43:38",
-  "totalScore": 16.476190476190478,
+  "lastUpdate": "10/08/2026, 22:26:18",
+  "totalScore": 3,
   "verdettoAttuale": {
-    "cls": "danger",
-    "word": "PENSACI DUE VOLTE",
-    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
