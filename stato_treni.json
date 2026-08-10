@@ -64,12 +64,17 @@
       "ora": "18:36",
       "score": 2.303030303030303,
       "classe": "ok"
+    },
+    {
+      "ora": "19:38",
+      "score": 7.429193899782135,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -81,7 +86,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 5,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -93,34 +98,48 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 25,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 17,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11338",
+            "orario": "19:37",
+            "luogo": "IVREA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 24,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 17,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11338",
+            "orario": "19:40",
+            "luogo": "NOVARA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 9,
         "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "avgDelay": 40,
+        "maxDelay": 40,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -128,7 +147,7 @@
             "treno": "2006",
             "orario": "19:55",
             "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 15
+            "ritardo": 40
           }
         ]
       },
@@ -136,7 +155,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -148,11 +167,11 @@
     }
   },
   "dataLog": "10/08/2026",
-  "lastUpdate": "10/08/2026, 18:36:41",
-  "totalScore": 2.303030303030303,
+  "lastUpdate": "10/08/2026, 19:38:49",
+  "totalScore": 7.429193899782135,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
