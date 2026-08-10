@@ -24,31 +24,29 @@
       "ora": "07:10",
       "score": 1.222222222222222,
       "classe": "ok"
+    },
+    {
+      "ora": "08:57",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 5,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "11352",
-            "orario": "07:39",
-            "luogo": "NOVARA",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -60,7 +58,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
+        "total": 20,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -72,7 +70,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
+        "total": 20,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -84,7 +82,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 12,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,7 +94,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -108,8 +106,8 @@
     }
   },
   "dataLog": "10/08/2026",
-  "lastUpdate": "10/08/2026, 07:10:06",
-  "totalScore": 1.222222222222222,
+  "lastUpdate": "10/08/2026, 08:57:40",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
