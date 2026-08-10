@@ -74,16 +74,29 @@
       "ora": "20:35",
       "score": 14.50952380952381,
       "classe": "danger"
+    },
+    {
+      "ora": "21:43",
+      "score": 16.476190476190478,
+      "classe": "danger"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": null,
-      "error": "fetch failed"
+      "stats": {
+        "total": 1,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -95,18 +108,18 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 12,
+        "total": 7,
         "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2038",
-            "orario": "20:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 15
+            "treno": "11342",
+            "orario": "21:37",
+            "luogo": "IVREA",
+            "ritardo": 5
           }
         ]
       },
@@ -114,29 +127,22 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 12,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "total": 6,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2038",
-            "orario": "20:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 7,
-        "delayedCount": 2,
-        "avgDelay": 42.5,
-        "maxDelay": 70,
+        "total": 5,
+        "delayedCount": 1,
+        "avgDelay": 110,
+        "maxDelay": 110,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -144,13 +150,7 @@
             "treno": "2006",
             "orario": "19:55",
             "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 70
-          },
-          {
-            "treno": "2038",
-            "orario": "21:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 15
+            "ritardo": 110
           }
         ]
       },
@@ -158,7 +158,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 3,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -170,8 +170,8 @@
     }
   },
   "dataLog": "10/08/2026",
-  "lastUpdate": "10/08/2026, 20:35:38",
-  "totalScore": 14.50952380952381,
+  "lastUpdate": "10/08/2026, 21:43:38",
+  "totalScore": 16.476190476190478,
   "verdettoAttuale": {
     "cls": "danger",
     "word": "PENSACI DUE VOLTE",
