@@ -34,6 +34,11 @@
       "ora": "11:47",
       "score": 5.181964573268921,
       "classe": "ok"
+    },
+    {
+      "ora": "13:04",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -76,38 +81,24 @@
     "chivassoritorno": {
       "stats": {
         "total": 23,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2020",
-            "orario": "11:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 20
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "total": 8,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2020",
-            "orario": "12:06",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -125,8 +116,8 @@
     }
   },
   "dataLog": "12/08/2026",
-  "lastUpdate": "12/08/2026, 11:47:49",
-  "totalScore": 5.181964573268921,
+  "lastUpdate": "12/08/2026, 13:04:18",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
