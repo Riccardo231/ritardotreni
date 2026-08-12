@@ -49,6 +49,11 @@
       "ora": "16:07",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "17:40",
+      "score": 1.9130434782608694,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -66,7 +71,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -78,31 +83,57 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 24,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 23,
+        "delayedCount": 2,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2032",
+            "orario": "17:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          },
+          {
+            "treno": "2737",
+            "orario": "17:48",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 23,
+        "delayedCount": 2,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2032",
+            "orario": "17:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          },
+          {
+            "treno": "2737",
+            "orario": "17:52",
+            "luogo": "IVREA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -126,8 +157,8 @@
     }
   },
   "dataLog": "12/08/2026",
-  "lastUpdate": "12/08/2026, 16:07:45",
-  "totalScore": 0,
+  "lastUpdate": "12/08/2026, 17:40:51",
+  "totalScore": 1.9130434782608694,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
