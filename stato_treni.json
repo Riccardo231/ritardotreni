@@ -39,29 +39,15 @@
       "ora": "13:04",
       "score": 8.09992784992785,
       "classe": "warn"
+    },
+    {
+      "ora": "14:35",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 7,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2727",
-            "orario": "13:24",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 15
-          }
-        ]
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 8,
         "delayedCount": 0,
@@ -73,47 +59,45 @@
       },
       "error": null
     },
-    "chivassoandata": {
+    "ivrearitorno": {
       "stats": {
-        "total": 22,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "total": 7,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2727",
-            "orario": "12:48",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 20
-          }
-        ]
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "chivassoandata": {
+      "stats": {
+        "total": 23,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 24,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "total": 23,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2727",
-            "orario": "13:00",
-            "luogo": "IVREA",
-            "ritardo": 20
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 9,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -125,7 +109,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -137,11 +121,11 @@
     }
   },
   "dataLog": "13/08/2026",
-  "lastUpdate": "13/08/2026, 13:04:45",
-  "totalScore": 8.09992784992785,
+  "lastUpdate": "13/08/2026, 14:35:03",
+  "totalScore": 0,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
