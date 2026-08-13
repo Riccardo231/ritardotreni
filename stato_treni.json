@@ -1,87 +1,7 @@
 {
   "timeline": [
     {
-      "ora": "00:50",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "01:50",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "04:33",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "06:31",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "08:06",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "10:06",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "11:48",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "13:04",
-      "score": 8.09992784992785,
-      "classe": "warn"
-    },
-    {
-      "ora": "14:35",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "16:09",
-      "score": 1.6237373737373737,
-      "classe": "ok"
-    },
-    {
-      "ora": "17:41",
-      "score": 22.144927536231886,
-      "classe": "danger"
-    },
-    {
-      "ora": "18:38",
-      "score": 0.9696969696969697,
-      "classe": "ok"
-    },
-    {
-      "ora": "19:44",
-      "score": 6.787037037037037,
-      "classe": "warn"
-    },
-    {
-      "ora": "20:41",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:45",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "22:52",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "23:54",
+      "ora": "00:52",
       "score": 0,
       "classe": "ok"
     }
@@ -113,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 0,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -125,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 0,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -137,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -149,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 1,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -160,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "13/08/2026",
-  "lastUpdate": "13/08/2026, 23:54:31",
+  "dataLog": "14/08/2026",
+  "lastUpdate": "14/08/2026, 00:52:27",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
