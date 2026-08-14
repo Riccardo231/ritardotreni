@@ -39,6 +39,11 @@
       "ora": "13:33",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "14:29",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -68,7 +73,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -80,7 +85,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -92,7 +97,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 9,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -116,7 +121,7 @@
     }
   },
   "dataLog": "14/08/2026",
-  "lastUpdate": "14/08/2026, 13:33:02",
+  "lastUpdate": "14/08/2026, 14:29:09",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
