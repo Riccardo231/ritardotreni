@@ -29,6 +29,11 @@
       "ora": "11:44",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "12:43",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -106,7 +111,7 @@
     }
   },
   "dataLog": "14/08/2026",
-  "lastUpdate": "14/08/2026, 11:44:05",
+  "lastUpdate": "14/08/2026, 12:43:31",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
