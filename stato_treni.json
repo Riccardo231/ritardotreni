@@ -14,6 +14,11 @@
       "ora": "06:29",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "08:05",
+      "score": 10.96031746031746,
+      "classe": "warn"
     }
   ],
   "stazioni": {
@@ -32,36 +37,69 @@
     "ivrearitorno": {
       "stats": {
         "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 35,
+        "maxDelay": 35,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11316",
+            "orario": "07:50",
+            "luogo": "NOVARA",
+            "ritardo": 35
+          }
+        ]
       },
       "error": null
     },
     "chivassoandata": {
       "stats": {
-        "total": 22,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 20,
+        "delayedCount": 2,
+        "avgDelay": 17.5,
+        "maxDelay": 25,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2714",
+            "orario": "08:06",
+            "luogo": "IVREA",
+            "ritardo": 10
+          },
+          {
+            "treno": "11316",
+            "orario": "08:37",
+            "luogo": "IVREA",
+            "ritardo": 25
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 21,
+        "delayedCount": 2,
+        "avgDelay": 17.5,
+        "maxDelay": 25,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2714",
+            "orario": "08:14",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 10
+          },
+          {
+            "treno": "11316",
+            "orario": "08:40",
+            "luogo": "NOVARA",
+            "ritardo": 25
+          }
+        ]
       },
       "error": null
     },
@@ -91,11 +129,11 @@
     }
   },
   "dataLog": "14/08/2026",
-  "lastUpdate": "14/08/2026, 06:29:57",
-  "totalScore": 0,
+  "lastUpdate": "14/08/2026, 08:05:15",
+  "totalScore": 10.96031746031746,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
