@@ -64,29 +64,15 @@
       "ora": "19:40",
       "score": 6.571078431372548,
       "classe": "warn"
+    },
+    {
+      "ora": "20:34",
+      "score": 0.923076923076923,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 4,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "11380",
-            "orario": "21:08",
-            "luogo": "NOVARA",
-            "ritardo": 10
-          }
-        ]
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 3,
         "delayedCount": 0,
@@ -98,31 +84,36 @@
       },
       "error": null
     },
-    "chivassoandata": {
+    "ivrearitorno": {
       "stats": {
-        "total": 16,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "total": 2,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "11380",
-            "orario": "20:20",
-            "luogo": "NOVARA",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "chivassoandata": {
+      "stats": {
+        "total": 12,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 17,
+        "total": 13,
         "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -130,7 +121,7 @@
             "treno": "11380",
             "orario": "20:23",
             "luogo": "IVREA",
-            "ritardo": 15
+            "ritardo": 5
           }
         ]
       },
@@ -138,7 +129,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 9,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -150,7 +141,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -162,11 +153,11 @@
     }
   },
   "dataLog": "14/08/2026",
-  "lastUpdate": "14/08/2026, 19:40:17",
-  "totalScore": 6.571078431372548,
+  "lastUpdate": "14/08/2026, 20:34:58",
+  "totalScore": 0.923076923076923,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
