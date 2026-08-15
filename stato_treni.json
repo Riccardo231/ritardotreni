@@ -104,6 +104,11 @@
       "ora": "19:59",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "20:42",
+      "score": 3.272727272727273,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -121,7 +126,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 2,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -133,31 +138,45 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 14,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 11,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2018",
+            "orario": "21:38",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 13,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 11,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2018",
+            "orario": "21:39",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -169,7 +188,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 4,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -181,8 +200,8 @@
     }
   },
   "dataLog": "15/08/2026",
-  "lastUpdate": "15/08/2026, 19:59:16",
-  "totalScore": 0,
+  "lastUpdate": "15/08/2026, 20:42:50",
+  "totalScore": 3.272727272727273,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
