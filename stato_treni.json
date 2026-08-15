@@ -1,137 +1,7 @@
 {
   "timeline": [
     {
-      "ora": "00:00",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "01:01",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "02:01",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "04:04",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "05:24",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "06:14",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "07:04",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "08:01",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "09:17",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "10:01",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "11:04",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "12:00",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "13:00",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "13:58",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "14:54",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "15:36",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "16:00",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "17:00",
-      "score": 10.194564694564695,
-      "classe": "warn"
-    },
-    {
-      "ora": "17:58",
-      "score": 32.52789802789803,
-      "classe": "apoc"
-    },
-    {
-      "ora": "18:35",
-      "score": 41.860623781676416,
-      "classe": "apoc"
-    },
-    {
-      "ora": "19:59",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "20:42",
-      "score": 3.272727272727273,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:09",
-      "score": 10.407407407407407,
-      "classe": "warn"
-    },
-    {
-      "ora": "21:58",
-      "score": 16.38888888888889,
-      "classe": "danger"
-    },
-    {
-      "ora": "22:33",
-      "score": 19.38888888888889,
-      "classe": "danger"
-    },
-    {
-      "ora": "23:00",
-      "score": 20.833333333333332,
-      "classe": "danger"
-    },
-    {
-      "ora": "23:58",
+      "ora": "00:32",
       "score": 0,
       "classe": "ok"
     }
@@ -163,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 0,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -175,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 0,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -187,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -199,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 1,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -210,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "15/08/2026",
-  "lastUpdate": "15/08/2026, 23:58:35",
+  "dataLog": "16/08/2026",
+  "lastUpdate": "16/08/2026, 00:32:21",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
