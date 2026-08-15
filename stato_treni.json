@@ -89,12 +89,17 @@
       "ora": "17:00",
       "score": 10.194564694564695,
       "classe": "warn"
+    },
+    {
+      "ora": "17:58",
+      "score": 32.52789802789803,
+      "classe": "apoc"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -118,24 +123,30 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
+        "total": 22,
         "delayedCount": 2,
-        "avgDelay": 22.5,
-        "maxDelay": 25,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "avgDelay": 40,
+        "maxDelay": 75,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2034",
+            "orario": "18:40",
+            "luogo": "MILANO CENTRALE"
+          }
+        ],
         "delayedTrains": [
           {
             "treno": "2032",
             "orario": "17:40",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 20
+            "ritardo": 75
           },
           {
-            "treno": "2034",
-            "orario": "18:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 25
+            "treno": "2039",
+            "orario": "19:18",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
           }
         ]
       },
@@ -143,24 +154,30 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
+        "total": 21,
         "delayedCount": 2,
-        "avgDelay": 22.5,
-        "maxDelay": 25,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "avgDelay": 40,
+        "maxDelay": 75,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2034",
+            "orario": "18:42",
+            "luogo": "TORINO PORTA NUOVA"
+          }
+        ],
         "delayedTrains": [
           {
             "treno": "2032",
             "orario": "17:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 20
+            "ritardo": 75
           },
           {
-            "treno": "2034",
-            "orario": "18:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 25
+            "treno": "2039",
+            "orario": "19:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
           }
         ]
       },
@@ -169,23 +186,23 @@
     "torinoandata": {
       "stats": {
         "total": 9,
-        "delayedCount": 2,
-        "avgDelay": 20,
-        "maxDelay": 20,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "delayedCount": 1,
+        "avgDelay": 70,
+        "maxDelay": 70,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2034",
+            "orario": "19:06",
+            "luogo": "MILANO CENTRALE"
+          }
+        ],
         "delayedTrains": [
           {
             "treno": "2032",
             "orario": "18:06",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 20
-          },
-          {
-            "treno": "2034",
-            "orario": "19:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 20
+            "ritardo": 70
           }
         ]
       },
@@ -193,23 +210,30 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 10,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 9,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2039",
+            "orario": "18:54",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     }
   },
   "dataLog": "15/08/2026",
-  "lastUpdate": "15/08/2026, 17:00:30",
-  "totalScore": 10.194564694564695,
+  "lastUpdate": "15/08/2026, 17:58:34",
+  "totalScore": 32.52789802789803,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "apoc",
+    "word": "NON ANDARE",
+    "sub": "Il caos ha preso il sopravvento sulla linea."
   }
 }
