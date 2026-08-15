@@ -114,31 +114,29 @@
       "ora": "21:09",
       "score": 10.407407407407407,
       "classe": "warn"
+    },
+    {
+      "ora": "21:58",
+      "score": 16.38888888888889,
+      "classe": "danger"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 3,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 2,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2743",
-            "orario": "21:23",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -150,10 +148,10 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "total": 6,
+        "delayedCount": 2,
+        "avgDelay": 32.5,
+        "maxDelay": 35,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -161,7 +159,13 @@
             "treno": "2018",
             "orario": "21:38",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 20
+            "ritardo": 30
+          },
+          {
+            "treno": "2042",
+            "orario": "22:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 35
           }
         ]
       },
@@ -169,10 +173,10 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "total": 6,
+        "delayedCount": 2,
+        "avgDelay": 35,
+        "maxDelay": 35,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -180,7 +184,13 @@
             "treno": "2018",
             "orario": "21:39",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 20
+            "ritardo": 35
+          },
+          {
+            "treno": "2042",
+            "orario": "22:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 35
           }
         ]
       },
@@ -188,10 +198,10 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 6,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "total": 5,
+        "delayedCount": 2,
+        "avgDelay": 27.5,
+        "maxDelay": 30,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -199,7 +209,13 @@
             "treno": "2018",
             "orario": "22:06",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 15
+            "ritardo": 25
+          },
+          {
+            "treno": "2042",
+            "orario": "23:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 30
           }
         ]
       },
@@ -207,7 +223,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 2,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -219,11 +235,11 @@
     }
   },
   "dataLog": "15/08/2026",
-  "lastUpdate": "15/08/2026, 21:09:24",
-  "totalScore": 10.407407407407407,
+  "lastUpdate": "15/08/2026, 21:58:16",
+  "totalScore": 16.38888888888889,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "danger",
+    "word": "PENSACI DUE VOLTE",
+    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
   }
 }
