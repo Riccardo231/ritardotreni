@@ -79,6 +79,11 @@
       "ora": "15:36",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "16:00",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -108,7 +113,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -156,7 +161,7 @@
     }
   },
   "dataLog": "15/08/2026",
-  "lastUpdate": "15/08/2026, 15:36:12",
+  "lastUpdate": "15/08/2026, 16:00:46",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
