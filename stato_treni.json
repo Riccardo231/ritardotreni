@@ -94,20 +94,17 @@
       "ora": "17:00",
       "score": 1.484848484848485,
       "classe": "ok"
+    },
+    {
+      "ora": "17:59",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
+      "stats": null,
+      "error": "The operation was aborted due to timeout"
     },
     "ivrearitorno": {
       "stats": {
@@ -135,26 +132,19 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
+        "total": 20,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2735",
-            "orario": "16:52",
-            "luogo": "IVREA",
-            "ritardo": 10
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 9,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -166,7 +156,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 10,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -178,8 +168,8 @@
     }
   },
   "dataLog": "16/08/2026",
-  "lastUpdate": "16/08/2026, 17:00:44",
-  "totalScore": 1.484848484848485,
+  "lastUpdate": "16/08/2026, 17:59:38",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
