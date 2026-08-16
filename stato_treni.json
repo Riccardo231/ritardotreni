@@ -89,12 +89,17 @@
       "ora": "16:01",
       "score": 1.484848484848485,
       "classe": "ok"
+    },
+    {
+      "ora": "17:00",
+      "score": 1.484848484848485,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -118,6 +123,18 @@
     },
     "chivassoandata": {
       "stats": {
+        "total": 21,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "chivassoritorno": {
+      "stats": {
         "total": 22,
         "delayedCount": 1,
         "avgDelay": 10,
@@ -126,24 +143,12 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "11372",
-            "orario": "16:20",
-            "luogo": "NOVARA",
+            "treno": "2735",
+            "orario": "16:52",
+            "luogo": "IVREA",
             "ritardo": 10
           }
         ]
-      },
-      "error": null
-    },
-    "chivassoritorno": {
-      "stats": {
-        "total": 23,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
       },
       "error": null
     },
@@ -161,7 +166,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 11,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -173,7 +178,7 @@
     }
   },
   "dataLog": "16/08/2026",
-  "lastUpdate": "16/08/2026, 16:01:32",
+  "lastUpdate": "16/08/2026, 17:00:44",
   "totalScore": 1.484848484848485,
   "verdettoAttuale": {
     "cls": "ok",
