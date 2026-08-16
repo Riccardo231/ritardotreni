@@ -59,6 +59,11 @@
       "ora": "11:07",
       "score": 11.142857142857144,
       "classe": "warn"
+    },
+    {
+      "ora": "12:01",
+      "score": 11.083333333333334,
+      "classe": "warn"
     }
   ],
   "stazioni": {
@@ -88,7 +93,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 18,
+        "total": 21,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -100,7 +105,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 16,
+        "total": 21,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -112,7 +117,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 1,
         "avgDelay": 80,
         "maxDelay": 80,
@@ -143,8 +148,8 @@
     }
   },
   "dataLog": "16/08/2026",
-  "lastUpdate": "16/08/2026, 11:07:19",
-  "totalScore": 11.142857142857144,
+  "lastUpdate": "16/08/2026, 12:01:06",
+  "totalScore": 11.083333333333334,
   "verdettoAttuale": {
     "cls": "warn",
     "word": "VAI CON RISERVA",
