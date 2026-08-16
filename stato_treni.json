@@ -84,6 +84,11 @@
       "ora": "15:37",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "16:01",
+      "score": 1.484848484848485,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -113,13 +118,20 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 20,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 22,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11372",
+            "orario": "16:20",
+            "luogo": "NOVARA",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
@@ -161,8 +173,8 @@
     }
   },
   "dataLog": "16/08/2026",
-  "lastUpdate": "16/08/2026, 15:37:48",
-  "totalScore": 0,
+  "lastUpdate": "16/08/2026, 16:01:32",
+  "totalScore": 1.484848484848485,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
