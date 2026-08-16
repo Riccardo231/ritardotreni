@@ -54,6 +54,11 @@
       "ora": "10:02",
       "score": 11.083333333333334,
       "classe": "warn"
+    },
+    {
+      "ora": "11:07",
+      "score": 11.142857142857144,
+      "classe": "warn"
     }
   ],
   "stazioni": {
@@ -71,7 +76,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -83,7 +88,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 16,
+        "total": 18,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -95,7 +100,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 15,
+        "total": 16,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -107,7 +112,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 1,
         "avgDelay": 80,
         "maxDelay": 80,
@@ -126,7 +131,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -138,8 +143,8 @@
     }
   },
   "dataLog": "16/08/2026",
-  "lastUpdate": "16/08/2026, 10:02:09",
-  "totalScore": 11.083333333333334,
+  "lastUpdate": "16/08/2026, 11:07:19",
+  "totalScore": 11.142857142857144,
   "verdettoAttuale": {
     "cls": "warn",
     "word": "VAI CON RISERVA",
