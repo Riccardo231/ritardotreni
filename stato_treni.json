@@ -69,6 +69,11 @@
       "ora": "13:00",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "13:59",
+      "score": 1.484848484848485,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -86,7 +91,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -110,13 +115,20 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 22,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2729",
+            "orario": "13:52",
+            "luogo": "IVREA",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
@@ -146,8 +158,8 @@
     }
   },
   "dataLog": "16/08/2026",
-  "lastUpdate": "16/08/2026, 13:00:39",
-  "totalScore": 0,
+  "lastUpdate": "16/08/2026, 13:59:09",
+  "totalScore": 1.484848484848485,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
