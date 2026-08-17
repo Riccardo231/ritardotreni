@@ -49,12 +49,17 @@
       "ora": "09:39",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "10:25",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 5,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -66,7 +71,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -114,7 +119,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -126,7 +131,7 @@
     }
   },
   "dataLog": "17/08/2026",
-  "lastUpdate": "17/08/2026, 09:39:23",
+  "lastUpdate": "17/08/2026, 10:25:43",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
