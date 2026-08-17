@@ -44,6 +44,11 @@
       "ora": "08:20",
       "score": 0.9696969696969697,
       "classe": "ok"
+    },
+    {
+      "ora": "09:39",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -61,7 +66,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -73,7 +78,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
+        "total": 20,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -85,7 +90,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 20,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -97,20 +102,13 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 8,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "9900",
-            "orario": "08:30",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -128,8 +126,8 @@
     }
   },
   "dataLog": "17/08/2026",
-  "lastUpdate": "17/08/2026, 08:20:59",
-  "totalScore": 0.9696969696969697,
+  "lastUpdate": "17/08/2026, 09:39:23",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
