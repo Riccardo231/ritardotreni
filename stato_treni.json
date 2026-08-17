@@ -89,12 +89,17 @@
       "ora": "17:04",
       "score": 1,
       "classe": "ok"
+    },
+    {
+      "ora": "18:00",
+      "score": 1,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -106,7 +111,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -118,7 +123,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 24,
+        "total": 23,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -130,7 +135,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
+        "total": 23,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -173,7 +178,7 @@
     }
   },
   "dataLog": "17/08/2026",
-  "lastUpdate": "17/08/2026, 17:04:09",
+  "lastUpdate": "17/08/2026, 18:00:46",
   "totalScore": 1,
   "verdettoAttuale": {
     "cls": "ok",
