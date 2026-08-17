@@ -84,12 +84,17 @@
       "ora": "16:11",
       "score": 0.9696969696969697,
       "classe": "ok"
+    },
+    {
+      "ora": "17:04",
+      "score": 1,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -101,7 +106,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -149,7 +154,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 11,
+        "total": 10,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -168,8 +173,8 @@
     }
   },
   "dataLog": "17/08/2026",
-  "lastUpdate": "17/08/2026, 16:11:13",
-  "totalScore": 0.9696969696969697,
+  "lastUpdate": "17/08/2026, 17:04:09",
+  "totalScore": 1,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
