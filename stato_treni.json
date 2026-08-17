@@ -74,6 +74,11 @@
       "ora": "14:01",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "15:26",
+      "score": 0.8115942028985508,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -116,12 +121,19 @@
     "chivassoritorno": {
       "stats": {
         "total": 23,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2031",
+            "orario": "15:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
@@ -139,7 +151,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -151,8 +163,8 @@
     }
   },
   "dataLog": "17/08/2026",
-  "lastUpdate": "17/08/2026, 14:01:18",
-  "totalScore": 0,
+  "lastUpdate": "17/08/2026, 15:26:55",
+  "totalScore": 0.8115942028985508,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
