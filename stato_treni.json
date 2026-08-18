@@ -44,6 +44,11 @@
       "ora": "09:24",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "10:15",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -85,7 +90,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -109,7 +114,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -121,7 +126,7 @@
     }
   },
   "dataLog": "18/08/2026",
-  "lastUpdate": "18/08/2026, 09:24:40",
+  "lastUpdate": "18/08/2026, 10:15:52",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
