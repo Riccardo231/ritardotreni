@@ -59,6 +59,11 @@
       "ora": "12:05",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "13:04",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -112,7 +117,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -136,7 +141,7 @@
     }
   },
   "dataLog": "18/08/2026",
-  "lastUpdate": "18/08/2026, 12:05:20",
+  "lastUpdate": "18/08/2026, 13:04:37",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
