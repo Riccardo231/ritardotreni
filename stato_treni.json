@@ -49,12 +49,17 @@
       "ora": "10:15",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "11:15",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -66,7 +71,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -78,7 +83,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 20,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -102,7 +107,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -114,7 +119,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -126,7 +131,7 @@
     }
   },
   "dataLog": "18/08/2026",
-  "lastUpdate": "18/08/2026, 10:15:52",
+  "lastUpdate": "18/08/2026, 11:15:19",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
