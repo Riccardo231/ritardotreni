@@ -84,12 +84,17 @@
       "ora": "17:14",
       "score": 19.92676767676768,
       "classe": "danger"
+    },
+    {
+      "ora": "18:03",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -101,7 +106,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -113,64 +118,43 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 24,
-        "delayedCount": 1,
-        "avgDelay": 50,
-        "maxDelay": 50,
+        "total": 23,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2030",
-            "orario": "16:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 50
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
-        "delayedCount": 1,
-        "avgDelay": 50,
-        "maxDelay": 50,
+        "total": 24,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2030",
-            "orario": "16:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 50
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
         "total": 11,
-        "delayedCount": 1,
-        "avgDelay": 45,
-        "maxDelay": 45,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2030",
-            "orario": "17:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 45
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 11,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -182,11 +166,11 @@
     }
   },
   "dataLog": "18/08/2026",
-  "lastUpdate": "18/08/2026, 17:14:02",
-  "totalScore": 19.92676767676768,
+  "lastUpdate": "18/08/2026, 18:03:50",
+  "totalScore": 0,
   "verdettoAttuale": {
-    "cls": "danger",
-    "word": "PENSACI DUE VOLTE",
-    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
