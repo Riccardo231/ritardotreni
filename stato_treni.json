@@ -104,6 +104,11 @@
       "ora": "22:00",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "22:35",
+      "score": 7,
+      "classe": "warn"
     }
   ],
   "stazioni": {
@@ -133,31 +138,45 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 5,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 4,
+        "delayedCount": 1,
+        "avgDelay": 20,
+        "maxDelay": 20,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2045",
+            "orario": "22:18",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 20
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 5,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 4,
+        "delayedCount": 1,
+        "avgDelay": 20,
+        "maxDelay": 20,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2045",
+            "orario": "22:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 20
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 4,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -169,7 +188,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -181,11 +200,11 @@
     }
   },
   "dataLog": "18/08/2026",
-  "lastUpdate": "18/08/2026, 22:00:07",
-  "totalScore": 0,
+  "lastUpdate": "18/08/2026, 22:35:25",
+  "totalScore": 7,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
