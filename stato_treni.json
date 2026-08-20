@@ -89,29 +89,40 @@
       "ora": "18:13",
       "score": 15.642857142857144,
       "classe": "danger"
+    },
+    {
+      "ora": "19:12",
+      "score": 21.143097643097644,
+      "classe": "danger"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
-        "delayedCount": 1,
-        "avgDelay": 20,
+        "total": 6,
+        "delayedCount": 3,
+        "avgDelay": 13.333333333333334,
         "maxDelay": 20,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "2737",
-            "orario": "18:23",
-            "luogo": "TORINO PORTA NUOVA"
-          }
-        ],
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "11374",
-            "orario": "18:08",
+            "treno": "11376",
+            "orario": "19:08",
             "luogo": "NOVARA",
+            "ritardo": 5
+          },
+          {
+            "treno": "2739",
+            "orario": "19:23",
+            "luogo": "TORINO PORTA NUOVA",
             "ritardo": 20
+          },
+          {
+            "treno": "11378",
+            "orario": "20:08",
+            "luogo": "NOVARA",
+            "ritardo": 15
           }
         ]
       },
@@ -119,7 +130,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 5,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -137,60 +148,82 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 2,
+        "total": 22,
+        "delayedCount": 2,
+        "avgDelay": 32.5,
+        "maxDelay": 45,
+        "soppressi": 1,
         "soppressiTrains": [
-          {
-            "treno": "11336",
-            "orario": "18:37",
-            "luogo": "IVREA"
-          },
           {
             "treno": "2738",
             "orario": "20:06",
             "luogo": "IVREA"
           }
         ],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2739",
+            "orario": "18:48",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 45
+          },
+          {
+            "treno": "11378",
+            "orario": "19:20",
+            "luogo": "NOVARA",
+            "ritardo": 20
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 24,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 1,
-        "soppressiTrains": [
+        "total": 22,
+        "delayedCount": 2,
+        "avgDelay": 32.5,
+        "maxDelay": 45,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
           {
-            "treno": "11336",
-            "orario": "18:49",
-            "luogo": "NOVARA"
+            "treno": "2739",
+            "orario": "18:52",
+            "luogo": "IVREA",
+            "ritardo": 45
+          },
+          {
+            "treno": "11378",
+            "orario": "19:23",
+            "luogo": "IVREA",
+            "ritardo": 20
           }
-        ],
-        "delayedTrains": []
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
         "total": 9,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 15,
+        "maxDelay": 15,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2736",
+            "orario": "19:35",
+            "luogo": "IVREA",
+            "ritardo": 15
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -202,8 +235,8 @@
     }
   },
   "dataLog": "20/08/2026",
-  "lastUpdate": "20/08/2026, 18:13:29",
-  "totalScore": 15.642857142857144,
+  "lastUpdate": "20/08/2026, 19:12:23",
+  "totalScore": 21.143097643097644,
   "verdettoAttuale": {
     "cls": "danger",
     "word": "PENSACI DUE VOLTE",
