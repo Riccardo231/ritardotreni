@@ -69,30 +69,49 @@
       "ora": "15:33",
       "score": 12.966073781291172,
       "classe": "warn"
+    },
+    {
+      "ora": "16:19",
+      "score": 21.463375995984695,
+      "classe": "danger"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 8,
+        "delayedCount": 1,
+        "avgDelay": 15,
+        "maxDelay": 15,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11370",
+            "orario": "16:08",
+            "luogo": "NOVARA",
+            "ritardo": 15
+          }
+        ]
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
         "total": 8,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 35,
+        "maxDelay": 35,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11332",
+            "orario": "15:50",
+            "luogo": "NOVARA",
+            "ritardo": 35
+          }
+        ]
       },
       "error": null
     },
@@ -100,22 +119,22 @@
       "stats": {
         "total": 23,
         "delayedCount": 2,
-        "avgDelay": 22.5,
-        "maxDelay": 40,
+        "avgDelay": 17.5,
+        "maxDelay": 25,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2728",
-            "orario": "14:48",
+            "treno": "11332",
+            "orario": "16:37",
             "luogo": "IVREA",
-            "ritardo": 40
+            "ritardo": 25
           },
           {
-            "treno": "11330",
-            "orario": "15:37",
-            "luogo": "IVREA",
-            "ritardo": 5
+            "treno": "2030",
+            "orario": "16:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
           }
         ]
       },
@@ -123,23 +142,23 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
+        "total": 21,
         "delayedCount": 2,
-        "avgDelay": 25,
-        "maxDelay": 40,
+        "avgDelay": 17.5,
+        "maxDelay": 25,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2728",
-            "orario": "15:00",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 40
+            "treno": "11332",
+            "orario": "16:40",
+            "luogo": "NOVARA",
+            "ritardo": 25
           },
           {
-            "treno": "11370",
-            "orario": "15:23",
-            "luogo": "IVREA",
+            "treno": "2030",
+            "orario": "16:42",
+            "luogo": "TORINO PORTA NUOVA",
             "ritardo": 10
           }
         ]
@@ -149,17 +168,29 @@
     "torinoandata": {
       "stats": {
         "total": 11,
-        "delayedCount": 1,
-        "avgDelay": 35,
-        "maxDelay": 35,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "delayedCount": 2,
+        "avgDelay": 32.5,
+        "maxDelay": 55,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2730",
+            "orario": "16:35",
+            "luogo": "IVREA"
+          }
+        ],
         "delayedTrains": [
           {
             "treno": "2728",
             "orario": "15:25",
             "luogo": "IVREA",
-            "ritardo": 35
+            "ritardo": 55
+          },
+          {
+            "treno": "2030",
+            "orario": "17:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
           }
         ]
       },
@@ -167,7 +198,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 10,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -179,11 +210,11 @@
     }
   },
   "dataLog": "21/08/2026",
-  "lastUpdate": "21/08/2026, 15:33:07",
-  "totalScore": 12.966073781291172,
+  "lastUpdate": "21/08/2026, 16:19:22",
+  "totalScore": 21.463375995984695,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "danger",
+    "word": "PENSACI DUE VOLTE",
+    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
   }
 }
