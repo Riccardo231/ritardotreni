@@ -54,6 +54,11 @@
       "ora": "12:13",
       "score": 1.7037037037037035,
       "classe": "ok"
+    },
+    {
+      "ora": "13:07",
+      "score": 0.8055555555555555,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -95,7 +100,26 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
+        "total": 24,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2727",
+            "orario": "13:00",
+            "luogo": "IVREA",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
+    },
+    "torinoandata": {
+      "stats": {
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -105,28 +129,9 @@
       },
       "error": null
     },
-    "torinoandata": {
-      "stats": {
-        "total": 9,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2020",
-            "orario": "12:06",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 10
-          }
-        ]
-      },
-      "error": null
-    },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -138,8 +143,8 @@
     }
   },
   "dataLog": "21/08/2026",
-  "lastUpdate": "21/08/2026, 12:13:03",
-  "totalScore": 1.7037037037037035,
+  "lastUpdate": "21/08/2026, 13:07:17",
+  "totalScore": 0.8055555555555555,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
