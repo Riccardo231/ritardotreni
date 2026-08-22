@@ -1,144 +1,9 @@
 {
   "timeline": [
     {
-      "ora": "00:01",
+      "ora": "00:33",
       "score": 0,
       "classe": "ok"
-    },
-    {
-      "ora": "01:02",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "02:00",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "04:05",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "05:27",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "06:17",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "07:11",
-      "score": 1.3333333333333333,
-      "classe": "ok"
-    },
-    {
-      "ora": "08:01",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "09:19",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "10:02",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "11:10",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "12:01",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "13:00",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "13:59",
-      "score": 1.6171497584541061,
-      "classe": "ok"
-    },
-    {
-      "ora": "14:56",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "15:37",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "16:00",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "17:00",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "17:58",
-      "score": 2.6602254428341383,
-      "classe": "ok"
-    },
-    {
-      "ora": "18:35",
-      "score": 2.687830687830688,
-      "classe": "ok"
-    },
-    {
-      "ora": "19:01",
-      "score": 2.5370370370370368,
-      "classe": "ok"
-    },
-    {
-      "ora": "19:59",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "20:44",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:10",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:58",
-      "score": 12,
-      "classe": "warn"
-    },
-    {
-      "ora": "22:34",
-      "score": 19.333333333333332,
-      "classe": "danger"
-    },
-    {
-      "ora": "23:01",
-      "score": 27.888888888888886,
-      "classe": "apoc"
-    },
-    {
-      "ora": "23:59",
-      "score": 9.666666666666666,
-      "classe": "warn"
     }
   ],
   "stazioni": {
@@ -168,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 0,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -180,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 0,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -192,26 +57,19 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 2,
-        "delayedCount": 1,
-        "avgDelay": 60,
-        "maxDelay": 60,
+        "total": 0,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2042",
-            "orario": "23:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 60
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 1,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -222,12 +80,12 @@
       "error": null
     }
   },
-  "dataLog": "22/08/2026",
-  "lastUpdate": "22/08/2026, 23:59:15",
-  "totalScore": 9.666666666666666,
+  "dataLog": "23/08/2026",
+  "lastUpdate": "23/08/2026, 00:33:17",
+  "totalScore": 0,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
