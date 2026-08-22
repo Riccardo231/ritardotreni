@@ -129,6 +129,11 @@
       "ora": "22:34",
       "score": 19.333333333333332,
       "classe": "danger"
+    },
+    {
+      "ora": "23:01",
+      "score": 27.888888888888886,
+      "classe": "apoc"
     }
   ],
   "stazioni": {
@@ -158,10 +163,10 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 3,
+        "total": 2,
         "delayedCount": 1,
-        "avgDelay": 40,
-        "maxDelay": 40,
+        "avgDelay": 65,
+        "maxDelay": 65,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -169,7 +174,7 @@
             "treno": "2042",
             "orario": "22:40",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 40
+            "ritardo": 65
           }
         ]
       },
@@ -178,9 +183,9 @@
     "chivassoritorno": {
       "stats": {
         "total": 3,
-        "delayedCount": 1,
-        "avgDelay": 40,
-        "maxDelay": 40,
+        "delayedCount": 2,
+        "avgDelay": 35,
+        "maxDelay": 65,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -188,7 +193,13 @@
             "treno": "2042",
             "orario": "22:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 40
+            "ritardo": 65
+          },
+          {
+            "treno": "2747",
+            "orario": "22:52",
+            "luogo": "IVREA",
+            "ritardo": 5
           }
         ]
       },
@@ -196,10 +207,10 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 3,
+        "total": 2,
         "delayedCount": 1,
-        "avgDelay": 40,
-        "maxDelay": 40,
+        "avgDelay": 60,
+        "maxDelay": 60,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
@@ -207,7 +218,7 @@
             "treno": "2042",
             "orario": "23:06",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 40
+            "ritardo": 60
           }
         ]
       },
@@ -227,11 +238,11 @@
     }
   },
   "dataLog": "22/08/2026",
-  "lastUpdate": "22/08/2026, 22:34:36",
-  "totalScore": 19.333333333333332,
+  "lastUpdate": "22/08/2026, 23:01:51",
+  "totalScore": 27.888888888888886,
   "verdettoAttuale": {
-    "cls": "danger",
-    "word": "PENSACI DUE VOLTE",
-    "sub": "Iniziano i ritardi pesanti sulle tratte principali."
+    "cls": "apoc",
+    "word": "NON ANDARE",
+    "sub": "Il caos ha preso il sopravvento sulla linea."
   }
 }
