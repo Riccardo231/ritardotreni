@@ -99,6 +99,11 @@
       "ora": "18:35",
       "score": 2.687830687830688,
       "classe": "ok"
+    },
+    {
+      "ora": "19:01",
+      "score": 2.5370370370370368,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -116,7 +121,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 5,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -128,37 +133,30 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 19,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2034",
-            "orario": "18:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
+        "total": 20,
         "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2034",
-            "orario": "18:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
+            "treno": "2739",
+            "orario": "18:52",
+            "luogo": "IVREA",
+            "ritardo": 10
           }
         ]
       },
@@ -185,7 +183,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -197,8 +195,8 @@
     }
   },
   "dataLog": "22/08/2026",
-  "lastUpdate": "22/08/2026, 18:35:18",
-  "totalScore": 2.687830687830688,
+  "lastUpdate": "22/08/2026, 19:01:23",
+  "totalScore": 2.5370370370370368,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
