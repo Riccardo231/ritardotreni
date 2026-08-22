@@ -94,6 +94,11 @@
       "ora": "17:58",
       "score": 2.6602254428341383,
       "classe": "ok"
+    },
+    {
+      "ora": "18:35",
+      "score": 2.687830687830688,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -123,7 +128,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
+        "total": 21,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -142,7 +147,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
+        "total": 21,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -180,7 +185,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -192,8 +197,8 @@
     }
   },
   "dataLog": "22/08/2026",
-  "lastUpdate": "22/08/2026, 17:58:47",
-  "totalScore": 2.6602254428341383,
+  "lastUpdate": "22/08/2026, 18:35:18",
+  "totalScore": 2.687830687830688,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
