@@ -134,12 +134,17 @@
       "ora": "23:01",
       "score": 27.888888888888886,
       "classe": "apoc"
+    },
+    {
+      "ora": "23:59",
+      "score": 9.666666666666666,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -163,45 +168,25 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 2,
-        "delayedCount": 1,
-        "avgDelay": 65,
-        "maxDelay": 65,
+        "total": 0,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2042",
-            "orario": "22:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 65
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 3,
-        "delayedCount": 2,
-        "avgDelay": 35,
-        "maxDelay": 65,
+        "total": 0,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2042",
-            "orario": "22:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 65
-          },
-          {
-            "treno": "2747",
-            "orario": "22:52",
-            "luogo": "IVREA",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -226,7 +211,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 0,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -238,11 +223,11 @@
     }
   },
   "dataLog": "22/08/2026",
-  "lastUpdate": "22/08/2026, 23:01:51",
-  "totalScore": 27.888888888888886,
+  "lastUpdate": "22/08/2026, 23:59:15",
+  "totalScore": 9.666666666666666,
   "verdettoAttuale": {
-    "cls": "apoc",
-    "word": "NON ANDARE",
-    "sub": "Il caos ha preso il sopravvento sulla linea."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
