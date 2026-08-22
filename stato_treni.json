@@ -64,6 +64,11 @@
       "ora": "13:00",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "13:59",
+      "score": 1.6171497584541061,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -94,24 +99,38 @@
     "chivassoandata": {
       "stats": {
         "total": 23,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2729",
+            "orario": "13:48",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
         "total": 24,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2729",
+            "orario": "13:52",
+            "luogo": "IVREA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
@@ -141,8 +160,8 @@
     }
   },
   "dataLog": "22/08/2026",
-  "lastUpdate": "22/08/2026, 13:00:50",
-  "totalScore": 0,
+  "lastUpdate": "22/08/2026, 13:59:30",
+  "totalScore": 1.6171497584541061,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
