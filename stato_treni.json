@@ -59,6 +59,11 @@
       "ora": "15:20",
       "score": 4.046442687747036,
       "classe": "ok"
+    },
+    {
+      "ora": "16:02",
+      "score": 1.037037037037037,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -88,45 +93,31 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 22,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
+        "total": 21,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2028",
-            "orario": "15:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 10
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
         "total": 23,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2028",
-            "orario": "15:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 10
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
+        "total": 9,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -145,7 +136,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 10,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -157,8 +148,8 @@
     }
   },
   "dataLog": "23/08/2026",
-  "lastUpdate": "23/08/2026, 15:20:57",
-  "totalScore": 4.046442687747036,
+  "lastUpdate": "23/08/2026, 16:02:23",
+  "totalScore": 1.037037037037037,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
