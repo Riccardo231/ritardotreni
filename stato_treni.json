@@ -39,6 +39,11 @@
       "ora": "11:10",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "12:01",
+      "score": 1.492063492063492,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -68,7 +73,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 18,
+        "total": 21,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -80,19 +85,26 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 17,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 21,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2725",
+            "orario": "11:52",
+            "luogo": "IVREA",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 6,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -116,8 +128,8 @@
     }
   },
   "dataLog": "23/08/2026",
-  "lastUpdate": "23/08/2026, 11:10:50",
-  "totalScore": 0,
+  "lastUpdate": "23/08/2026, 12:01:41",
+  "totalScore": 1.492063492063492,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
