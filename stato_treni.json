@@ -54,6 +54,11 @@
       "ora": "14:00",
       "score": 1.484848484848485,
       "classe": "ok"
+    },
+    {
+      "ora": "15:20",
+      "score": 4.046442687747036,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -71,7 +76,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 4,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -83,18 +88,6 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "chivassoritorno": {
-      "stats": {
         "total": 22,
         "delayedCount": 1,
         "avgDelay": 10,
@@ -103,9 +96,28 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2729",
-            "orario": "13:52",
-            "luogo": "IVREA",
+            "treno": "2028",
+            "orario": "15:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
+          }
+        ]
+      },
+      "error": null
+    },
+    "chivassoritorno": {
+      "stats": {
+        "total": 23,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2028",
+            "orario": "15:42",
+            "luogo": "TORINO PORTA NUOVA",
             "ritardo": 10
           }
         ]
@@ -115,18 +127,25 @@
     "torinoandata": {
       "stats": {
         "total": 8,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2028",
+            "orario": "16:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -138,8 +157,8 @@
     }
   },
   "dataLog": "23/08/2026",
-  "lastUpdate": "23/08/2026, 14:00:12",
-  "totalScore": 1.484848484848485,
+  "lastUpdate": "23/08/2026, 15:20:57",
+  "totalScore": 4.046442687747036,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
