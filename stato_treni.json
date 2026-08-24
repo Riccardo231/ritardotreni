@@ -44,12 +44,17 @@
       "ora": "09:44",
       "score": 1.6515151515151516,
       "classe": "ok"
+    },
+    {
+      "ora": "10:30",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 5,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -74,38 +79,24 @@
     "chivassoandata": {
       "stats": {
         "total": 20,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2016",
-            "orario": "09:40",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
         "total": 22,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2016",
-            "orario": "09:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -123,7 +114,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -135,8 +126,8 @@
     }
   },
   "dataLog": "24/08/2026",
-  "lastUpdate": "24/08/2026, 09:44:58",
-  "totalScore": 1.6515151515151516,
+  "lastUpdate": "24/08/2026, 10:30:42",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
