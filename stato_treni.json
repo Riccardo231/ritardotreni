@@ -74,12 +74,17 @@
       "ora": "15:40",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "16:28",
+      "score": 104.63699102829537,
+      "classe": "apoc"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -91,7 +96,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -104,24 +109,38 @@
     "chivassoandata": {
       "stats": {
         "total": 23,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 260,
+        "maxDelay": 260,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2037",
+            "orario": "18:18",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 260
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 21,
+        "delayedCount": 1,
+        "avgDelay": 260,
+        "maxDelay": 260,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2037",
+            "orario": "18:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 260
+          }
+        ]
       },
       "error": null
     },
@@ -139,23 +158,30 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 11,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 10,
+        "delayedCount": 1,
+        "avgDelay": 260,
+        "maxDelay": 260,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2037",
+            "orario": "17:54",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 260
+          }
+        ]
       },
       "error": null
     }
   },
   "dataLog": "26/08/2026",
-  "lastUpdate": "26/08/2026, 15:40:48",
-  "totalScore": 0,
+  "lastUpdate": "26/08/2026, 16:28:47",
+  "totalScore": 104.63699102829537,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "apoc",
+    "word": "NON ANDARE",
+    "sub": "Il caos ha preso il sopravvento sulla linea."
   }
 }
