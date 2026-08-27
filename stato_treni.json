@@ -1,97 +1,7 @@
 {
   "timeline": [
     {
-      "ora": "00:01",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "01:04",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "02:01",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "04:14",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "05:40",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "06:25",
-      "score": 2.4761904761904763,
-      "classe": "ok"
-    },
-    {
-      "ora": "07:17",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "08:19",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "09:32",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "10:24",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "11:25",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "12:18",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "13:13",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "14:16",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "15:40",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "16:28",
-      "score": 104.63699102829537,
-      "classe": "apoc"
-    },
-    {
-      "ora": "18:05",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "20:26",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "23:15",
+      "ora": "04:11",
       "score": 0,
       "classe": "ok"
     }
@@ -99,7 +9,7 @@
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 1,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -111,7 +21,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 0,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -123,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 1,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -135,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 1,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -147,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 1,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -159,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 0,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -170,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "26/08/2026",
-  "lastUpdate": "26/08/2026, 23:15:45",
+  "dataLog": "27/08/2026",
+  "lastUpdate": "27/08/2026, 04:11:28",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
