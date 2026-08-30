@@ -14,6 +14,11 @@
       "ora": "09:31",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "15:19",
+      "score": 9.75,
+      "classe": "warn"
     }
   ],
   "stazioni": {
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 4,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,7 +48,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 18,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -55,7 +60,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 17,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -67,7 +72,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -79,23 +84,30 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 8,
+        "delayedCount": 1,
+        "avgDelay": 70,
+        "maxDelay": 70,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2039",
+            "orario": "18:54",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 70
+          }
+        ]
       },
       "error": null
     }
   },
   "dataLog": "30/08/2026",
-  "lastUpdate": "30/08/2026, 09:31:37",
-  "totalScore": 0,
+  "lastUpdate": "30/08/2026, 15:19:36",
+  "totalScore": 9.75,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
