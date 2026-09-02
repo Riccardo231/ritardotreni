@@ -19,6 +19,11 @@
       "ora": "11:56",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "16:19",
+      "score": 2.96969696969697,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -36,7 +41,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -48,7 +53,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -60,7 +65,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -72,19 +77,26 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 9,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 11,
+        "delayedCount": 1,
+        "avgDelay": 20,
+        "maxDelay": 20,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2028",
+            "orario": "16:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 20
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,8 +108,8 @@
     }
   },
   "dataLog": "02/09/2026",
-  "lastUpdate": "02/09/2026, 11:56:20",
-  "totalScore": 0,
+  "lastUpdate": "02/09/2026, 16:19:39",
+  "totalScore": 2.96969696969697,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
