@@ -9,12 +9,17 @@
       "ora": "02:34",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "07:07",
+      "score": 3.7255892255892262,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 1,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -26,7 +31,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -38,31 +43,45 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 4,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 20,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2015",
+            "orario": "07:18",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 3,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 22,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2015",
+            "orario": "07:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 1,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -74,20 +93,33 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 9,
+        "delayedCount": 2,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2015",
+            "orario": "06:54",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
+          },
+          {
+            "treno": "2005",
+            "orario": "07:10",
+            "luogo": "MILANO PORTA GARIBALDI",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     }
   },
   "dataLog": "02/09/2026",
-  "lastUpdate": "02/09/2026, 02:34:20",
-  "totalScore": 0,
+  "lastUpdate": "02/09/2026, 07:07:46",
+  "totalScore": 3.7255892255892262,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
