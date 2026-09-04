@@ -24,12 +24,17 @@
       "ora": "18:12",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "21:09",
+      "score": 1.222222222222222,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -41,7 +46,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 5,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -53,7 +58,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 22,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -65,7 +70,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -77,19 +82,26 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 10,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 6,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2038",
+            "orario": "21:06",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -101,8 +113,8 @@
     }
   },
   "dataLog": "04/09/2026",
-  "lastUpdate": "04/09/2026, 18:12:36",
-  "totalScore": 0,
+  "lastUpdate": "04/09/2026, 21:09:54",
+  "totalScore": 1.222222222222222,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
