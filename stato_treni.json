@@ -14,22 +14,15 @@
       "ora": "08:31",
       "score": 2.5,
       "classe": "ok"
+    },
+    {
+      "ora": "13:22",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 5,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 4,
         "delayedCount": 0,
@@ -41,9 +34,21 @@
       },
       "error": null
     },
+    "ivrearitorno": {
+      "stats": {
+        "total": 3,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
     "chivassoandata": {
       "stats": {
-        "total": 17,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -55,7 +60,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 16,
+        "total": 21,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -67,25 +72,19 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 10,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "2754",
-            "orario": "08:35",
-            "luogo": "IVREA"
-          }
-        ],
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": []
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 7,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -97,8 +96,8 @@
     }
   },
   "dataLog": "06/09/2026",
-  "lastUpdate": "06/09/2026, 08:31:15",
-  "totalScore": 2.5,
+  "lastUpdate": "06/09/2026, 13:22:18",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
