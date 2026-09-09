@@ -19,31 +19,29 @@
       "ora": "13:58",
       "score": 7.592885375494071,
       "classe": "warn"
+    },
+    {
+      "ora": "18:32",
+      "score": 1.6237373737373737,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 8,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 6,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2729",
-            "orario": "14:23",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -56,23 +54,17 @@
     "chivassoandata": {
       "stats": {
         "total": 22,
-        "delayedCount": 2,
-        "avgDelay": 12.5,
-        "maxDelay": 15,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2024",
-            "orario": "13:40",
+            "treno": "2034",
+            "orario": "18:40",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 15
-          },
-          {
-            "treno": "2729",
-            "orario": "13:48",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 10
+            "ritardo": 5
           }
         ]
       },
@@ -80,24 +72,18 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
-        "delayedCount": 2,
-        "avgDelay": 12.5,
-        "maxDelay": 15,
+        "total": 24,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2024",
-            "orario": "13:42",
+            "treno": "2034",
+            "orario": "18:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 15
-          },
-          {
-            "treno": "2729",
-            "orario": "13:52",
-            "luogo": "IVREA",
-            "ritardo": 10
+            "ritardo": 5
           }
         ]
       },
@@ -105,26 +91,19 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "total": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2024",
-            "orario": "14:06",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -136,11 +115,11 @@
     }
   },
   "dataLog": "09/09/2026",
-  "lastUpdate": "09/09/2026, 13:58:59",
-  "totalScore": 7.592885375494071,
+  "lastUpdate": "09/09/2026, 18:32:26",
+  "totalScore": 1.6237373737373737,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
