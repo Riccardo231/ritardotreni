@@ -19,6 +19,11 @@
       "ora": "14:39",
       "score": 1.037037037037037,
       "classe": "ok"
+    },
+    {
+      "ora": "18:39",
+      "score": 1.037037037037037,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -36,7 +41,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 4,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -48,7 +53,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
+        "total": 19,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -60,7 +65,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
+        "total": 18,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -80,9 +85,9 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2766",
-            "orario": "14:35",
-            "luogo": "IVREA",
+            "treno": "2038",
+            "orario": "21:06",
+            "luogo": "MILANO PORTA GARIBALDI",
             "ritardo": 5
           }
         ]
@@ -91,7 +96,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -103,7 +108,7 @@
     }
   },
   "dataLog": "13/09/2026",
-  "lastUpdate": "13/09/2026, 14:39:47",
+  "lastUpdate": "13/09/2026, 18:39:03",
   "totalScore": 1.037037037037037,
   "verdettoAttuale": {
     "cls": "ok",
