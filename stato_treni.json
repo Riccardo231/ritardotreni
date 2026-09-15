@@ -19,12 +19,17 @@
       "ora": "14:36",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "19:18",
+      "score": 0.8181818181818182,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 8,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -36,7 +41,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -48,19 +53,26 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 22,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11703",
+            "orario": "19:12",
+            "luogo": "TORINO LINGOTTO",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
+        "total": 21,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -72,7 +84,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 10,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -84,7 +96,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,8 +108,8 @@
     }
   },
   "dataLog": "15/09/2026",
-  "lastUpdate": "15/09/2026, 14:36:05",
-  "totalScore": 0,
+  "lastUpdate": "15/09/2026, 19:18:29",
+  "totalScore": 0.8181818181818182,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
