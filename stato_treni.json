@@ -4,12 +4,17 @@
       "ora": "01:16",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "03:44",
+      "score": 8.333333333333334,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 1,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -21,7 +26,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 0,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -33,31 +38,45 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 3,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 4,
+        "delayedCount": 1,
+        "avgDelay": 25,
+        "maxDelay": 25,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2011",
+            "orario": "05:18",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 25
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 3,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 4,
+        "delayedCount": 1,
+        "avgDelay": 25,
+        "maxDelay": 25,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2011",
+            "orario": "05:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 25
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 0,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -69,7 +88,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -81,11 +100,11 @@
     }
   },
   "dataLog": "17/09/2026",
-  "lastUpdate": "17/09/2026, 01:16:12",
-  "totalScore": 0,
+  "lastUpdate": "17/09/2026, 03:44:12",
+  "totalScore": 8.333333333333334,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
