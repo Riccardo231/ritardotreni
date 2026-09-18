@@ -14,12 +14,17 @@
       "ora": "08:41",
       "score": 0.9696969696969697,
       "classe": "ok"
+    },
+    {
+      "ora": "13:53",
+      "score": 2.7131093544137026,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 5,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,31 +48,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "chivassoritorno": {
-      "stats": {
-        "total": 20,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "torinoandata": {
-      "stats": {
-        "total": 11,
+        "total": 22,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -75,18 +56,37 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2052",
-            "orario": "08:40",
-            "luogo": "MILANO PORTA GARIBALDI",
+            "treno": "2029",
+            "orario": "14:18",
+            "luogo": "TORINO PORTA NUOVA",
             "ritardo": 5
           }
         ]
       },
       "error": null
     },
-    "torinoritorno": {
+    "chivassoritorno": {
       "stats": {
-        "total": 8,
+        "total": 23,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2029",
+            "orario": "14:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
+    },
+    "torinoandata": {
+      "stats": {
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -95,11 +95,30 @@
         "delayedTrains": []
       },
       "error": null
+    },
+    "torinoritorno": {
+      "stats": {
+        "total": 8,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2029",
+            "orario": "13:54",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
     }
   },
   "dataLog": "18/09/2026",
-  "lastUpdate": "18/09/2026, 08:41:58",
-  "totalScore": 0.9696969696969697,
+  "lastUpdate": "18/09/2026, 13:53:11",
+  "totalScore": 2.7131093544137026,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
