@@ -1,91 +1,13 @@
 {
   "timeline": [
     {
-      "ora": "01:07",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "03:34",
-      "score": 8.61111111111111,
-      "classe": "warn"
-    },
-    {
-      "ora": "08:41",
-      "score": 0.9696969696969697,
-      "classe": "ok"
-    },
-    {
-      "ora": "13:53",
-      "score": 2.7131093544137026,
-      "classe": "ok"
-    },
-    {
-      "ora": "18:15",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:13",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "23:54",
+      "ora": "02:06",
       "score": 0,
       "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 0,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "ivrearitorno": {
-      "stats": {
-        "total": 0,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "chivassoandata": {
-      "stats": {
-        "total": 0,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "chivassoritorno": {
-      "stats": {
-        "total": 0,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "torinoandata": {
       "stats": {
         "total": 1,
         "delayedCount": 0,
@@ -97,7 +19,43 @@
       },
       "error": null
     },
-    "torinoritorno": {
+    "ivrearitorno": {
+      "stats": {
+        "total": 1,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "chivassoandata": {
+      "stats": {
+        "total": 7,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "chivassoritorno": {
+      "stats": {
+        "total": 7,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "torinoandata": {
       "stats": {
         "total": 0,
         "delayedCount": 0,
@@ -108,10 +66,22 @@
         "delayedTrains": []
       },
       "error": null
+    },
+    "torinoritorno": {
+      "stats": {
+        "total": 4,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
     }
   },
-  "dataLog": "18/09/2026",
-  "lastUpdate": "18/09/2026, 23:54:00",
+  "dataLog": "19/09/2026",
+  "lastUpdate": "19/09/2026, 02:06:47",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
