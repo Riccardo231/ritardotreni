@@ -1,35 +1,15 @@
 {
   "timeline": [
     {
-      "ora": "02:02",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "07:26",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "12:07",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "19:41",
-      "score": 1.7936507936507937,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:48",
-      "score": 0,
+      "ora": "00:20",
+      "score": 4.666666666666667,
       "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -53,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 5,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -65,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 5,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -77,19 +57,26 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 4,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 1,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2044",
+            "orario": "00:10",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 2,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -100,9 +87,9 @@
       "error": null
     }
   },
-  "dataLog": "20/09/2026",
-  "lastUpdate": "20/09/2026, 21:48:42",
-  "totalScore": 0,
+  "dataLog": "21/09/2026",
+  "lastUpdate": "21/09/2026, 00:20:41",
+  "totalScore": 4.666666666666667,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
