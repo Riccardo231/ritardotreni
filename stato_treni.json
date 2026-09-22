@@ -1,49 +1,27 @@
 {
   "timeline": [
     {
-      "ora": "02:18",
-      "score": 83.33333333333333,
-      "classe": "apoc"
-    },
-    {
-      "ora": "12:21",
-      "score": 20.81159420289855,
-      "classe": "danger"
-    },
-    {
-      "ora": "17:11",
+      "ora": "00:25",
       "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "21:14",
-      "score": 2.3333333333333335,
       "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 2,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 0,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2743",
-            "orario": "21:23",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -55,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 10,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -67,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 11,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -79,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 6,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -102,9 +80,9 @@
       "error": null
     }
   },
-  "dataLog": "22/09/2026",
-  "lastUpdate": "22/09/2026, 21:14:47",
-  "totalScore": 2.3333333333333335,
+  "dataLog": "23/09/2026",
+  "lastUpdate": "23/09/2026, 00:25:38",
+  "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
