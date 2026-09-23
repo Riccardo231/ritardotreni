@@ -14,22 +14,15 @@
       "ora": "07:50",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "13:20",
+      "score": 61.00029278290148,
+      "classe": "apoc"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 6,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 7,
         "delayedCount": 0,
@@ -41,45 +34,102 @@
       },
       "error": null
     },
-    "chivassoandata": {
+    "ivrearitorno": {
       "stats": {
-        "total": 20,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": []
+      },
+      "error": null
+    },
+    "chivassoandata": {
+      "stats": {
+        "total": 22,
+        "delayedCount": 2,
+        "avgDelay": 132.5,
+        "maxDelay": 190,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "11366",
+            "orario": "13:20",
+            "luogo": "NOVARA"
+          }
+        ],
+        "delayedTrains": [
+          {
+            "treno": "2018",
+            "orario": "10:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 190
+          },
+          {
+            "treno": "2022",
+            "orario": "12:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 75
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 23,
+        "delayedCount": 2,
+        "avgDelay": 132.5,
+        "maxDelay": 190,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2018",
+            "orario": "10:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 190
+          },
+          {
+            "treno": "2022",
+            "orario": "12:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 75
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 9,
+        "delayedCount": 2,
+        "avgDelay": 120,
+        "maxDelay": 180,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2018",
+            "orario": "11:15",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 180
+          },
+          {
+            "treno": "2022",
+            "orario": "13:10",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 60
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -91,11 +141,11 @@
     }
   },
   "dataLog": "23/09/2026",
-  "lastUpdate": "23/09/2026, 07:50:29",
-  "totalScore": 0,
+  "lastUpdate": "23/09/2026, 13:20:21",
+  "totalScore": 61.00029278290148,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "apoc",
+    "word": "NON ANDARE",
+    "sub": "Il caos ha preso il sopravvento sulla linea."
   }
 }
