@@ -19,6 +19,11 @@
       "ora": "13:50",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "18:14",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
@@ -48,7 +53,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 15,
+        "total": 16,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -60,7 +65,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 18,
+        "total": 17,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,7 +101,7 @@
     }
   },
   "dataLog": "26/09/2026",
-  "lastUpdate": "26/09/2026, 13:50:17",
+  "lastUpdate": "26/09/2026, 18:14:42",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
