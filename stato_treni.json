@@ -9,12 +9,17 @@
       "ora": "04:00",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "10:58",
+      "score": 9.90240918501788,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 2,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -26,7 +31,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -38,43 +43,76 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 4,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 22,
+        "delayedCount": 2,
+        "avgDelay": 30,
+        "maxDelay": 35,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11360",
+            "orario": "10:20",
+            "luogo": "NOVARA",
+            "ritardo": 35
+          },
+          {
+            "treno": "2018",
+            "orario": "10:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 25
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 3,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 23,
+        "delayedCount": 2,
+        "avgDelay": 25,
+        "maxDelay": 25,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "11395",
+            "orario": "10:40",
+            "luogo": "NOVARA",
+            "ritardo": 25
+          },
+          {
+            "treno": "2018",
+            "orario": "10:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 25
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
         "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2018",
+            "orario": "11:15",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 10,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -86,11 +124,11 @@
     }
   },
   "dataLog": "28/09/2026",
-  "lastUpdate": "28/09/2026, 04:00:14",
-  "totalScore": 0,
+  "lastUpdate": "28/09/2026, 10:58:24",
+  "totalScore": 9.90240918501788,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
