@@ -14,12 +14,17 @@
       "ora": "11:04",
       "score": 1.6435786435786437,
       "classe": "ok"
+    },
+    {
+      "ora": "23:04",
+      "score": 2.3333333333333335,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,7 +48,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 21,
+        "total": 2,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -51,9 +56,9 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2020",
-            "orario": "11:40",
-            "luogo": "MILANO PORTA GARIBALDI",
+            "treno": "2044",
+            "orario": "23:40",
+            "luogo": "MILANO CENTRALE",
             "ritardo": 5
           }
         ]
@@ -62,26 +67,19 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
+        "total": 1,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2020",
-            "orario": "11:42",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 7,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -93,7 +91,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -105,8 +103,8 @@
     }
   },
   "dataLog": "29/09/2026",
-  "lastUpdate": "29/09/2026, 11:04:30",
-  "totalScore": 1.6435786435786437,
+  "lastUpdate": "29/09/2026, 23:04:18",
+  "totalScore": 2.3333333333333335,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
