@@ -9,12 +9,17 @@
       "ora": "08:16",
       "score": 5.453823953823954,
       "classe": "ok"
+    },
+    {
+      "ora": "15:13",
+      "score": 1.6369910282953761,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 5,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -26,7 +31,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -38,7 +43,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 20,
+        "total": 23,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -46,8 +51,8 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2017",
-            "orario": "08:18",
+            "treno": "2031",
+            "orario": "15:18",
             "luogo": "TORINO PORTA NUOVA",
             "ritardo": 5
           }
@@ -58,21 +63,15 @@
     "chivassoritorno": {
       "stats": {
         "total": 21,
-        "delayedCount": 2,
+        "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2714",
-            "orario": "08:14",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          },
-          {
-            "treno": "2017",
-            "orario": "08:20",
+            "treno": "2031",
+            "orario": "15:20",
             "luogo": "MILANO CENTRALE",
             "ritardo": 5
           }
@@ -82,20 +81,13 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
-        "delayedCount": 1,
-        "avgDelay": 25,
-        "maxDelay": 25,
+        "total": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "9900",
-            "orario": "08:33",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 25
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -113,8 +105,8 @@
     }
   },
   "dataLog": "02/10/2026",
-  "lastUpdate": "02/10/2026, 08:16:31",
-  "totalScore": 5.453823953823954,
+  "lastUpdate": "02/10/2026, 15:13:14",
+  "totalScore": 1.6369910282953761,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
