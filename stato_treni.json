@@ -1,40 +1,13 @@
 {
   "timeline": [
     {
-      "ora": "02:15",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "08:16",
-      "score": 5.453823953823954,
-      "classe": "ok"
-    },
-    {
-      "ora": "15:13",
-      "score": 1.6369910282953761,
-      "classe": "ok"
-    },
-    {
-      "ora": "20:43",
+      "ora": "00:36",
       "score": 0,
       "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 3,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 1,
         "delayedCount": 0,
@@ -46,9 +19,21 @@
       },
       "error": null
     },
+    "ivrearitorno": {
+      "stats": {
+        "total": 0,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
     "chivassoandata": {
       "stats": {
-        "total": 12,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -60,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 13,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -72,7 +57,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 6,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -84,7 +69,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 3,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -95,8 +80,8 @@
       "error": null
     }
   },
-  "dataLog": "02/10/2026",
-  "lastUpdate": "02/10/2026, 20:43:15",
+  "dataLog": "03/10/2026",
+  "lastUpdate": "03/10/2026, 00:36:36",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
