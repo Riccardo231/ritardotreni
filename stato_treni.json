@@ -4,12 +4,17 @@
       "ora": "04:52",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "11:36",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 2,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -21,7 +26,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -33,7 +38,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 13,
+        "total": 18,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -45,7 +50,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 13,
+        "total": 17,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -57,7 +62,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 6,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -69,7 +74,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -81,7 +86,7 @@
     }
   },
   "dataLog": "04/10/2026",
-  "lastUpdate": "04/10/2026, 04:52:12",
+  "lastUpdate": "04/10/2026, 11:36:05",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
