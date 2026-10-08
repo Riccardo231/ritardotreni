@@ -14,12 +14,17 @@
       "ora": "16:04",
       "score": 2.599472990777339,
       "classe": "ok"
+    },
+    {
+      "ora": "22:12",
+      "score": 4.333333333333333,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,7 +48,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
+        "total": 5,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -51,8 +56,8 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2033",
-            "orario": "16:18",
+            "treno": "2045",
+            "orario": "22:18",
             "luogo": "TORINO PORTA NUOVA",
             "ritardo": 5
           }
@@ -62,7 +67,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
+        "total": 6,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -70,9 +75,9 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2033",
-            "orario": "16:20",
-            "luogo": "MILANO CENTRALE",
+            "treno": "2045",
+            "orario": "22:20",
+            "luogo": "MILANO PORTA GARIBALDI",
             "ritardo": 5
           }
         ]
@@ -81,7 +86,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 3,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -89,8 +94,8 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2028",
-            "orario": "16:10",
+            "treno": "2040",
+            "orario": "22:10",
             "luogo": "MILANO CENTRALE",
             "ritardo": 5
           }
@@ -100,7 +105,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -112,8 +117,8 @@
     }
   },
   "dataLog": "08/10/2026",
-  "lastUpdate": "08/10/2026, 16:04:25",
-  "totalScore": 2.599472990777339,
+  "lastUpdate": "08/10/2026, 22:12:00",
+  "totalScore": 4.333333333333333,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
