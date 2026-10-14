@@ -1,35 +1,15 @@
 {
   "timeline": [
     {
-      "ora": "01:07",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "04:10",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "10:02",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "16:04",
-      "score": 6.747474747474747,
-      "classe": "warn"
-    },
-    {
-      "ora": "20:57",
-      "score": 0,
+      "ora": "00:12",
+      "score": 6,
       "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 3,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -41,7 +21,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 1,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -53,7 +33,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 10,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -65,7 +45,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 11,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -77,19 +57,26 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 6,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 1,
+        "delayedCount": 1,
+        "avgDelay": 20,
+        "maxDelay": 20,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "33456",
+            "orario": "00:03",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 20
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 2,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -100,9 +87,9 @@
       "error": null
     }
   },
-  "dataLog": "14/10/2026",
-  "lastUpdate": "14/10/2026, 20:57:15",
-  "totalScore": 0,
+  "dataLog": "15/10/2026",
+  "lastUpdate": "15/10/2026, 00:12:12",
+  "totalScore": 6,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
