@@ -29,12 +29,17 @@
       "ora": "20:17",
       "score": 2.444444444444444,
       "classe": "ok"
+    },
+    {
+      "ora": "23:04",
+      "score": 2.3333333333333335,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 2,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -46,7 +51,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -58,7 +63,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 8,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -70,19 +75,26 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 10,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 2,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "33456",
+            "orario": "23:35",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 3,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -94,27 +106,20 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 3,
-        "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
+        "total": 0,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "9255",
-            "orario": "20:40",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 10
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     }
   },
   "dataLog": "18/10/2026",
-  "lastUpdate": "18/10/2026, 20:17:51",
-  "totalScore": 2.444444444444444,
+  "lastUpdate": "18/10/2026, 23:04:00",
+  "totalScore": 2.3333333333333335,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
