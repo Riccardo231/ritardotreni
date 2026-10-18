@@ -19,22 +19,15 @@
       "ora": "13:45",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "17:45",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
-      "stats": {
-        "total": 4,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": []
-      },
-      "error": null
-    },
-    "ivrearitorno": {
       "stats": {
         "total": 3,
         "delayedCount": 0,
@@ -46,9 +39,21 @@
       },
       "error": null
     },
+    "ivrearitorno": {
+      "stats": {
+        "total": 4,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
+      },
+      "error": null
+    },
     "chivassoandata": {
       "stats": {
-        "total": 13,
+        "total": 15,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -72,7 +77,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 3,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -84,7 +89,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,7 +101,7 @@
     }
   },
   "dataLog": "18/10/2026",
-  "lastUpdate": "18/10/2026, 13:45:13",
+  "lastUpdate": "18/10/2026, 17:45:01",
   "totalScore": 0,
   "verdettoAttuale": {
     "cls": "ok",
