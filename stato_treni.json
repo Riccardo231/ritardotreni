@@ -19,12 +19,17 @@
       "ora": "14:27",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "19:40",
+      "score": 3,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 8,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -36,7 +41,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -48,7 +53,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 22,
+        "total": 19,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -60,7 +65,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 20,
+        "total": 19,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -73,18 +78,31 @@
     "torinoandata": {
       "stats": {
         "total": 10,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "delayedCount": 2,
+        "avgDelay": 15,
+        "maxDelay": 25,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2736",
+            "orario": "19:40",
+            "luogo": "IVREA",
+            "ritardo": 5
+          },
+          {
+            "treno": "2038",
+            "orario": "21:10",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 25
+          }
+        ]
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 7,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -96,8 +114,8 @@
     }
   },
   "dataLog": "21/10/2026",
-  "lastUpdate": "21/10/2026, 14:27:34",
-  "totalScore": 0,
+  "lastUpdate": "21/10/2026, 19:40:43",
+  "totalScore": 3,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
