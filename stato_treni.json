@@ -9,12 +9,17 @@
       "ora": "11:39",
       "score": 10.713109354413703,
       "classe": "warn"
+    },
+    {
+      "ora": "16:41",
+      "score": 2.29040404040404,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -38,18 +43,18 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 22,
+        "total": 24,
         "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2023",
-            "orario": "11:18",
+            "treno": "2735",
+            "orario": "16:43",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 20
+            "ritardo": 10
           }
         ]
       },
@@ -57,18 +62,18 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 23,
+        "total": 22,
         "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2023",
-            "orario": "11:20",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 20
+            "treno": "2735",
+            "orario": "16:52",
+            "luogo": "IVREA",
+            "ritardo": 5
           }
         ]
       },
@@ -76,20 +81,13 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
-        "delayedCount": 1,
-        "avgDelay": 35,
-        "maxDelay": 35,
+        "total": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2018",
-            "orario": "11:15",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 35
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
@@ -107,11 +105,11 @@
     }
   },
   "dataLog": "22/10/2026",
-  "lastUpdate": "22/10/2026, 11:39:53",
-  "totalScore": 10.713109354413703,
+  "lastUpdate": "22/10/2026, 16:41:44",
+  "totalScore": 2.29040404040404,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
