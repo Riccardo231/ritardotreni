@@ -9,12 +9,17 @@
       "ora": "02:59",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "07:57",
+      "score": 1.484848484848485,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 2,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -26,7 +31,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -38,7 +43,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 13,
+        "total": 18,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -50,19 +55,26 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 11,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 22,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2055",
+            "orario": "07:49",
+            "luogo": "MILANO PORTA GARIBALDI",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 2,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -74,7 +86,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -86,8 +98,8 @@
     }
   },
   "dataLog": "23/10/2026",
-  "lastUpdate": "23/10/2026, 02:59:08",
-  "totalScore": 0,
+  "lastUpdate": "23/10/2026, 07:57:53",
+  "totalScore": 1.484848484848485,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
