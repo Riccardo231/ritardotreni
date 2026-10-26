@@ -14,12 +14,17 @@
       "ora": "15:34",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "21:10",
+      "score": 1.9696969696969697,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,31 +48,45 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 10,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2740",
+            "orario": "21:06",
+            "luogo": "IVREA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 11,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2740",
+            "orario": "21:10",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 10,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -79,7 +98,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -91,8 +110,8 @@
     }
   },
   "dataLog": "26/10/2026",
-  "lastUpdate": "26/10/2026, 15:34:45",
-  "totalScore": 0,
+  "lastUpdate": "26/10/2026, 21:10:53",
+  "totalScore": 1.9696969696969697,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
