@@ -9,12 +9,17 @@
       "ora": "06:39",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "12:02",
+      "score": 1.75,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -26,7 +31,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -50,7 +55,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
+        "total": 23,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -62,13 +67,20 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 8,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2020",
+            "orario": "12:10",
+            "luogo": "MILANO PORTA GARIBALDI",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
@@ -86,8 +98,8 @@
     }
   },
   "dataLog": "27/10/2026",
-  "lastUpdate": "27/10/2026, 06:39:34",
-  "totalScore": 0,
+  "lastUpdate": "27/10/2026, 12:02:30",
+  "totalScore": 1.75,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
