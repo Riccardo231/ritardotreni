@@ -1,30 +1,15 @@
 {
   "timeline": [
     {
-      "ora": "01:45",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "07:45",
-      "score": 26.436507936507937,
-      "classe": "apoc"
-    },
-    {
-      "ora": "14:56",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "20:26",
-      "score": 10.777777777777779,
+      "ora": "00:36",
+      "score": 8,
       "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 3,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -36,7 +21,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 2,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -48,57 +33,31 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 15,
-        "delayedCount": 2,
-        "avgDelay": 17.5,
-        "maxDelay": 20,
+        "total": 1,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2058",
-            "orario": "20:10",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 20
-          },
-          {
-            "treno": "2041",
-            "orario": "20:18",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 16,
-        "delayedCount": 2,
-        "avgDelay": 17.5,
-        "maxDelay": 20,
+        "total": 2,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2058",
-            "orario": "20:14",
-            "luogo": "TORINO LINGOTTO",
-            "ritardo": 20
-          },
-          {
-            "treno": "2041",
-            "orario": "20:20",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
+        "total": 1,
         "delayedCount": 1,
         "avgDelay": 35,
         "maxDelay": 35,
@@ -106,8 +65,8 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2036",
-            "orario": "20:10",
+            "treno": "33456",
+            "orario": "00:03",
             "luogo": "MILANO CENTRALE",
             "ritardo": 35
           }
@@ -117,7 +76,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 3,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -128,9 +87,9 @@
       "error": null
     }
   },
-  "dataLog": "28/10/2026",
-  "lastUpdate": "28/10/2026, 20:26:30",
-  "totalScore": 10.777777777777779,
+  "dataLog": "29/10/2026",
+  "lastUpdate": "29/10/2026, 00:36:28",
+  "totalScore": 8,
   "verdettoAttuale": {
     "cls": "warn",
     "word": "VAI CON RISERVA",
