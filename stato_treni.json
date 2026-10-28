@@ -9,30 +9,29 @@
       "ora": "07:45",
       "score": 26.436507936507937,
       "classe": "apoc"
+    },
+    {
+      "ora": "14:56",
+      "score": 0,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "2717",
-            "orario": "08:23",
-            "luogo": "TORINO PORTA NUOVA"
-          }
-        ],
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": []
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -44,89 +43,37 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 19,
+        "total": 22,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 3,
-        "soppressiTrains": [
-          {
-            "treno": "2717",
-            "orario": "07:43",
-            "luogo": "TORINO PORTA NUOVA"
-          },
-          {
-            "treno": "2055",
-            "orario": "07:44",
-            "luogo": "TORINO LINGOTTO"
-          },
-          {
-            "treno": "2014",
-            "orario": "08:40",
-            "luogo": "MILANO CENTRALE"
-          }
-        ],
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
-        "delayedCount": 1,
-        "avgDelay": 25,
-        "maxDelay": 25,
-        "soppressi": 3,
-        "soppressiTrains": [
-          {
-            "treno": "2055",
-            "orario": "07:49",
-            "luogo": "MILANO PORTA GARIBALDI"
-          },
-          {
-            "treno": "2717",
-            "orario": "07:52",
-            "luogo": "IVREA"
-          },
-          {
-            "treno": "2014",
-            "orario": "08:42",
-            "luogo": "TORINO PORTA NUOVA"
-          }
-        ],
-        "delayedTrains": [
-          {
-            "treno": "2015",
-            "orario": "07:20",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 25
-          }
-        ]
+        "total": 22,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 12,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "2014",
-            "orario": "09:10",
-            "luogo": "MILANO CENTRALE"
-          }
-        ],
-        "delayedTrains": [
-          {
-            "treno": "2712",
-            "orario": "07:40",
-            "luogo": "IVREA",
-            "ritardo": 20
-          }
-        ]
+        "total": 10,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": []
       },
       "error": null
     },
@@ -144,11 +91,11 @@
     }
   },
   "dataLog": "28/10/2026",
-  "lastUpdate": "28/10/2026, 07:45:53",
-  "totalScore": 26.436507936507937,
+  "lastUpdate": "28/10/2026, 14:56:18",
+  "totalScore": 0,
   "verdettoAttuale": {
-    "cls": "apoc",
-    "word": "NON ANDARE",
-    "sub": "Il caos ha preso il sopravvento sulla linea."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
