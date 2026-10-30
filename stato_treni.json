@@ -9,12 +9,17 @@
       "ora": "08:44",
       "score": 9.166666666666666,
       "classe": "warn"
+    },
+    {
+      "ora": "15:35",
+      "score": 4.123737373737374,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 5,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -26,7 +31,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -38,22 +43,22 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 20,
+        "total": 24,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
         "soppressi": 1,
         "soppressiTrains": [
           {
-            "treno": "2014",
-            "orario": "08:40",
-            "luogo": "MILANO CENTRALE"
+            "treno": "11330",
+            "orario": "15:37",
+            "luogo": "IVREA"
           }
         ],
         "delayedTrains": [
           {
-            "treno": "2016",
-            "orario": "09:40",
+            "treno": "2028",
+            "orario": "15:40",
             "luogo": "MILANO CENTRALE",
             "ritardo": 5
           }
@@ -63,22 +68,16 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 20,
+        "total": 22,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "2014",
-            "orario": "08:42",
-            "luogo": "TORINO PORTA NUOVA"
-          }
-        ],
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2016",
-            "orario": "09:42",
+            "treno": "2028",
+            "orario": "15:42",
             "luogo": "TORINO PORTA NUOVA",
             "ritardo": 5
           }
@@ -92,21 +91,15 @@
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "2014",
-            "orario": "09:10",
-            "luogo": "MILANO CENTRALE"
-          }
-        ],
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": []
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -118,11 +111,11 @@
     }
   },
   "dataLog": "30/10/2026",
-  "lastUpdate": "30/10/2026, 08:44:18",
-  "totalScore": 9.166666666666666,
+  "lastUpdate": "30/10/2026, 15:35:20",
+  "totalScore": 4.123737373737374,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
