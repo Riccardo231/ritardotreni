@@ -14,12 +14,17 @@
       "ora": "15:40",
       "score": 10.432806324110674,
       "classe": "warn"
+    },
+    {
+      "ora": "21:39",
+      "score": 3.9761904761904763,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 9,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,24 +48,24 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
-        "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
-        "soppressi": 1,
-        "soppressiTrains": [
-          {
-            "treno": "11372",
-            "orario": "16:20",
-            "luogo": "NOVARA"
-          }
-        ],
+        "total": 8,
+        "delayedCount": 2,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2028",
-            "orario": "15:40",
+            "treno": "11342",
+            "orario": "21:37",
+            "luogo": "IVREA",
+            "ritardo": 5
+          },
+          {
+            "treno": "2040",
+            "orario": "21:40",
             "luogo": "MILANO CENTRALE",
-            "ritardo": 20
+            "ritardo": 5
           }
         ]
       },
@@ -68,18 +73,18 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
+        "total": 7,
         "delayedCount": 1,
-        "avgDelay": 20,
-        "maxDelay": 20,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2028",
-            "orario": "15:42",
+            "treno": "2040",
+            "orario": "21:42",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 20
+            "ritardo": 5
           }
         ]
       },
@@ -87,18 +92,18 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 5,
         "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2028",
-            "orario": "16:10",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 15
+            "treno": "2740",
+            "orario": "21:40",
+            "luogo": "IVREA",
+            "ritardo": 5
           }
         ]
       },
@@ -106,7 +111,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 10,
+        "total": 2,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -118,11 +123,11 @@
     }
   },
   "dataLog": "03/11/2026",
-  "lastUpdate": "03/11/2026, 15:40:58",
-  "totalScore": 10.432806324110674,
+  "lastUpdate": "03/11/2026, 21:39:42",
+  "totalScore": 3.9761904761904763,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
