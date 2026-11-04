@@ -14,12 +14,17 @@
       "ora": "16:47",
       "score": 9.24016563146998,
       "classe": "warn"
+    },
+    {
+      "ora": "22:47",
+      "score": 1.7777777777777777,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 8,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -31,7 +36,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -43,18 +48,18 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 23,
+        "total": 3,
         "delayedCount": 1,
-        "avgDelay": 10,
-        "maxDelay": 10,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2735",
-            "orario": "16:43",
+            "treno": "2747",
+            "orario": "22:43",
             "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 10
+            "ritardo": 5
           }
         ]
       },
@@ -62,51 +67,31 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
-        "delayedCount": 2,
-        "avgDelay": 20,
-        "maxDelay": 35,
+        "total": 2,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2730",
-            "orario": "16:10",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 35
-          },
-          {
-            "treno": "2735",
-            "orario": "16:52",
-            "luogo": "IVREA",
-            "ritardo": 5
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 12,
-        "delayedCount": 1,
-        "avgDelay": 30,
-        "maxDelay": 30,
+        "total": 2,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2730",
-            "orario": "16:40",
-            "luogo": "IVREA",
-            "ritardo": 30
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "torinoritorno": {
       "stats": {
-        "total": 10,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -118,11 +103,11 @@
     }
   },
   "dataLog": "04/11/2026",
-  "lastUpdate": "04/11/2026, 16:47:17",
-  "totalScore": 9.24016563146998,
+  "lastUpdate": "04/11/2026, 22:47:20",
+  "totalScore": 1.7777777777777777,
   "verdettoAttuale": {
-    "cls": "warn",
-    "word": "VAI CON RISERVA",
-    "sub": "Qualche accumulo di ritardo qua e là."
+    "cls": "ok",
+    "word": "VAI TRANQUILLO",
+    "sub": "Treni in linea con le aspettative."
   }
 }
