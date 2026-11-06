@@ -9,12 +9,17 @@
       "ora": "04:40",
       "score": 3.121212121212121,
       "classe": "ok"
+    },
+    {
+      "ora": "12:34",
+      "score": 2.5,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 2,
+        "total": 7,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -26,7 +31,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -38,26 +43,19 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 22,
-        "delayedCount": 1,
-        "avgDelay": 15,
-        "maxDelay": 15,
+        "total": 21,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "11350",
-            "orario": "05:05",
-            "luogo": "NOVARA",
-            "ritardo": 15
-          }
-        ]
+        "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 3,
+        "total": 23,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -69,7 +67,25 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
+        "total": 9,
+        "delayedCount": 0,
+        "avgDelay": 0,
+        "maxDelay": 0,
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2722",
+            "orario": "12:40",
+            "luogo": "IVREA"
+          }
+        ],
+        "delayedTrains": []
+      },
+      "error": null
+    },
+    "torinoritorno": {
+      "stats": {
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -78,30 +94,11 @@
         "delayedTrains": []
       },
       "error": null
-    },
-    "torinoritorno": {
-      "stats": {
-        "total": 11,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2005",
-            "orario": "07:10",
-            "luogo": "MILANO PORTA GARIBALDI",
-            "ritardo": 5
-          }
-        ]
-      },
-      "error": null
     }
   },
   "dataLog": "06/11/2026",
-  "lastUpdate": "06/11/2026, 04:40:57",
-  "totalScore": 3.121212121212121,
+  "lastUpdate": "06/11/2026, 12:34:29",
+  "totalScore": 2.5,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
