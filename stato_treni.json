@@ -19,12 +19,17 @@
       "ora": "19:31",
       "score": 1.7638888888888886,
       "classe": "ok"
+    },
+    {
+      "ora": "23:30",
+      "score": 8,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 3,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -36,7 +41,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 3,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -48,7 +53,7 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 16,
+        "total": 1,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -56,8 +61,8 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2036",
-            "orario": "19:40",
+            "treno": "33456",
+            "orario": "23:33",
             "luogo": "MILANO CENTRALE",
             "ritardo": 5
           }
@@ -67,7 +72,7 @@
     },
     "chivassoritorno": {
       "stats": {
-        "total": 15,
+        "total": 1,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -75,8 +80,8 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2036",
-            "orario": "19:42",
+            "treno": "33456",
+            "orario": "23:35",
             "luogo": "TORINO PORTA NUOVA",
             "ritardo": 5
           }
@@ -86,7 +91,7 @@
     },
     "torinoandata": {
       "stats": {
-        "total": 9,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -98,7 +103,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 5,
+        "total": 0,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -110,11 +115,11 @@
     }
   },
   "dataLog": "08/11/2026",
-  "lastUpdate": "08/11/2026, 19:31:03",
-  "totalScore": 1.7638888888888886,
+  "lastUpdate": "08/11/2026, 23:30:23",
+  "totalScore": 8,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
