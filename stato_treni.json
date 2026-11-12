@@ -9,12 +9,17 @@
       "ora": "12:53",
       "score": 1.0833333333333333,
       "classe": "ok"
+    },
+    {
+      "ora": "20:47",
+      "score": 11.811355311355312,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -26,7 +31,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 8,
+        "total": 1,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -38,31 +43,81 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 20,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 13,
+        "delayedCount": 4,
+        "avgDelay": 17.5,
+        "maxDelay": 50,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2058",
+            "orario": "20:10",
+            "luogo": "MILANO PORTA GARIBALDI",
+            "ritardo": 50
+          },
+          {
+            "treno": "2038",
+            "orario": "20:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          },
+          {
+            "treno": "2743",
+            "orario": "20:48",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 10
+          },
+          {
+            "treno": "2040",
+            "orario": "21:40",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 22,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 14,
+        "delayedCount": 4,
+        "avgDelay": 17.5,
+        "maxDelay": 50,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2058",
+            "orario": "20:14",
+            "luogo": "TORINO LINGOTTO",
+            "ritardo": 50
+          },
+          {
+            "treno": "2038",
+            "orario": "20:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          },
+          {
+            "treno": "2743",
+            "orario": "20:52",
+            "luogo": "IVREA",
+            "ritardo": 10
+          },
+          {
+            "treno": "2040",
+            "orario": "21:42",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 8,
+        "total": 6,
         "delayedCount": 1,
         "avgDelay": 5,
         "maxDelay": 5,
@@ -70,8 +125,8 @@
         "soppressiTrains": [],
         "delayedTrains": [
           {
-            "treno": "2022",
-            "orario": "13:10",
+            "treno": "2038",
+            "orario": "21:10",
             "luogo": "MILANO CENTRALE",
             "ritardo": 5
           }
@@ -81,23 +136,30 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 3,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2045",
+            "orario": "21:54",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     }
   },
   "dataLog": "12/11/2026",
-  "lastUpdate": "12/11/2026, 12:53:32",
-  "totalScore": 1.0833333333333333,
+  "lastUpdate": "12/11/2026, 20:47:39",
+  "totalScore": 11.811355311355312,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
