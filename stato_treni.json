@@ -9,12 +9,17 @@
       "ora": "10:13",
       "score": 1.961038961038961,
       "classe": "ok"
+    },
+    {
+      "ora": "19:25",
+      "score": 1.650793650793651,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 6,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -26,7 +31,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 6,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -38,7 +43,45 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 19,
+        "total": 21,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2039",
+            "orario": "19:18",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
+    },
+    "chivassoritorno": {
+      "stats": {
+        "total": 21,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
+        "soppressi": 0,
+        "soppressiTrains": [],
+        "delayedTrains": [
+          {
+            "treno": "2039",
+            "orario": "19:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
+      },
+      "error": null
+    },
+    "torinoandata": {
+      "stats": {
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -48,47 +91,9 @@
       },
       "error": null
     },
-    "chivassoritorno": {
-      "stats": {
-        "total": 22,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2718",
-            "orario": "10:10",
-            "luogo": "TORINO PORTA NUOVA",
-            "ritardo": 5
-          }
-        ]
-      },
-      "error": null
-    },
-    "torinoandata": {
-      "stats": {
-        "total": 7,
-        "delayedCount": 1,
-        "avgDelay": 5,
-        "maxDelay": 5,
-        "soppressi": 0,
-        "soppressiTrains": [],
-        "delayedTrains": [
-          {
-            "treno": "2016",
-            "orario": "10:10",
-            "luogo": "MILANO CENTRALE",
-            "ritardo": 5
-          }
-        ]
-      },
-      "error": null
-    },
     "torinoritorno": {
       "stats": {
-        "total": 9,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -100,8 +105,8 @@
     }
   },
   "dataLog": "18/11/2026",
-  "lastUpdate": "18/11/2026, 10:13:41",
-  "totalScore": 1.961038961038961,
+  "lastUpdate": "18/11/2026, 19:25:07",
+  "totalScore": 1.650793650793651,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
