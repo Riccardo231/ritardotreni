@@ -4,12 +4,17 @@
       "ora": "00:53",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "07:54",
+      "score": 2.9095655806182124,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 0,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -21,7 +26,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 0,
+        "total": 6,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -33,31 +38,51 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 3,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 19,
+        "delayedCount": 1,
+        "avgDelay": 10,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2055",
+            "orario": "07:44",
+            "luogo": "TORINO LINGOTTO",
+            "ritardo": 10
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 2,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 21,
+        "delayedCount": 2,
+        "avgDelay": 7.5,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2055",
+            "orario": "07:49",
+            "luogo": "MILANO PORTA GARIBALDI",
+            "ritardo": 10
+          },
+          {
+            "treno": "2717",
+            "orario": "07:52",
+            "luogo": "IVREA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 0,
+        "total": 11,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -69,7 +94,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 3,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -81,8 +106,8 @@
     }
   },
   "dataLog": "20/11/2026",
-  "lastUpdate": "20/11/2026, 00:53:16",
-  "totalScore": 0,
+  "lastUpdate": "20/11/2026, 07:54:59",
+  "totalScore": 2.9095655806182124,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
