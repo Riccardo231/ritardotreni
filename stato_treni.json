@@ -1,30 +1,15 @@
 {
   "timeline": [
     {
-      "ora": "00:53",
-      "score": 0,
-      "classe": "ok"
-    },
-    {
-      "ora": "07:54",
-      "score": 2.9095655806182124,
-      "classe": "ok"
-    },
-    {
-      "ora": "17:00",
-      "score": 3.629776021080369,
-      "classe": "ok"
-    },
-    {
-      "ora": "23:49",
-      "score": 0,
-      "classe": "ok"
+      "ora": "04:52",
+      "score": 7.5,
+      "classe": "warn"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 0,
+        "total": 4,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -36,7 +21,7 @@
     },
     "ivrearitorno": {
       "stats": {
-        "total": 0,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -48,31 +33,43 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 0,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2011",
+            "orario": "05:27",
+            "luogo": "TORINO PORTA NUOVA"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 0,
+        "total": 9,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2011",
+            "orario": "05:29",
+            "luogo": "MILANO CENTRALE"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 1,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -84,23 +81,29 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 0,
+        "total": 8,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
-        "soppressi": 0,
-        "soppressiTrains": [],
+        "soppressi": 1,
+        "soppressiTrains": [
+          {
+            "treno": "2011",
+            "orario": "05:04",
+            "luogo": "MILANO CENTRALE"
+          }
+        ],
         "delayedTrains": []
       },
       "error": null
     }
   },
-  "dataLog": "20/11/2026",
-  "lastUpdate": "20/11/2026, 23:49:35",
-  "totalScore": 0,
+  "dataLog": "21/11/2026",
+  "lastUpdate": "21/11/2026, 04:52:33",
+  "totalScore": 7.5,
   "verdettoAttuale": {
-    "cls": "ok",
-    "word": "VAI TRANQUILLO",
-    "sub": "Treni in linea con le aspettative."
+    "cls": "warn",
+    "word": "VAI CON RISERVA",
+    "sub": "Qualche accumulo di ritardo qua e là."
   }
 }
