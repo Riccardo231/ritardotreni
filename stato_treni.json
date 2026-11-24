@@ -4,24 +4,36 @@
       "ora": "07:27",
       "score": 0,
       "classe": "ok"
+    },
+    {
+      "ora": "19:21",
+      "score": 4.154479578392622,
+      "classe": "ok"
     }
   ],
   "stazioni": {
     "ivreaandata": {
       "stats": {
-        "total": 7,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 5,
+        "delayedCount": 1,
+        "avgDelay": 5,
+        "maxDelay": 5,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2739",
+            "orario": "19:23",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "ivrearitorno": {
       "stats": {
-        "total": 7,
+        "total": 3,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -33,31 +45,63 @@
     },
     "chivassoandata": {
       "stats": {
-        "total": 20,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 23,
+        "delayedCount": 3,
+        "avgDelay": 6.666666666666667,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2056",
+            "orario": "19:10",
+            "luogo": "MILANO PORTA GARIBALDI",
+            "ritardo": 10
+          },
+          {
+            "treno": "11703",
+            "orario": "19:12",
+            "luogo": "TORINO LINGOTTO",
+            "ritardo": 5
+          },
+          {
+            "treno": "2039",
+            "orario": "19:18",
+            "luogo": "TORINO PORTA NUOVA",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "chivassoritorno": {
       "stats": {
-        "total": 21,
-        "delayedCount": 0,
-        "avgDelay": 0,
-        "maxDelay": 0,
+        "total": 22,
+        "delayedCount": 2,
+        "avgDelay": 7.5,
+        "maxDelay": 10,
         "soppressi": 0,
         "soppressiTrains": [],
-        "delayedTrains": []
+        "delayedTrains": [
+          {
+            "treno": "2056",
+            "orario": "19:14",
+            "luogo": "TORINO LINGOTTO",
+            "ritardo": 10
+          },
+          {
+            "treno": "2039",
+            "orario": "19:20",
+            "luogo": "MILANO CENTRALE",
+            "ritardo": 5
+          }
+        ]
       },
       "error": null
     },
     "torinoandata": {
       "stats": {
-        "total": 11,
+        "total": 10,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -69,7 +113,7 @@
     },
     "torinoritorno": {
       "stats": {
-        "total": 8,
+        "total": 5,
         "delayedCount": 0,
         "avgDelay": 0,
         "maxDelay": 0,
@@ -81,8 +125,8 @@
     }
   },
   "dataLog": "24/11/2026",
-  "lastUpdate": "24/11/2026, 07:27:36",
-  "totalScore": 0,
+  "lastUpdate": "24/11/2026, 19:21:39",
+  "totalScore": 4.154479578392622,
   "verdettoAttuale": {
     "cls": "ok",
     "word": "VAI TRANQUILLO",
